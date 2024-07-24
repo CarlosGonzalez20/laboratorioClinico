@@ -334,7 +334,7 @@ namespace clinica
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(232, 96);
+            this.textBox8.Location = new System.Drawing.Point(272, 176);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(214, 22);
             this.textBox8.TabIndex = 21;
@@ -369,7 +369,7 @@ namespace clinica
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(464, 97);
+            this.textBox13.Location = new System.Drawing.Point(502, 105);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(221, 22);
             this.textBox13.TabIndex = 26;
