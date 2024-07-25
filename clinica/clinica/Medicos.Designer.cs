@@ -82,7 +82,7 @@ namespace clinica
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.maskedTextBox10 = new System.Windows.Forms.MaskedTextBox();
+            this.especializacionID = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -576,7 +576,7 @@ namespace clinica
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.maskedTextBox10);
+            this.groupBox2.Controls.Add(this.especializacionID);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.maskedTextBox9);
             this.groupBox2.Controls.Add(this.label12);
@@ -764,13 +764,13 @@ namespace clinica
             this.materialButton4.UseAccentColor = false;
             this.materialButton4.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox10
+            // especializacionID
             // 
-            this.maskedTextBox10.Location = new System.Drawing.Point(406, 64);
-            this.maskedTextBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox10.Name = "maskedTextBox10";
-            this.maskedTextBox10.Size = new System.Drawing.Size(101, 22);
-            this.maskedTextBox10.TabIndex = 73;
+            this.especializacionID.Location = new System.Drawing.Point(406, 64);
+            this.especializacionID.Margin = new System.Windows.Forms.Padding(4);
+            this.especializacionID.Name = "especializacionID";
+            this.especializacionID.Size = new System.Drawing.Size(101, 22);
+            this.especializacionID.TabIndex = 73;
             // 
             // label13
             // 
@@ -867,7 +867,7 @@ namespace clinica
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialButton materialButton3;
         private MaterialSkin.Controls.MaterialButton materialButton4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox10;
+        private System.Windows.Forms.MaskedTextBox especializacionID;
         private System.Windows.Forms.Label label13;
     }
 }
