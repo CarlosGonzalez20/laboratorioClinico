@@ -11,9 +11,9 @@ using MaterialSkin;
 
 namespace clinica
 {
-    public partial class Médicos : MaterialSkin.Controls.MaterialForm
+    public partial class Medicos : MaterialSkin.Controls.MaterialForm
     {
-        public Médicos()
+        public Medicos()
         {
             InitializeComponent();
         }

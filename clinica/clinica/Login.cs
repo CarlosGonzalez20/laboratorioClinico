@@ -76,7 +76,7 @@ namespace clinica
                         formB.Show();
                         break;
                     case "Médicos 2":
-                        Médicos formC = new Médicos();
+                        Medicos formC = new Medicos();
                         formC.Show();
                         break;
                 }
