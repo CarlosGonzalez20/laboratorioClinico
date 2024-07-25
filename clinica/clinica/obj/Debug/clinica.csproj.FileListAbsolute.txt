@@ -12,3 +12,4 @@ C:\Users\ll322\source\repos\laboratorioClinico\clinica\clinica\obj\Debug\clinica
 C:\Users\ll322\source\repos\laboratorioClinico\clinica\clinica\bin\Debug\MaterialSkin.dll
 C:\Users\ll322\source\repos\laboratorioClinico\clinica\clinica\obj\Debug\clinica.csproj.CopyComplete
 C:\Users\ll322\source\repos\laboratorioClinico\clinica\clinica\obj\Debug\clinica.facturacion.resources
+C:\Users\ll322\source\repos\laboratorioClinico\clinica\clinica\obj\Debug\clinica.Médicos.resources

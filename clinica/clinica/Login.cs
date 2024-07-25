@@ -20,7 +20,7 @@ namespace clinica
 
         private void llenarComboArea()
         {
-            List<string> items = new List<string> { "Pacientes", "Médicos", "Clínicas", "Agregar más"};
+            List<string> items = new List<string> { "Pacientes", "Médicos", "Clínicas", "Agregar más", "Médicos 2"};
             areaUsuario.Items.Clear();
             foreach (var item in items)
             {
@@ -74,6 +74,10 @@ namespace clinica
                     case "Médicos":
                         facturacion formB = new facturacion();
                         formB.Show();
+                        break;
+                    case "Médicos 2":
+                        Médicos formC = new Médicos();
+                        formC.Show();
                         break;
                 }
             }
