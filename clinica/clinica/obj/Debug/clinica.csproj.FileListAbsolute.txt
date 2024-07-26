@@ -12,3 +12,18 @@ C:\Users\ll322\source\repos\laboratorioClinico\clinica\clinica\obj\Debug\clinica
 C:\Users\ll322\source\repos\laboratorioClinico\clinica\clinica\bin\Debug\MaterialSkin.dll
 C:\Users\ll322\source\repos\laboratorioClinico\clinica\clinica\obj\Debug\clinica.csproj.CopyComplete
 C:\Users\ll322\source\repos\laboratorioClinico\clinica\clinica\obj\Debug\clinica.facturacion.resources
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\bin\Debug\clinica.exe.config
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\bin\Debug\clinica.exe
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\bin\Debug\clinica.pdb
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\bin\Debug\MaterialSkin.dll
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\obj\Debug\clinica.csproj.AssemblyReference.cache
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\obj\Debug\clinica.datosPaciente.resources
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\obj\Debug\clinica.facturacion.resources
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\obj\Debug\clinica.Examenes.resources
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\obj\Debug\clinica.Login.resources
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\obj\Debug\clinica.Properties.Resources.resources
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\obj\Debug\clinica.csproj.GenerateResource.cache
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\obj\Debug\clinica.csproj.CoreCompileInputs.cache
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\obj\Debug\clinica.csproj.CopyComplete
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\obj\Debug\clinica.exe
+C:\Users\Josue Paz\Documents\GitHub\laboratorioClinico\clinica\clinica\obj\Debug\clinica.pdb
