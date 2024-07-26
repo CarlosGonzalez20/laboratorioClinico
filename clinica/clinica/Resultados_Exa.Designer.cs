@@ -46,7 +46,6 @@ namespace clinica
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTextBox5 = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox6 = new MaterialSkin.Controls.MaterialTextBox();
             this.Instrucciones = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
@@ -59,7 +58,6 @@ namespace clinica
             this.ID_Examen.AnimateReadOnly = false;
             this.ID_Examen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ID_Examen.Depth = 0;
-            this.ID_Examen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ID_Examen.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ID_Examen.LeadingIcon = null;
             this.ID_Examen.Location = new System.Drawing.Point(32, 130);
@@ -95,7 +93,6 @@ namespace clinica
             this.materialTextBox1.AnimateReadOnly = false;
             this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox1.LeadingIcon = null;
             this.materialTextBox1.Location = new System.Drawing.Point(32, 254);
@@ -196,7 +193,6 @@ namespace clinica
             this.materialTextBox2.AnimateReadOnly = false;
             this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBox2.Depth = 0;
-            this.materialTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox2.LeadingIcon = null;
             this.materialTextBox2.Location = new System.Drawing.Point(32, 378);
@@ -249,7 +245,6 @@ namespace clinica
             this.materialTextBox3.AnimateReadOnly = false;
             this.materialTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBox3.Depth = 0;
-            this.materialTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox3.LeadingIcon = null;
             this.materialTextBox3.Location = new System.Drawing.Point(652, 324);
@@ -285,7 +280,6 @@ namespace clinica
             this.materialTextBox4.AnimateReadOnly = false;
             this.materialTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBox4.Depth = 0;
-            this.materialTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox4.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox4.LeadingIcon = null;
             this.materialTextBox4.Location = new System.Drawing.Point(652, 391);
@@ -319,7 +313,6 @@ namespace clinica
             this.materialTextBox5.AnimateReadOnly = false;
             this.materialTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBox5.Depth = 0;
-            this.materialTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox5.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox5.LeadingIcon = null;
             this.materialTextBox5.Location = new System.Drawing.Point(881, 324);
@@ -348,23 +341,8 @@ namespace clinica
             this.materialLabel7.Text = "Duracion";
             this.materialLabel7.UseAccent = true;
             // 
-            // materialTextBox6
+            // Instrucciones
             // 
-            this.materialTextBox6.AnimateReadOnly = false;
-            this.materialTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox6.Depth = 0;
-            this.materialTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox6.LeadingIcon = null;
-            this.materialTextBox6.Location = new System.Drawing.Point(977, 391);
-            this.materialTextBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.materialTextBox6.MaxLength = 50;
-            this.materialTextBox6.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox6.Multiline = false;
-            this.materialTextBox6.Name = "materialTextBox6";
-            this.materialTextBox6.Size = new System.Drawing.Size(330, 50);
-            this.materialTextBox6.TabIndex = 33;
-            this.materialTextBox6.Text = "";
-            this.materialTextBox6.TrailingIcon = null;
             this.Instrucciones.AnimateReadOnly = false;
             this.Instrucciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Instrucciones.Depth = 0;
@@ -459,7 +437,6 @@ namespace clinica
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialButton3);
             this.Controls.Add(this.materialButton4);
-            this.Controls.Add(this.materialTextBox6);
             this.Controls.Add(this.Instrucciones);
             this.Controls.Add(this.materialLabel8);
             this.Controls.Add(this.materialTextBox5);
@@ -506,8 +483,11 @@ namespace clinica
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox5;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox6;
+<<<<<<< HEAD
         private MaterialSkin.Controls.MaterialTextBox Instrucciones;
+=======
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox6;
+>>>>>>> a9622436d97ae1357078993927e53617ba991e9a
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private MaterialSkin.Controls.MaterialButton materialButton3;
         private MaterialSkin.Controls.MaterialButton materialButton4;
