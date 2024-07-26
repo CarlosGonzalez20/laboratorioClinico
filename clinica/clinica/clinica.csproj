@@ -62,6 +62,12 @@
     <Compile Include="datosPaciente.Designer.cs">
       <DependentUpon>datosPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado.Designer.cs">
+      <DependentUpon>Empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="equipoLaboratorio.cs">
       <SubType>Form</SubType>
     </Compile>
