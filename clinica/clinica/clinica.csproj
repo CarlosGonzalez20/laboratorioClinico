@@ -81,11 +81,11 @@
     <Compile Include="Cargo.Designer.cs">
       <DependentUpon>Cargo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Examenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Examenes.Designer.cs">
+      <DependentUpon>Examenes.cs</DependentUpon>
     </Compile>
     <Compile Include="Laboratorio.cs">
       <SubType>Form</SubType>
@@ -151,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="facturacion.resx">
       <DependentUpon>facturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examenes.resx">
+      <DependentUpon>Examenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laboratorio.resx">
       <DependentUpon>Laboratorio.cs</DependentUpon>

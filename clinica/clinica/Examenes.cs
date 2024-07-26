@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MaterialSkin;
 namespace clinica
 {
-    public partial class Form2 : Form
+    public partial class Examenes : MaterialSkin.Controls.MaterialForm
     {
-        public Form2()
+        public Examenes()
         {
             InitializeComponent();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
