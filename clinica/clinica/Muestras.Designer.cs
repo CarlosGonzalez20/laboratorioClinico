@@ -48,6 +48,7 @@ namespace clinica
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -224,6 +225,7 @@ namespace clinica
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.comboBox1);
             this.groupBox4.Location = new System.Drawing.Point(38, 352);
@@ -256,6 +258,15 @@ namespace clinica
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(157, 22);
             this.dateTimePicker2.TabIndex = 44;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(86, 92);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // Muestras
             // 
@@ -300,5 +311,6 @@ namespace clinica
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button button5;
     }
 }
