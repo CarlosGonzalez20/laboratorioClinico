@@ -50,11 +50,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clinica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clinica.Designer.cs">
+      <DependentUpon>clinica.cs</DependentUpon>
+    </Compile>
     <Compile Include="datosPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="datosPaciente.Designer.cs">
       <DependentUpon>datosPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Especialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Especialidad.Designer.cs">
+      <DependentUpon>Especialidad.cs</DependentUpon>
     </Compile>
     <Compile Include="facturacion.cs">
       <SubType>Form</SubType>
@@ -67,6 +79,12 @@
     </Compile>
     <Compile Include="Cargo.Designer.cs">
       <DependentUpon>Cargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Género.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Género.Designer.cs">
+      <DependentUpon>Género.cs</DependentUpon>
     </Compile>
     <Compile Include="Personal.cs">
       <SubType>Form</SubType>
@@ -91,11 +109,20 @@
     <EmbeddedResource Include="Cargo.resx">
       <DependentUpon>Cargo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="clinica.resx">
+      <DependentUpon>clinica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="datosPaciente.resx">
       <DependentUpon>datosPaciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Especialidad.resx">
+      <DependentUpon>Especialidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="facturacion.resx">
       <DependentUpon>facturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Género.resx">
+      <DependentUpon>Género.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
