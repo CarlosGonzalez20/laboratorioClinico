@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\clinica",
+    "\\clinica\\clinica"
   ],
-  "SelectedNode": "\\clinica.sln",
+  "SelectedNode": "\\clinica\\clinica\\datosPaciente.cs",
   "PreviewInSolutionExplorer": false
 }

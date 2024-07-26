@@ -44,40 +44,40 @@ namespace clinica
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.estatusPaciente = new System.Windows.Forms.GroupBox();
+            this.estadoInactivo = new System.Windows.Forms.RadioButton();
+            this.estatusActivo = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ingresarPaciente = new MaterialSkin.Controls.MaterialButton();
-            this.modificarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.eliminarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.buscarPaciente = new MaterialSkin.Controls.MaterialButton();
-            this.estatusActivo = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.estatusPaciente = new System.Windows.Forms.GroupBox();
-            this.estadoInactivo = new System.Windows.Forms.RadioButton();
+            this.modificarPaciente = new MaterialSkin.Controls.MaterialButton();
+            this.ingresarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.groupBox1.SuspendLayout();
+            this.estatusPaciente.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.estatusPaciente.SuspendLayout();
             this.SuspendLayout();
             // 
             // expedienteNo
@@ -239,54 +239,112 @@ namespace clinica
             this.groupBox1.Text = "Datos del paciente";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
-            // groupBox3
+            // estatusPaciente
             // 
-            this.groupBox3.Controls.Add(this.textBox15);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.textBox11);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.textBox12);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Location = new System.Drawing.Point(18, 347);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(581, 136);
-            this.groupBox3.TabIndex = 34;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos de contacto de emergencia";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            this.estatusPaciente.Controls.Add(this.estadoInactivo);
+            this.estatusPaciente.Controls.Add(this.estatusActivo);
+            this.estatusPaciente.Location = new System.Drawing.Point(789, 138);
+            this.estatusPaciente.Name = "estatusPaciente";
+            this.estatusPaciente.Size = new System.Drawing.Size(159, 100);
+            this.estatusPaciente.TabIndex = 42;
+            this.estatusPaciente.TabStop = false;
+            this.estatusPaciente.Text = "Estatus del Paciente";
             // 
-            // textBox2
+            // estadoInactivo
             // 
-            this.textBox2.Location = new System.Drawing.Point(566, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(268, 22);
-            this.textBox2.TabIndex = 22;
+            this.estadoInactivo.AutoSize = true;
+            this.estadoInactivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estadoInactivo.Location = new System.Drawing.Point(45, 60);
+            this.estadoInactivo.Name = "estadoInactivo";
+            this.estadoInactivo.Size = new System.Drawing.Size(77, 21);
+            this.estadoInactivo.TabIndex = 40;
+            this.estadoInactivo.TabStop = true;
+            this.estadoInactivo.Text = "Inactivo";
+            this.estadoInactivo.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // estatusActivo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(563, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Apellidos";
+            this.estatusActivo.AutoSize = true;
+            this.estatusActivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estatusActivo.Location = new System.Drawing.Point(45, 33);
+            this.estatusActivo.Name = "estatusActivo";
+            this.estatusActivo.Size = new System.Drawing.Size(67, 21);
+            this.estatusActivo.TabIndex = 39;
+            this.estatusActivo.TabStop = true;
+            this.estatusActivo.Text = "Activo";
+            this.estatusActivo.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // dateTimePicker2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(122, 27);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 17);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "No. Identificación";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.dateTimePicker2.Location = new System.Drawing.Point(566, 214);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(209, 22);
+            this.dateTimePicker2.TabIndex = 41;
             // 
-            // textBox13
+            // dateTimePicker1
             // 
-            this.textBox13.Location = new System.Drawing.Point(125, 48);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(140, 22);
-            this.textBox13.TabIndex = 26;
+            this.dateTimePicker1.Location = new System.Drawing.Point(566, 158);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(209, 22);
+            this.dateTimePicker1.TabIndex = 40;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(20, 214);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(528, 22);
+            this.textBox4.TabIndex = 34;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(563, 194);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(119, 17);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "Fecha de registro";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 194);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(188, 17);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Medicamentos que consume";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(20, 157);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(528, 22);
+            this.textBox3.TabIndex = 32;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(703, 104);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(245, 22);
+            this.textBox5.TabIndex = 36;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 17);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Alergias";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(700, 85);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(142, 17);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "Proveedor de seguro";
             // 
             // textBox1
             // 
@@ -304,62 +362,70 @@ namespace clinica
             this.label1.TabIndex = 29;
             this.label1.Text = "Correo Electrónico";
             // 
-            // textBox3
+            // textBox2
             // 
-            this.textBox3.Location = new System.Drawing.Point(20, 157);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(528, 22);
-            this.textBox3.TabIndex = 32;
+            this.textBox2.Location = new System.Drawing.Point(566, 48);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(268, 22);
+            this.textBox2.TabIndex = 22;
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 17);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Alergias";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(563, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Apellidos";
             // 
-            // textBox4
+            // textBox13
             // 
-            this.textBox4.Location = new System.Drawing.Point(20, 214);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(528, 22);
-            this.textBox4.TabIndex = 34;
+            this.textBox13.Location = new System.Drawing.Point(125, 48);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(140, 22);
+            this.textBox13.TabIndex = 26;
             // 
-            // label12
+            // label10
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(17, 194);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(188, 17);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Medicamentos que consume";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(122, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(116, 17);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "No. Identificación";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // textBox5
+            // groupBox3
             // 
-            this.textBox5.Location = new System.Drawing.Point(703, 104);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(245, 22);
-            this.textBox5.TabIndex = 36;
+            this.groupBox3.Controls.Add(this.textBox15);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.textBox11);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.textBox12);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Location = new System.Drawing.Point(18, 347);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(581, 136);
+            this.groupBox3.TabIndex = 34;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Datos de contacto de emergencia";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // label13
+            // textBox15
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(700, 85);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(142, 17);
-            this.label13.TabIndex = 35;
-            this.label13.Text = "Proveedor de seguro";
+            this.textBox15.Location = new System.Drawing.Point(271, 97);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(115, 22);
+            this.textBox15.TabIndex = 28;
             // 
-            // label14
+            // label19
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(563, 194);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(119, 17);
-            this.label14.TabIndex = 37;
-            this.label14.Text = "Fecha de registro";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(268, 77);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(64, 17);
+            this.label19.TabIndex = 27;
+            this.label19.Text = "Teléfono";
             // 
             // textBox11
             // 
@@ -394,22 +460,6 @@ namespace clinica
             this.label18.TabIndex = 23;
             this.label18.Text = "Nombre Completo";
             // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(271, 97);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(115, 22);
-            this.textBox15.TabIndex = 28;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(268, 77);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(64, 17);
-            this.label19.TabIndex = 27;
-            this.label19.Text = "Teléfono";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.eliminarPaciente);
@@ -422,46 +472,6 @@ namespace clinica
             this.groupBox2.TabIndex = 35;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mantenimiento";
-            // 
-            // ingresarPaciente
-            // 
-            this.ingresarPaciente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ingresarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ingresarPaciente.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.ingresarPaciente.Depth = 0;
-            this.ingresarPaciente.HighEmphasis = true;
-            this.ingresarPaciente.Icon = null;
-            this.ingresarPaciente.Location = new System.Drawing.Point(185, 33);
-            this.ingresarPaciente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.ingresarPaciente.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ingresarPaciente.Name = "ingresarPaciente";
-            this.ingresarPaciente.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.ingresarPaciente.Size = new System.Drawing.Size(91, 36);
-            this.ingresarPaciente.TabIndex = 3;
-            this.ingresarPaciente.Text = "Ingresar";
-            this.ingresarPaciente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.ingresarPaciente.UseAccentColor = false;
-            this.ingresarPaciente.UseVisualStyleBackColor = true;
-            // 
-            // modificarPaciente
-            // 
-            this.modificarPaciente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.modificarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modificarPaciente.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.modificarPaciente.Depth = 0;
-            this.modificarPaciente.HighEmphasis = true;
-            this.modificarPaciente.Icon = null;
-            this.modificarPaciente.Location = new System.Drawing.Point(31, 83);
-            this.modificarPaciente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.modificarPaciente.MouseState = MaterialSkin.MouseState.HOVER;
-            this.modificarPaciente.Name = "modificarPaciente";
-            this.modificarPaciente.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.modificarPaciente.Size = new System.Drawing.Size(99, 36);
-            this.modificarPaciente.TabIndex = 4;
-            this.modificarPaciente.Text = "modificar";
-            this.modificarPaciente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.modificarPaciente.UseAccentColor = false;
-            this.modificarPaciente.UseVisualStyleBackColor = true;
             // 
             // eliminarPaciente
             // 
@@ -502,55 +512,47 @@ namespace clinica
             this.buscarPaciente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buscarPaciente.UseAccentColor = false;
             this.buscarPaciente.UseVisualStyleBackColor = true;
+            this.buscarPaciente.Click += new System.EventHandler(this.buscarPaciente_Click);
             // 
-            // estatusActivo
+            // modificarPaciente
             // 
-            this.estatusActivo.AutoSize = true;
-            this.estatusActivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.estatusActivo.Location = new System.Drawing.Point(45, 33);
-            this.estatusActivo.Name = "estatusActivo";
-            this.estatusActivo.Size = new System.Drawing.Size(67, 21);
-            this.estatusActivo.TabIndex = 39;
-            this.estatusActivo.TabStop = true;
-            this.estatusActivo.Text = "Activo";
-            this.estatusActivo.UseVisualStyleBackColor = true;
+            this.modificarPaciente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.modificarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.modificarPaciente.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.modificarPaciente.Depth = 0;
+            this.modificarPaciente.HighEmphasis = true;
+            this.modificarPaciente.Icon = null;
+            this.modificarPaciente.Location = new System.Drawing.Point(31, 83);
+            this.modificarPaciente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.modificarPaciente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.modificarPaciente.Name = "modificarPaciente";
+            this.modificarPaciente.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.modificarPaciente.Size = new System.Drawing.Size(99, 36);
+            this.modificarPaciente.TabIndex = 4;
+            this.modificarPaciente.Text = "modificar";
+            this.modificarPaciente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.modificarPaciente.UseAccentColor = false;
+            this.modificarPaciente.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // ingresarPaciente
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(566, 158);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(209, 22);
-            this.dateTimePicker1.TabIndex = 40;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(566, 214);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(209, 22);
-            this.dateTimePicker2.TabIndex = 41;
-            // 
-            // estatusPaciente
-            // 
-            this.estatusPaciente.Controls.Add(this.estadoInactivo);
-            this.estatusPaciente.Controls.Add(this.estatusActivo);
-            this.estatusPaciente.Location = new System.Drawing.Point(789, 138);
-            this.estatusPaciente.Name = "estatusPaciente";
-            this.estatusPaciente.Size = new System.Drawing.Size(159, 100);
-            this.estatusPaciente.TabIndex = 42;
-            this.estatusPaciente.TabStop = false;
-            this.estatusPaciente.Text = "Estatus del Paciente";
-            // 
-            // estadoInactivo
-            // 
-            this.estadoInactivo.AutoSize = true;
-            this.estadoInactivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.estadoInactivo.Location = new System.Drawing.Point(45, 60);
-            this.estadoInactivo.Name = "estadoInactivo";
-            this.estadoInactivo.Size = new System.Drawing.Size(77, 21);
-            this.estadoInactivo.TabIndex = 40;
-            this.estadoInactivo.TabStop = true;
-            this.estadoInactivo.Text = "Inactivo";
-            this.estadoInactivo.UseVisualStyleBackColor = true;
+            this.ingresarPaciente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ingresarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ingresarPaciente.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.ingresarPaciente.Depth = 0;
+            this.ingresarPaciente.HighEmphasis = true;
+            this.ingresarPaciente.Icon = null;
+            this.ingresarPaciente.Location = new System.Drawing.Point(185, 33);
+            this.ingresarPaciente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ingresarPaciente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ingresarPaciente.Name = "ingresarPaciente";
+            this.ingresarPaciente.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.ingresarPaciente.Size = new System.Drawing.Size(91, 36);
+            this.ingresarPaciente.TabIndex = 3;
+            this.ingresarPaciente.Text = "Ingresar";
+            this.ingresarPaciente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.ingresarPaciente.UseAccentColor = false;
+            this.ingresarPaciente.UseVisualStyleBackColor = true;
             // 
             // datosPaciente
             // 
@@ -567,12 +569,12 @@ namespace clinica
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.estatusPaciente.ResumeLayout(false);
+            this.estatusPaciente.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.estatusPaciente.ResumeLayout(false);
-            this.estatusPaciente.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

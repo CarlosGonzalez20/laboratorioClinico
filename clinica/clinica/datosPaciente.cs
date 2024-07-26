@@ -72,5 +72,15 @@ namespace clinica
         {
 
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buscarPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
