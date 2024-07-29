@@ -287,6 +287,7 @@ namespace clinica
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(209, 22);
             this.dateTimePicker1.TabIndex = 40;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // textBox4
             // 
