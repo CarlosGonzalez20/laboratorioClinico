@@ -27,3 +27,25 @@ C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\Analisis II - Proyect
 C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\Analisis II - Proyecto\clinica\clinica\obj\Debug\clinica.exe
 C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\Analisis II - Proyecto\clinica\clinica\obj\Debug\clinica.pdb
 C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\Analisis II - Proyecto\clinica\clinica\obj\Debug\clinica.Menú.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\bin\Debug\clinica.exe.config
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\bin\Debug\clinica.exe
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\bin\Debug\clinica.pdb
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\bin\Debug\MaterialSkin.dll
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.csproj.AssemblyReference.cache
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.Cambio_de_Contraseña.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.Cargo.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.datosPaciente.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.equipoLaboratorio.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.facturacion.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.Laboratorio.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.Medico.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.Personal.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.Login.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.Properties.Resources.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.Proveedor.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.tipoEmpleado.resources
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.csproj.GenerateResource.cache
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.csproj.CoreCompileInputs.cache
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.csproj.CopyComplete
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.exe
+C:\Users\sebri\OneDrive\Documentos\analisis proyecto\clinica\clinica\obj\Debug\clinica.pdb

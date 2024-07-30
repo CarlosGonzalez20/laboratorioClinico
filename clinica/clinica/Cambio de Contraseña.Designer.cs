@@ -258,7 +258,7 @@ namespace clinica
             this.materialMaskedTextBox3.HideSelection = true;
             this.materialMaskedTextBox3.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.materialMaskedTextBox3.LeadingIcon = null;
-            this.materialMaskedTextBox3.Location = new System.Drawing.Point(266, 209);
+            this.materialMaskedTextBox3.Location = new System.Drawing.Point(278, 209);
             this.materialMaskedTextBox3.Margin = new System.Windows.Forms.Padding(2);
             this.materialMaskedTextBox3.Mask = "";
             this.materialMaskedTextBox3.MaxLength = 32767;
