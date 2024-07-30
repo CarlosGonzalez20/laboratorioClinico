@@ -20,7 +20,7 @@ namespace clinica
 
         private void llenarComboArea()
         {
-            List<string> items = new List<string> { "Pacientes", "Médicos", "Clínicas", "Agregar más"};
+            List<string> items = new List<string> { "Pacientes", "Médicos", "Clínicas","Cargo","TIpoEmpleado" ,"Agregar más"};
             areaUsuario.Items.Clear();
             foreach (var item in items)
             {
@@ -75,6 +75,16 @@ namespace clinica
                         facturacion formB = new facturacion();
                         formB.Show();
                         break;
+                    case "Cargo":
+                        Cargo formC = new Cargo();
+                        formC.Show();
+                        break;
+                    case "TipoEmpleado":
+                        tipoEmpleado formD = new tipoEmpleado();
+                        formD.Show();
+                        break;
+
+
                 }
             }
             catch (Exception ex)
