@@ -56,6 +56,12 @@
     <Compile Include="Cambio de Contraseña.Designer.cs">
       <DependentUpon>Cambio de Contraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clinica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clinica.Designer.cs">
+      <DependentUpon>Clinica.cs</DependentUpon>
+    </Compile>
     <Compile Include="datosPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
