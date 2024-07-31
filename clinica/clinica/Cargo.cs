@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
-
 
 
 namespace clinica
@@ -22,62 +20,69 @@ namespace clinica
             InitializeComponent();
         }
 
+
+
+
+
         private void Cargo_Load(object sender, EventArgs e)
         {
 
+
         }
+
         private void ingresarPaciente_Click(object sender, EventArgs e)
         {
-            DatabaseConnection dbConnection = new DatabaseConnection();
-            using (MySqlConnection connection = dbConnection.GetConnection())
+
+            string connectionString = "server=localhost;user=root;database=laboratorioclinico;password=12345;";
+
+            // Suponiendo que tienes TextBoxes llamados nombres y Tipo, y un ComboBox llamado Estado
+            string Cargo = cargos.Text;
+            string Descripcion = descripcion.Text;
+
+            string Estados = "";
+            if (radioActivo.Checked)
             {
-                if (connection == null) return; // Verifica si la conexión fue exitosa
+                Estados = "1";
+            }
+            else if (radioInactivo.Checked)
+            {
+                Estados = "0";
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un estado.");
+                return;
+            }
 
-                string cargo = cargos.Text.Trim();
-                string descripcion = Descripcion.Text.Trim();
-                string estados = radioActivo.Checked ? "1" : "0";
+            if (string.IsNullOrEmpty(Cargo) || string.IsNullOrEmpty(Descripcion) || string.IsNullOrEmpty(Estados))
+            {
+                MessageBox.Show("Por favor, completa todos los campos.");
+                return;
+            }
 
-                if (string.IsNullOrEmpty(cargo) || string.IsNullOrEmpty(descripcion) || string.IsNullOrEmpty(estados))
+            string query = "INSERT INTO cargoPersonalLaboratorio (nombrePosicionPersonalLab, descripcionPosicionPersonalLab, estadoPosicionPersonalLab) VALUES (@cargo, @Descripcion, @Estados)";
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
-                    MessageBox.Show("Por favor, completa todos los campos.");
-                    return;
-                }
-
-                string query = "INSERT INTO cargoPersonalLaboratorio (nombrePosicionPersonalLab, descripcionPosicionPersonalLab, estadoPosicionPersonalLab) VALUES (@cargo, @descripcion, @estados)";
-
-                try
-                {
+                    connection.Open();
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
-                        // Usa Add con tipos explícitos si es necesario
-                        command.Parameters.AddWithValue("@cargo", cargo);
-                        command.Parameters.AddWithValue("@descripcion", descripcion);
-                        command.Parameters.AddWithValue("@estados", estados);
+                        command.Parameters.AddWithValue("@cargo", Cargo);
+                        command.Parameters.AddWithValue("@Descripcion", Descripcion);
+                        command.Parameters.AddWithValue("@Estados", Estados);
 
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Datos insertados correctamente.");
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se insertaron datos.");
-                        }
+                        command.ExecuteNonQuery();
                     }
                 }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error en la base de datos: " + ex.Message);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                MessageBox.Show("Datos insertados correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-
 
 
         private void eliminarPaciente_Click(object sender, EventArgs e)
@@ -125,6 +130,12 @@ namespace clinica
             }
         }
 
-    }
-    }
 
+
+
+
+
+
+
+    }
+}

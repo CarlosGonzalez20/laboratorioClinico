@@ -29,7 +29,7 @@ namespace clinica
         /// </summary>
         private void InitializeComponent()
         {
-            this.Descripcion = new System.Windows.Forms.TextBox();
+            this.descripcion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,12 +46,12 @@ namespace clinica
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Descripcion
+            // descripcion
             // 
-            this.Descripcion.Location = new System.Drawing.Point(28, 201);
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Size = new System.Drawing.Size(187, 20);
-            this.Descripcion.TabIndex = 15;
+            this.descripcion.Location = new System.Drawing.Point(28, 201);
+            this.descripcion.Name = "descripcion";
+            this.descripcion.Size = new System.Drawing.Size(187, 20);
+            this.descripcion.TabIndex = 15;
             // 
             // label5
             // 
@@ -233,7 +233,7 @@ namespace clinica
             this.Controls.Add(this.label1);
             this.Controls.Add(this.idCargo);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.Descripcion);
+            this.Controls.Add(this.descripcion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -248,7 +248,7 @@ namespace clinica
         }
 
         #endregion
-        private System.Windows.Forms.TextBox Descripcion;
+        private System.Windows.Forms.TextBox descripcion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
