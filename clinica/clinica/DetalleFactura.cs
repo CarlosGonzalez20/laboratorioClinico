@@ -12,7 +12,7 @@ using MaterialSkin;
 namespace clinica
 {
     public partial class DetalleFactura : MaterialSkin.Controls.MaterialForm
-    {
+    
     {
         public DetalleFactura()
         {
