@@ -11,14 +11,14 @@ using MaterialSkin;
 
 namespace clinica
 {
-    public partial class Clinica : MaterialSkin.Controls.MaterialForm
+    public partial class Especialidad : MaterialSkin.Controls.MaterialForm
     {
-        public Clinica()
+        public Especialidad()
         {
             InitializeComponent();
         }
 
-        private void Clinica_Load(object sender, EventArgs e)
+        private void Especialidad_Load(object sender, EventArgs e)
         {
 
         }

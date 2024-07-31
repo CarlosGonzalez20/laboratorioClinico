@@ -1,7 +1,7 @@
 ﻿
 namespace clinica
 {
-    partial class Clinica
+    partial class Genero
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,16 @@ namespace clinica
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clinica));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Genero));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBusc = new MaterialSkin.Controls.MaterialButton();
             this.btnMod = new MaterialSkin.Controls.MaterialButton();
             this.btnElim = new MaterialSkin.Controls.MaterialButton();
             this.btnIng = new MaterialSkin.Controls.MaterialButton();
-            this.txtDir = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtEst = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtNo = new MaterialSkin.Controls.MaterialTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtDes = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtEstatus = new MaterialSkin.Controls.MaterialTextBox();
+            this.MTEstado = new MaterialSkin.Controls.MaterialLabel();
             this.txtNom = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
@@ -54,10 +52,10 @@ namespace clinica
             this.groupBox1.Controls.Add(this.btnMod);
             this.groupBox1.Controls.Add(this.btnElim);
             this.groupBox1.Controls.Add(this.btnIng);
-            this.groupBox1.Location = new System.Drawing.Point(425, 416);
+            this.groupBox1.Location = new System.Drawing.Point(243, 380);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(331, 163);
-            this.groupBox1.TabIndex = 45;
+            this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimiento";
             // 
@@ -137,105 +135,76 @@ namespace clinica
             this.btnIng.UseAccentColor = false;
             this.btnIng.UseVisualStyleBackColor = true;
             // 
-            // txtDir
+            // txtNo
             // 
-            this.txtDir.AnimateReadOnly = false;
-            this.txtDir.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDir.Depth = 0;
-            this.txtDir.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtDir.LeadingIcon = null;
-            this.txtDir.Location = new System.Drawing.Point(698, 104);
-            this.txtDir.MaxLength = 50;
-            this.txtDir.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtDir.Multiline = false;
-            this.txtDir.Name = "txtDir";
-            this.txtDir.Size = new System.Drawing.Size(186, 50);
-            this.txtDir.TabIndex = 44;
-            this.txtDir.Text = "";
-            this.txtDir.TrailingIcon = null;
-            // 
-            // txtEst
-            // 
-            this.txtEst.AnimateReadOnly = false;
-            this.txtEst.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEst.Depth = 0;
-            this.txtEst.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtEst.LeadingIcon = null;
-            this.txtEst.Location = new System.Drawing.Point(698, 345);
-            this.txtEst.MaxLength = 50;
-            this.txtEst.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtEst.Multiline = false;
-            this.txtEst.Name = "txtEst";
-            this.txtEst.Size = new System.Drawing.Size(186, 50);
-            this.txtEst.TabIndex = 43;
-            this.txtEst.Text = "";
-            this.txtEst.TrailingIcon = null;
-            // 
-            // materialLabel4
-            // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(514, 365);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(58, 19);
-            this.materialLabel4.TabIndex = 42;
-            this.materialLabel4.Text = "Estado: ";
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(443, 287);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(209, 19);
-            this.materialLabel3.TabIndex = 41;
-            this.materialLabel3.Text = "Descripción De Especialidad: ";
+            this.txtNo.AnimateReadOnly = false;
+            this.txtNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNo.Depth = 0;
+            this.txtNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNo.LeadingIcon = null;
+            this.txtNo.Location = new System.Drawing.Point(267, 101);
+            this.txtNo.MaxLength = 50;
+            this.txtNo.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtNo.Multiline = false;
+            this.txtNo.Name = "txtNo";
+            this.txtNo.Size = new System.Drawing.Size(176, 50);
+            this.txtNo.TabIndex = 23;
+            this.txtNo.Text = "";
+            this.txtNo.TrailingIcon = null;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(33, 146);
+            this.pictureBox1.Location = new System.Drawing.Point(514, 100);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(344, 315);
+            this.pictureBox1.Size = new System.Drawing.Size(363, 274);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
-            // txtDes
+            // txtEstatus
             // 
-            this.txtDes.AnimateReadOnly = false;
-            this.txtDes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDes.Depth = 0;
-            this.txtDes.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtDes.LeadingIcon = null;
-            this.txtDes.Location = new System.Drawing.Point(698, 270);
-            this.txtDes.MaxLength = 50;
-            this.txtDes.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtDes.Multiline = false;
-            this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(186, 50);
-            this.txtDes.TabIndex = 39;
-            this.txtDes.Text = "";
-            this.txtDes.TrailingIcon = null;
+            this.txtEstatus.AnimateReadOnly = false;
+            this.txtEstatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEstatus.Depth = 0;
+            this.txtEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEstatus.LeadingIcon = null;
+            this.txtEstatus.Location = new System.Drawing.Point(267, 301);
+            this.txtEstatus.MaxLength = 50;
+            this.txtEstatus.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtEstatus.Multiline = false;
+            this.txtEstatus.Name = "txtEstatus";
+            this.txtEstatus.Size = new System.Drawing.Size(176, 50);
+            this.txtEstatus.TabIndex = 21;
+            this.txtEstatus.Text = "";
+            this.txtEstatus.TrailingIcon = null;
+            // 
+            // MTEstado
+            // 
+            this.MTEstado.AutoSize = true;
+            this.MTEstado.Depth = 0;
+            this.MTEstado.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.MTEstado.Location = new System.Drawing.Point(169, 303);
+            this.MTEstado.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MTEstado.Name = "MTEstado";
+            this.MTEstado.Size = new System.Drawing.Size(54, 19);
+            this.MTEstado.TabIndex = 20;
+            this.MTEstado.Text = "Estado:";
             // 
             // txtNom
             // 
             this.txtNom.AnimateReadOnly = false;
             this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNom.Depth = 0;
-            this.txtNom.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNom.LeadingIcon = null;
-            this.txtNom.Location = new System.Drawing.Point(698, 192);
+            this.txtNom.Location = new System.Drawing.Point(267, 200);
             this.txtNom.MaxLength = 50;
             this.txtNom.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNom.Multiline = false;
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(186, 50);
-            this.txtNom.TabIndex = 38;
+            this.txtNom.Size = new System.Drawing.Size(176, 50);
+            this.txtNom.TabIndex = 19;
             this.txtNom.Text = "";
             this.txtNom.TrailingIcon = null;
             // 
@@ -244,43 +213,41 @@ namespace clinica
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(493, 126);
+            this.materialLabel2.Location = new System.Drawing.Point(108, 213);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(155, 19);
-            this.materialLabel2.TabIndex = 37;
-            this.materialLabel2.Text = "Número Especialidad:";
+            this.materialLabel2.Size = new System.Drawing.Size(115, 19);
+            this.materialLabel2.TabIndex = 18;
+            this.materialLabel2.Text = "Nombre Género:";
             // 
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(493, 192);
+            this.materialLabel1.Location = new System.Drawing.Point(144, 104);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(159, 19);
-            this.materialLabel1.TabIndex = 36;
-            this.materialLabel1.Text = "Nombre Especialidad: ";
+            this.materialLabel1.Size = new System.Drawing.Size(79, 19);
+            this.materialLabel1.TabIndex = 17;
+            this.materialLabel1.Text = "No Género:";
             // 
-            // Clinica
+            // Genero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 604);
+            this.ClientSize = new System.Drawing.Size(987, 571);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtDir);
-            this.Controls.Add(this.txtEst);
-            this.Controls.Add(this.materialLabel4);
-            this.Controls.Add(this.materialLabel3);
+            this.Controls.Add(this.txtNo);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtDes);
+            this.Controls.Add(this.txtEstatus);
+            this.Controls.Add(this.MTEstado);
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Name = "Clinica";
-            this.Text = "Clinica";
-            this.Load += new System.EventHandler(this.Clinica_Load);
+            this.Name = "Genero";
+            this.Text = "Genero";
+            this.Load += new System.EventHandler(this.Genero_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -296,12 +263,10 @@ namespace clinica
         private MaterialSkin.Controls.MaterialButton btnMod;
         private MaterialSkin.Controls.MaterialButton btnElim;
         private MaterialSkin.Controls.MaterialButton btnIng;
-        private MaterialSkin.Controls.MaterialTextBox txtDir;
-        private MaterialSkin.Controls.MaterialTextBox txtEst;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialTextBox txtNo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialTextBox txtDes;
+        private MaterialSkin.Controls.MaterialTextBox txtEstatus;
+        private MaterialSkin.Controls.MaterialLabel MTEstado;
         private MaterialSkin.Controls.MaterialTextBox txtNom;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
