@@ -127,10 +127,3 @@ namespace clinica
 
     }
 }
-
-
-
-
-
-
-        
