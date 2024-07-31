@@ -123,6 +123,7 @@ namespace clinica
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
         }
 
     }
