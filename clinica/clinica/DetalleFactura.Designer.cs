@@ -476,7 +476,7 @@ namespace clinica
             this.groupBox4.Controls.Add(this.buscarPaciente);
             this.groupBox4.Controls.Add(this.modificarPaciente);
             this.groupBox4.Controls.Add(this.ingresarPaciente);
-            this.groupBox4.Location = new System.Drawing.Point(991, 110);
+            this.groupBox4.Location = new System.Drawing.Point(1001, 110);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
