@@ -56,6 +56,12 @@
     <Compile Include="Cambio de Contraseña.Designer.cs">
       <DependentUpon>Cambio de Contraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clinica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clinica.Designer.cs">
+      <DependentUpon>Clinica.cs</DependentUpon>
+    </Compile>
     <Compile Include="datosPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     <Compile Include="equipoLaboratorio.Designer.cs">
       <DependentUpon>equipoLaboratorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Especialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Especialidad.Designer.cs">
+      <DependentUpon>Especialidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="facturacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,12 @@
     </Compile>
     <Compile Include="Cargo.Designer.cs">
       <DependentUpon>Cargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genero.Designer.cs">
+      <DependentUpon>Genero.cs</DependentUpon>
     </Compile>
     <Compile Include="Laboratorio.cs">
       <SubType>Form</SubType>
@@ -154,6 +172,9 @@
     <EmbeddedResource Include="Cargo.resx">
       <DependentUpon>Cargo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Clinica.resx">
+      <DependentUpon>Clinica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="datosPaciente.resx">
       <DependentUpon>datosPaciente.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,8 +187,14 @@
     <EmbeddedResource Include="equipoLaboratorio.resx">
       <DependentUpon>equipoLaboratorio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Especialidad.resx">
+      <DependentUpon>Especialidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="facturacion.resx">
       <DependentUpon>facturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genero.resx">
+      <DependentUpon>Genero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laboratorio.resx">
       <DependentUpon>Laboratorio.cs</DependentUpon>
