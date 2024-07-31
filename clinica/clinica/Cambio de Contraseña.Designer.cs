@@ -56,8 +56,8 @@ namespace clinica
             this.usuario.HideSelection = true;
             this.usuario.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.usuario.LeadingIcon = null;
-            this.usuario.Location = new System.Drawing.Point(34, 120);
-            this.usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.usuario.Location = new System.Drawing.Point(45, 148);
+            this.usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usuario.Mask = "";
             this.usuario.MaxLength = 32767;
             this.usuario.MouseState = MaterialSkin.MouseState.OUT;
@@ -74,7 +74,7 @@ namespace clinica
             this.usuario.SelectionLength = 0;
             this.usuario.SelectionStart = 0;
             this.usuario.ShortcutsEnabled = true;
-            this.usuario.Size = new System.Drawing.Size(188, 48);
+            this.usuario.Size = new System.Drawing.Size(251, 48);
             this.usuario.SkipLiterals = true;
             this.usuario.TabIndex = 16;
             this.usuario.TabStop = false;
@@ -89,8 +89,7 @@ namespace clinica
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(32, 95);
-            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel3.Location = new System.Drawing.Point(43, 117);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(118, 19);
@@ -106,8 +105,8 @@ namespace clinica
             this.ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ingresar.HighEmphasis = true;
             this.ingresar.Icon = null;
-            this.ingresar.Location = new System.Drawing.Point(35, 277);
-            this.ingresar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.ingresar.Location = new System.Drawing.Point(47, 341);
+            this.ingresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ingresar.MouseState = MaterialSkin.MouseState.HOVER;
             this.ingresar.Name = "ingresar";
             this.ingresar.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -133,8 +132,8 @@ namespace clinica
             this.materialMaskedTextBox1.HideSelection = true;
             this.materialMaskedTextBox1.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.materialMaskedTextBox1.LeadingIcon = null;
-            this.materialMaskedTextBox1.Location = new System.Drawing.Point(35, 209);
-            this.materialMaskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.materialMaskedTextBox1.Location = new System.Drawing.Point(47, 257);
+            this.materialMaskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.materialMaskedTextBox1.Mask = "";
             this.materialMaskedTextBox1.MaxLength = 32767;
             this.materialMaskedTextBox1.MouseState = MaterialSkin.MouseState.OUT;
@@ -151,7 +150,7 @@ namespace clinica
             this.materialMaskedTextBox1.SelectionLength = 0;
             this.materialMaskedTextBox1.SelectionStart = 0;
             this.materialMaskedTextBox1.ShortcutsEnabled = true;
-            this.materialMaskedTextBox1.Size = new System.Drawing.Size(188, 48);
+            this.materialMaskedTextBox1.Size = new System.Drawing.Size(251, 48);
             this.materialMaskedTextBox1.SkipLiterals = true;
             this.materialMaskedTextBox1.TabIndex = 17;
             this.materialMaskedTextBox1.TabStop = false;
@@ -166,8 +165,7 @@ namespace clinica
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(31, 188);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel1.Location = new System.Drawing.Point(41, 231);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(136, 19);
@@ -179,8 +177,7 @@ namespace clinica
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(262, 99);
-            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel2.Location = new System.Drawing.Point(349, 122);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(131, 19);
@@ -202,8 +199,8 @@ namespace clinica
             this.materialMaskedTextBox2.HideSelection = true;
             this.materialMaskedTextBox2.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.materialMaskedTextBox2.LeadingIcon = null;
-            this.materialMaskedTextBox2.Location = new System.Drawing.Point(266, 120);
-            this.materialMaskedTextBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.materialMaskedTextBox2.Location = new System.Drawing.Point(355, 148);
+            this.materialMaskedTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.materialMaskedTextBox2.Mask = "";
             this.materialMaskedTextBox2.MaxLength = 32767;
             this.materialMaskedTextBox2.MouseState = MaterialSkin.MouseState.OUT;
@@ -220,7 +217,7 @@ namespace clinica
             this.materialMaskedTextBox2.SelectionLength = 0;
             this.materialMaskedTextBox2.SelectionStart = 0;
             this.materialMaskedTextBox2.ShortcutsEnabled = true;
-            this.materialMaskedTextBox2.Size = new System.Drawing.Size(188, 48);
+            this.materialMaskedTextBox2.Size = new System.Drawing.Size(251, 48);
             this.materialMaskedTextBox2.SkipLiterals = true;
             this.materialMaskedTextBox2.TabIndex = 19;
             this.materialMaskedTextBox2.TabStop = false;
@@ -235,8 +232,7 @@ namespace clinica
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(262, 188);
-            this.materialLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel4.Location = new System.Drawing.Point(349, 231);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(149, 19);
@@ -258,8 +254,8 @@ namespace clinica
             this.materialMaskedTextBox3.HideSelection = true;
             this.materialMaskedTextBox3.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.materialMaskedTextBox3.LeadingIcon = null;
-            this.materialMaskedTextBox3.Location = new System.Drawing.Point(266, 209);
-            this.materialMaskedTextBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.materialMaskedTextBox3.Location = new System.Drawing.Point(355, 257);
+            this.materialMaskedTextBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.materialMaskedTextBox3.Mask = "";
             this.materialMaskedTextBox3.MaxLength = 32767;
             this.materialMaskedTextBox3.MouseState = MaterialSkin.MouseState.OUT;
@@ -276,7 +272,7 @@ namespace clinica
             this.materialMaskedTextBox3.SelectionLength = 0;
             this.materialMaskedTextBox3.SelectionStart = 0;
             this.materialMaskedTextBox3.ShortcutsEnabled = true;
-            this.materialMaskedTextBox3.Size = new System.Drawing.Size(188, 48);
+            this.materialMaskedTextBox3.Size = new System.Drawing.Size(251, 48);
             this.materialMaskedTextBox3.SkipLiterals = true;
             this.materialMaskedTextBox3.TabIndex = 21;
             this.materialMaskedTextBox3.TabStop = false;
@@ -295,8 +291,8 @@ namespace clinica
             this.materialButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(265, 277);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.materialButton1.Location = new System.Drawing.Point(353, 341);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -309,9 +305,9 @@ namespace clinica
             // 
             // Cambio_de_Contraseña
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 359);
+            this.ClientSize = new System.Drawing.Size(747, 442);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.materialMaskedTextBox3);
@@ -322,8 +318,11 @@ namespace clinica
             this.Controls.Add(this.usuario);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.ingresar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Cambio_de_Contraseña";
+            this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Text = "Cambio_de_Contraseña";
+            this.Load += new System.EventHandler(this.Cambio_de_Contraseña_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

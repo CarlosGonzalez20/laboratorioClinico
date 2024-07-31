@@ -9,17 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 
-
 namespace clinica
 {
-    public partial class Cambio_de_Contraseña : MaterialSkin.Controls.MaterialForm
+    public partial class SOLICITUD_DE_CITAS : MaterialSkin.Controls.MaterialForm
     {
-        public Cambio_de_Contraseña()
+        public SOLICITUD_DE_CITAS()
         {
             InitializeComponent();
         }
 
-        private void Cambio_de_Contraseña_Load(object sender, EventArgs e)
+        private void SOLICITUD_DE_CITAS_Load(object sender, EventArgs e)
         {
 
         }

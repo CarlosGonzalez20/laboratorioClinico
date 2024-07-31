@@ -112,6 +112,12 @@
     <Compile Include="Proveedor.Designer.cs">
       <DependentUpon>Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="SOLICITUD_DE_CITAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOLICITUD_DE_CITAS.Designer.cs">
+      <DependentUpon>SOLICITUD_DE_CITAS.cs</DependentUpon>
+    </Compile>
     <Compile Include="tipoEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="Proveedor.resx">
       <DependentUpon>Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOLICITUD_DE_CITAS.resx">
+      <DependentUpon>SOLICITUD_DE_CITAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tipoEmpleado.resx">
       <DependentUpon>tipoEmpleado.cs</DependentUpon>
