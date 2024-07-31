@@ -110,3 +110,28 @@ C:\Users\emora\Documents\LabClinico\clinica\clinica\bin\Debug\clinica.exe
 C:\Users\emora\Documents\LabClinico\clinica\clinica\bin\Debug\clinica.pdb
 C:\Users\emora\Documents\LabClinico\clinica\clinica\bin\Debug\MaterialSkin.dll
 C:\Users\emora\Documents\LabClinico\clinica\clinica\obj\Debug\clinica.csproj.CopyComplete
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.csproj.AssemblyReference.cache
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Cambio_de_Contraseña.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Cargo.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Clinica.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.datosPaciente.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.DetalleFactura.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Empleado.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.equipoLaboratorio.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Especialidad.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.facturacion.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Genero.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Laboratorio.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Medicina.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Medico.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.MUESTRAS.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Personal.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Login.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Properties.Resources.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.Proveedor.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.SOLICITUD_DE_CITAS.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.tipoEmpleado.resources
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.csproj.GenerateResource.cache
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.csproj.CoreCompileInputs.cache
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.exe
+C:\Users\overt\OneDrive\Escritorio\OCTAVO SEMESTRE - SALVA\ANALISIS PROYECTO - FINAL\clinica\clinica\obj\Debug\clinica.pdb
