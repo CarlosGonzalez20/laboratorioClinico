@@ -110,6 +110,12 @@
     <Compile Include="Medico.Designer.cs">
       <DependentUpon>Medico.cs</DependentUpon>
     </Compile>
+    <Compile Include="MUESTRAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MUESTRAS.Designer.cs">
+      <DependentUpon>MUESTRAS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Medico.resx">
       <DependentUpon>Medico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MUESTRAS.resx">
+      <DependentUpon>MUESTRAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
