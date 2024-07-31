@@ -62,6 +62,12 @@
     <Compile Include="datosPaciente.Designer.cs">
       <DependentUpon>datosPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetalleFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleFactura.Designer.cs">
+      <DependentUpon>DetalleFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     </Compile>
     <Compile Include="Laboratorio.Designer.cs">
       <DependentUpon>Laboratorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medicina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medicina.Designer.cs">
+      <DependentUpon>Medicina.cs</DependentUpon>
     </Compile>
     <Compile Include="Medico.cs">
       <SubType>Form</SubType>
@@ -139,6 +151,9 @@
     <EmbeddedResource Include="datosPaciente.resx">
       <DependentUpon>datosPaciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DetalleFactura.resx">
+      <DependentUpon>DetalleFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Empleado.resx">
       <DependentUpon>Empleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Laboratorio.resx">
       <DependentUpon>Laboratorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medicina.resx">
+      <DependentUpon>Medicina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Medico.resx">
       <DependentUpon>Medico.cs</DependentUpon>
