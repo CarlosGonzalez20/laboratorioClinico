@@ -2,7 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\clinica",
-    "\\clinica\\clinica"
+    "\\clinica\\clinica",
+    "\\clinica\\clinica\\Properties"
   ],
   "SelectedNode": "\\clinica\\clinica\\Cargo.cs",
   "PreviewInSolutionExplorer": false

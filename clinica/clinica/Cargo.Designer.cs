@@ -29,12 +29,10 @@ namespace clinica
         /// </summary>
         private void InitializeComponent()
         {
-            this.descripcion = new System.Windows.Forms.TextBox();
+            this.Descripcion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.areaCargo = new System.Windows.Forms.ComboBox();
-            this.Estado = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.eliminarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.buscarPaciente = new MaterialSkin.Controls.MaterialButton();
@@ -42,15 +40,18 @@ namespace clinica
             this.ingresarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.idCargo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cargos = new System.Windows.Forms.TextBox();
+            this.radioActivo = new System.Windows.Forms.RadioButton();
+            this.radioInactivo = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // descripcion
+            // Descripcion
             // 
-            this.descripcion.Location = new System.Drawing.Point(28, 201);
-            this.descripcion.Name = "descripcion";
-            this.descripcion.Size = new System.Drawing.Size(187, 20);
-            this.descripcion.TabIndex = 15;
+            this.Descripcion.Location = new System.Drawing.Point(28, 201);
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Size = new System.Drawing.Size(187, 20);
+            this.Descripcion.TabIndex = 15;
             // 
             // label5
             // 
@@ -78,26 +79,6 @@ namespace clinica
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Cargo";
-            // 
-            // areaCargo
-            // 
-            this.areaCargo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.areaCargo.FormattingEnabled = true;
-            this.areaCargo.Location = new System.Drawing.Point(28, 129);
-            this.areaCargo.Margin = new System.Windows.Forms.Padding(2);
-            this.areaCargo.Name = "areaCargo";
-            this.areaCargo.Size = new System.Drawing.Size(187, 21);
-            this.areaCargo.TabIndex = 56;
-            // 
-            // Estado
-            // 
-            this.Estado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Estado.FormattingEnabled = true;
-            this.Estado.Location = new System.Drawing.Point(28, 274);
-            this.Estado.Margin = new System.Windows.Forms.Padding(2);
-            this.Estado.Name = "Estado";
-            this.Estado.Size = new System.Drawing.Size(187, 21);
-            this.Estado.TabIndex = 57;
             // 
             // groupBox2
             // 
@@ -212,17 +193,47 @@ namespace clinica
             this.label1.TabIndex = 60;
             this.label1.Text = "ID";
             // 
+            // cargos
+            // 
+            this.cargos.Location = new System.Drawing.Point(28, 141);
+            this.cargos.Name = "cargos";
+            this.cargos.Size = new System.Drawing.Size(187, 20);
+            this.cargos.TabIndex = 61;
+            // 
+            // radioActivo
+            // 
+            this.radioActivo.AutoSize = true;
+            this.radioActivo.Location = new System.Drawing.Point(28, 293);
+            this.radioActivo.Name = "radioActivo";
+            this.radioActivo.Size = new System.Drawing.Size(55, 17);
+            this.radioActivo.TabIndex = 62;
+            this.radioActivo.TabStop = true;
+            this.radioActivo.Text = "Activo";
+            this.radioActivo.UseVisualStyleBackColor = true;
+            // 
+            // radioInactivo
+            // 
+            this.radioInactivo.AutoSize = true;
+            this.radioInactivo.Location = new System.Drawing.Point(152, 293);
+            this.radioInactivo.Name = "radioInactivo";
+            this.radioInactivo.Size = new System.Drawing.Size(63, 17);
+            this.radioInactivo.TabIndex = 63;
+            this.radioInactivo.TabStop = true;
+            this.radioInactivo.Text = "Inactivo";
+            this.radioInactivo.UseVisualStyleBackColor = true;
+            // 
             // Cargo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 378);
+            this.Controls.Add(this.radioInactivo);
+            this.Controls.Add(this.radioActivo);
+            this.Controls.Add(this.cargos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.idCargo);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.Estado);
-            this.Controls.Add(this.areaCargo);
-            this.Controls.Add(this.descripcion);
+            this.Controls.Add(this.Descripcion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -237,12 +248,10 @@ namespace clinica
         }
 
         #endregion
-        private System.Windows.Forms.TextBox descripcion;
+        private System.Windows.Forms.TextBox Descripcion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox areaCargo;
-        private System.Windows.Forms.ComboBox Estado;
         private System.Windows.Forms.GroupBox groupBox2;
         private MaterialSkin.Controls.MaterialButton eliminarPaciente;
         private MaterialSkin.Controls.MaterialButton buscarPaciente;
@@ -250,5 +259,8 @@ namespace clinica
         private MaterialSkin.Controls.MaterialButton ingresarPaciente;
         private System.Windows.Forms.TextBox idCargo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox cargos;
+        private System.Windows.Forms.RadioButton radioActivo;
+        private System.Windows.Forms.RadioButton radioInactivo;
     }
 }
