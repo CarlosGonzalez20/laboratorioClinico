@@ -223,7 +223,7 @@ namespace clinica
             this.groupBox2.Controls.Add(this.buscarPaciente);
             this.groupBox2.Controls.Add(this.modificarPaciente);
             this.groupBox2.Controls.Add(this.ingresarPaciente);
-            this.groupBox2.Location = new System.Drawing.Point(335, 104);
+            this.groupBox2.Location = new System.Drawing.Point(333, 104);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
