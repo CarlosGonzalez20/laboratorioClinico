@@ -54,12 +54,14 @@ namespace clinica
             this.estadoInactivo = new System.Windows.Forms.RadioButton();
             this.estatusActivo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             this.estatusPaciente.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -68,7 +70,7 @@ namespace clinica
             this.groupBox2.Controls.Add(this.buscarPaciente);
             this.groupBox2.Controls.Add(this.modificarPaciente);
             this.groupBox2.Controls.Add(this.ingresarPaciente);
-            this.groupBox2.Location = new System.Drawing.Point(156, 278);
+            this.groupBox2.Location = new System.Drawing.Point(21, 286);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -301,7 +303,7 @@ namespace clinica
             // 
             this.estatusPaciente.Controls.Add(this.estadoInactivo);
             this.estatusPaciente.Controls.Add(this.estatusActivo);
-            this.estatusPaciente.Location = new System.Drawing.Point(621, 79);
+            this.estatusPaciente.Location = new System.Drawing.Point(530, 242);
             this.estatusPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.estatusPaciente.Name = "estatusPaciente";
             this.estatusPaciente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -341,7 +343,7 @@ namespace clinica
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(456, 79);
+            this.groupBox1.Location = new System.Drawing.Point(530, 79);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -349,6 +351,20 @@ namespace clinica
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estado del equipo";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButton3.Location = new System.Drawing.Point(30, 85);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(105, 21);
+            this.radioButton3.TabIndex = 41;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Por cambiar";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -376,25 +392,22 @@ namespace clinica
             this.radioButton2.Text = "Excelente";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // dataGridView1
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton3.Location = new System.Drawing.Point(30, 85);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(105, 21);
-            this.radioButton3.TabIndex = 41;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Por cambiar";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(721, 79);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(419, 302);
+            this.dataGridView1.TabIndex = 60;
             // 
             // equipoLaboratorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 397);
+            this.ClientSize = new System.Drawing.Size(1161, 401);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.estatusPaciente);
             this.Controls.Add(this.textBox2);
@@ -423,6 +436,7 @@ namespace clinica
             this.estatusPaciente.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,5 +472,6 @@ namespace clinica
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

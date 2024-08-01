@@ -105,7 +105,7 @@ namespace clinica
             this.ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ingresar.HighEmphasis = true;
             this.ingresar.Icon = null;
-            this.ingresar.Location = new System.Drawing.Point(47, 341);
+            this.ingresar.Location = new System.Drawing.Point(111, 341);
             this.ingresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ingresar.MouseState = MaterialSkin.MouseState.HOVER;
             this.ingresar.Name = "ingresar";
@@ -235,9 +235,9 @@ namespace clinica
             this.materialLabel4.Location = new System.Drawing.Point(349, 231);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(149, 19);
+            this.materialLabel4.Size = new System.Drawing.Size(202, 19);
             this.materialLabel4.TabIndex = 22;
-            this.materialLabel4.Text = "Contraseña Aleatoria";
+            this.materialLabel4.Text = "Confirmar nueva contraseña";
             // 
             // materialMaskedTextBox3
             // 
@@ -291,7 +291,7 @@ namespace clinica
             this.materialButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(353, 341);
+            this.materialButton1.Location = new System.Drawing.Point(352, 341);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -307,7 +307,7 @@ namespace clinica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 442);
+            this.ClientSize = new System.Drawing.Size(656, 409);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.materialMaskedTextBox3);
@@ -318,7 +318,7 @@ namespace clinica
             this.Controls.Add(this.usuario);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.ingresar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cambio_de_Contraseña";
             this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Text = "Cambio_de_Contraseña";

@@ -42,8 +42,10 @@ namespace clinica
             this.txtNom = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -54,7 +56,7 @@ namespace clinica
             this.groupBox1.Controls.Add(this.btnIng);
             this.groupBox1.Location = new System.Drawing.Point(243, 380);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 163);
+            this.groupBox1.Size = new System.Drawing.Size(482, 104);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimiento";
@@ -66,7 +68,7 @@ namespace clinica
             this.btnBusc.Depth = 0;
             this.btnBusc.HighEmphasis = true;
             this.btnBusc.Icon = null;
-            this.btnBusc.Location = new System.Drawing.Point(206, 99);
+            this.btnBusc.Location = new System.Drawing.Point(353, 38);
             this.btnBusc.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnBusc.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBusc.Name = "btnBusc";
@@ -85,7 +87,7 @@ namespace clinica
             this.btnMod.Depth = 0;
             this.btnMod.HighEmphasis = true;
             this.btnMod.Icon = null;
-            this.btnMod.Location = new System.Drawing.Point(51, 99);
+            this.btnMod.Location = new System.Drawing.Point(246, 38);
             this.btnMod.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnMod.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMod.Name = "btnMod";
@@ -104,7 +106,7 @@ namespace clinica
             this.btnElim.Depth = 0;
             this.btnElim.HighEmphasis = true;
             this.btnElim.Icon = null;
-            this.btnElim.Location = new System.Drawing.Point(206, 38);
+            this.btnElim.Location = new System.Drawing.Point(150, 38);
             this.btnElim.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnElim.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnElim.Name = "btnElim";
@@ -140,7 +142,7 @@ namespace clinica
             this.txtNo.AnimateReadOnly = false;
             this.txtNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNo.Depth = 0;
-            this.txtNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNo.LeadingIcon = null;
             this.txtNo.Location = new System.Drawing.Point(267, 101);
             this.txtNo.MaxLength = 50;
@@ -167,7 +169,7 @@ namespace clinica
             this.txtEstatus.AnimateReadOnly = false;
             this.txtEstatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEstatus.Depth = 0;
-            this.txtEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEstatus.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEstatus.LeadingIcon = null;
             this.txtEstatus.Location = new System.Drawing.Point(267, 301);
             this.txtEstatus.MaxLength = 50;
@@ -196,7 +198,7 @@ namespace clinica
             this.txtNom.AnimateReadOnly = false;
             this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNom.Depth = 0;
-            this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNom.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNom.LeadingIcon = null;
             this.txtNom.Location = new System.Drawing.Point(267, 200);
             this.txtNom.MaxLength = 50;
@@ -232,11 +234,22 @@ namespace clinica
             this.materialLabel1.TabIndex = 17;
             this.materialLabel1.Text = "No Género:";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(907, 100);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(370, 274);
+            this.dataGridView1.TabIndex = 25;
+            // 
             // Genero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 571);
+            this.ClientSize = new System.Drawing.Size(1297, 510);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtNo);
             this.Controls.Add(this.pictureBox1);
@@ -251,6 +264,7 @@ namespace clinica
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,5 +284,6 @@ namespace clinica
         private MaterialSkin.Controls.MaterialTextBox txtNom;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

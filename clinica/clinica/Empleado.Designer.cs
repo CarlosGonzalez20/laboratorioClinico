@@ -70,13 +70,19 @@ namespace clinica
             this.buscarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.modificarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.ingresarPaciente = new MaterialSkin.Controls.MaterialButton();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.estatusPaciente.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox11);
+            this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.textBox10);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.label11);
@@ -114,7 +120,7 @@ namespace clinica
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(957, 250);
+            this.groupBox1.Size = new System.Drawing.Size(1084, 250);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de los Empleados";
@@ -157,7 +163,7 @@ namespace clinica
             // 
             this.estatusPaciente.Controls.Add(this.estadoInactivo);
             this.estatusPaciente.Controls.Add(this.estatusActivo);
-            this.estatusPaciente.Location = new System.Drawing.Point(792, 141);
+            this.estatusPaciente.Location = new System.Drawing.Point(910, 25);
             this.estatusPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.estatusPaciente.Name = "estatusPaciente";
             this.estatusPaciente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -440,7 +446,7 @@ namespace clinica
             this.groupBox2.Controls.Add(this.buscarPaciente);
             this.groupBox2.Controls.Add(this.modificarPaciente);
             this.groupBox2.Controls.Add(this.ingresarPaciente);
-            this.groupBox2.Location = new System.Drawing.Point(1024, 99);
+            this.groupBox2.Location = new System.Drawing.Point(1139, 190);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -529,11 +535,39 @@ namespace clinica
             this.ingresarPaciente.UseAccentColor = false;
             this.ingresarPaciente.UseVisualStyleBackColor = true;
             // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(810, 183);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(212, 22);
+            this.textBox11.TabIndex = 49;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(808, 165);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(81, 17);
+            this.label17.TabIndex = 48;
+            this.label17.Text = "Contraseña";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(19, 354);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1084, 168);
+            this.dataGridView1.TabIndex = 38;
+            // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1273, 383);
+            this.ClientSize = new System.Drawing.Size(1331, 548);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Empleado";
@@ -545,6 +579,7 @@ namespace clinica
             this.estatusPaciente.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -592,5 +627,8 @@ namespace clinica
         private MaterialSkin.Controls.MaterialButton buscarPaciente;
         private MaterialSkin.Controls.MaterialButton modificarPaciente;
         private MaterialSkin.Controls.MaterialButton ingresarPaciente;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
