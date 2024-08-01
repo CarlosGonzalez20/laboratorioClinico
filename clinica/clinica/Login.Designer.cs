@@ -37,6 +37,7 @@
             this.usuario = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.contraseña = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.cambiarContraseña = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // ingresar
@@ -48,7 +49,7 @@
             this.ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ingresar.HighEmphasis = true;
             this.ingresar.Icon = null;
-            this.ingresar.Location = new System.Drawing.Point(270, 348);
+            this.ingresar.Location = new System.Drawing.Point(196, 343);
             this.ingresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ingresar.MouseState = MaterialSkin.MouseState.HOVER;
             this.ingresar.Name = "ingresar";
@@ -243,11 +244,34 @@
             this.materialLabel4.TabIndex = 14;
             this.materialLabel4.Text = "Contraseña";
             // 
+            // cambiarContraseña
+            // 
+            this.cambiarContraseña.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cambiarContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cambiarContraseña.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.cambiarContraseña.Depth = 0;
+            this.cambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cambiarContraseña.HighEmphasis = true;
+            this.cambiarContraseña.Icon = null;
+            this.cambiarContraseña.Location = new System.Drawing.Point(346, 343);
+            this.cambiarContraseña.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.cambiarContraseña.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cambiarContraseña.Name = "cambiarContraseña";
+            this.cambiarContraseña.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.cambiarContraseña.Size = new System.Drawing.Size(185, 36);
+            this.cambiarContraseña.TabIndex = 16;
+            this.cambiarContraseña.Text = "Cambiar contraseña";
+            this.cambiarContraseña.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.cambiarContraseña.UseAccentColor = false;
+            this.cambiarContraseña.UseVisualStyleBackColor = true;
+            this.cambiarContraseña.Click += new System.EventHandler(this.cambiarContraseña_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 430);
+            this.Controls.Add(this.cambiarContraseña);
             this.Controls.Add(this.contraseña);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.usuario);
@@ -277,5 +301,6 @@
         private MaterialSkin.Controls.MaterialMaskedTextBox usuario;
         private MaterialSkin.Controls.MaterialMaskedTextBox contraseña;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialButton cambiarContraseña;
     }
 }
