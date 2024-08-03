@@ -32,6 +32,7 @@ namespace clinica
                 return;
             }
 
+
             switch (codigo)
             {
                 case "1":
@@ -120,6 +121,7 @@ namespace clinica
                 }
             }
         }
+   
 
         private void btnElim_Click(object sender, EventArgs e)
         {

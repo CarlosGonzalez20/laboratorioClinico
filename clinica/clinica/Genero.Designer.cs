@@ -229,7 +229,7 @@ namespace clinica
             "3",
             "4",
             "5"});
-            this.CmbGenero.Location = new System.Drawing.Point(318, 112);
+            this.CmbGenero.Location = new System.Drawing.Point(318, 114);
             this.CmbGenero.MaxDropDownItems = 4;
             this.CmbGenero.MouseState = MaterialSkin.MouseState.OUT;
             this.CmbGenero.Name = "CmbGenero";
@@ -258,10 +258,10 @@ namespace clinica
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1064, 202);
+            this.dataGridView1.Location = new System.Drawing.Point(1035, 202);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(565, 326);
+            this.dataGridView1.Size = new System.Drawing.Size(594, 388);
             this.dataGridView1.TabIndex = 27;
             // 
             // Genero
