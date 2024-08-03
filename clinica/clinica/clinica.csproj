@@ -145,6 +145,12 @@
     <Compile Include="Especialidad.Designer.cs">
       <DependentUpon>Especialidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Examenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examenes.Designer.cs">
+      <DependentUpon>Examenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="facturacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,12 @@
     <Compile Include="Proveedor.Designer.cs">
       <DependentUpon>Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resultado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resultado.Designer.cs">
+      <DependentUpon>Resultado.cs</DependentUpon>
+    </Compile>
     <Compile Include="SOLICITUD_DE_CITAS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +255,9 @@
     <EmbeddedResource Include="Especialidad.resx">
       <DependentUpon>Especialidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Examenes.resx">
+      <DependentUpon>Examenes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="facturacion.resx">
       <DependentUpon>facturacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +293,9 @@
     </Compile>
     <EmbeddedResource Include="Proveedor.resx">
       <DependentUpon>Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resultado.resx">
+      <DependentUpon>Resultado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SOLICITUD_DE_CITAS.resx">
       <DependentUpon>SOLICITUD_DE_CITAS.cs</DependentUpon>
