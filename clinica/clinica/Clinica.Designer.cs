@@ -407,10 +407,10 @@ namespace clinica
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1088, 208);
+            this.dataGridView1.Location = new System.Drawing.Point(1072, 208);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(696, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(712, 484);
             this.dataGridView1.TabIndex = 57;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
