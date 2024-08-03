@@ -20,7 +20,44 @@ namespace clinica
         public Cargo()
         {
             InitializeComponent();
+            cargarInformacion();
         }
+
+        private void cargarInformacion()
+        {
+            string query = "SELECT * FROM cargoPersonalLaboratorio";
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                if (connection == null)
+                {
+                    MessageBox.Show("No se pudo establecer la conexión a la base de datos. Pacientes");
+                    return;
+                }
+
+                try
+                {
+                    // Crear adaptador y llenar el DataTable
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, connection);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+
+                    // Asignar el DataTable al DataGridView
+                    infoCargo.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al cargar datos de pacientes: {ex.Message}");
+                }
+            }
+
+
+
+        }
+
+
+
+
 
         private void Cargo_Load(object sender, EventArgs e)
         {
@@ -79,29 +116,31 @@ namespace clinica
 
 
 
-
-        private void eliminarPaciente_Click(object sender, EventArgs e)
+        private void eliminarCargo_Click(object sender, EventArgs e)
         {
 
 
-            string connectionString = "server=localhost;user=root;database=laboratorioclinico;password=12345;";
-
-            // Suponiendo que tienes un TextBox llamado txtID para ingresar el ID del registro a eliminar
-            string id = idCargo.Text;
-
-            if (string.IsNullOrEmpty(id))
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            using (MySqlConnection connection = dbConnection.GetConnection())
             {
-                MessageBox.Show("Por favor, ingresa un ID válido.");
-                return;
-            }
-
-            string query = "DELETE FROM cargoPersonalLaboratorio WHERE  posicionPersonalLabID = @id";
-
-            try
-            {
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                if (connection == null)
                 {
-                    connection.Open();
+                    MessageBox.Show("No se pudo establecer la conexión a la base de datos.");
+                    return;
+                }
+
+                string id = idCargo.Text.Trim(); // Asegúrate de tener un TextBox para el ID
+
+                if (string.IsNullOrEmpty(id))
+                {
+                    MessageBox.Show("Por favor, proporciona un ID.");
+                    return;
+                }
+
+                string query = "DELETE FROM cargoPersonalLaboratorio WHERE posicionPersonalLabID = @id";
+
+                try
+                {
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@id", id);
@@ -111,24 +150,79 @@ namespace clinica
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Registro eliminado correctamente.");
+                            cargarInformacion();
                         }
                         else
                         {
-                            MessageBox.Show("No se encontró ningún registro con el ID especificado.");
+                            MessageBox.Show("No se encontró ningún registro con el ID proporcionado.");
                         }
                     }
                 }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error en la base de datos: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void buscarCargo_Click(object sender, EventArgs e)
         {
 
+            {
+                DatabaseConnection dbConnection = new DatabaseConnection();
+                using (MySqlConnection connection = dbConnection.GetConnection())
+                {
+                    if (connection == null)
+                    {
+                        MessageBox.Show("No se pudo establecer la conexión a la base de datos.");
+                        return;
+                    }
+
+                    string id = idCargo.Text.Trim(); // Asegúrate de tener un TextBox para el ID
+
+                    if (string.IsNullOrEmpty(id))
+                    {
+                        MessageBox.Show("Por favor, proporciona un ID.");
+                        return;
+                    }
+
+                    string query = "SELECT * FROM cargoPersonalLaboratorio WHERE posicionPersonalLabID = @id";
+
+                    try
+                    {
+                        using (MySqlCommand command = new MySqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@id", id);
+                            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
+                            DataTable dataTable = new DataTable();
+                            dataAdapter.Fill(dataTable);
+
+                            if (dataTable.Rows.Count > 0)
+                            {
+                                infoCargo.DataSource = dataTable;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontró ningún registro con el ID proporcionado.");
+                                infoCargo.DataSource = null; // Limpia el DataGridView si no se encuentra nada
+                            }
+                        }
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Error en la base de datos: " + ex.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }
+
