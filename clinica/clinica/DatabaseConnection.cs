@@ -1,5 +1,16 @@
 ﻿using System;
+using System.Data.SqlClient;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MaterialSkin;
 using MySql.Data.MySqlClient;
+
 
 namespace clinica
 {
@@ -10,7 +21,7 @@ namespace clinica
         public DatabaseConnection()
         {
             // Configura la cadena de conexión para MySQL
-            connectionString = "server=localhost;user=root;database=laboratorioclinico;password=12345;";
+            connectionString = "server=localhost;user=root;database=laboratorioclinico;password=root123;";
         }
 
         public MySqlConnection GetConnection()
