@@ -37,5 +37,16 @@ namespace clinica
         {
 
         }
+
+        private void ingresarPersonal_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+        }
     }
 }
