@@ -477,7 +477,7 @@ namespace clinica
             this.modificarPersonal.Depth = 0;
             this.modificarPersonal.HighEmphasis = true;
             this.modificarPersonal.Icon = null;
-            this.modificarPersonal.Location = new System.Drawing.Point(244, 25);
+            this.modificarPersonal.Location = new System.Drawing.Point(245, 25);
             this.modificarPersonal.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.modificarPersonal.MouseState = MaterialSkin.MouseState.HOVER;
             this.modificarPersonal.Name = "modificarPersonal";
