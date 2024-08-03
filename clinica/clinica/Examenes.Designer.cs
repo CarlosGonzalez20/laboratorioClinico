@@ -404,7 +404,7 @@ namespace clinica
             this.Controls.Add(this.materialButton2);
             this.Controls.Add(this.materialButton1);
             this.Name = "Examenes";
-            this.Text = "Examenes";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Examenes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
