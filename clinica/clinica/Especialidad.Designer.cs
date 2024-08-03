@@ -46,8 +46,10 @@ namespace clinica
             this.txtDes = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.txtEstado = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.cmbEspecialidad = new MaterialSkin.Controls.MaterialComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -344,7 +346,7 @@ namespace clinica
             "100",
             "200",
             "300"});
-            this.cmbEspecialidad.Location = new System.Drawing.Point(702, 120);
+            this.cmbEspecialidad.Location = new System.Drawing.Point(702, 121);
             this.cmbEspecialidad.MaxDropDownItems = 4;
             this.cmbEspecialidad.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbEspecialidad.Name = "cmbEspecialidad";
@@ -353,11 +355,21 @@ namespace clinica
             this.cmbEspecialidad.TabIndex = 34;
             this.cmbEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cmbEspecialidad_SelectedIndexChanged);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1013, 206);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(569, 338);
+            this.dataGridView1.TabIndex = 35;
+            // 
             // Especialidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 734);
+            this.ClientSize = new System.Drawing.Size(1647, 761);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cmbEspecialidad);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtDes);
@@ -374,12 +386,16 @@ namespace clinica
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-   
+        private void cmbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -415,5 +431,6 @@ namespace clinica
         private MaterialSkin.Controls.MaterialMaskedTextBox txtDes;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtEstado;
         private MaterialSkin.Controls.MaterialComboBox cmbEspecialidad;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

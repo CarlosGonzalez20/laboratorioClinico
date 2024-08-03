@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Windows.Forms;
 
 namespace clinica
 {
@@ -53,7 +54,9 @@ namespace clinica
             this.MLNum_Clinic = new MaterialSkin.Controls.MaterialLabel();
             this.txtHorario = new MaterialSkin.Controls.MaterialTextBox();
             this.cmbClinica = new MaterialSkin.Controls.MaterialComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -62,7 +65,7 @@ namespace clinica
             this.groupBox1.Controls.Add(this.MBmod);
             this.groupBox1.Controls.Add(this.MTElim);
             this.groupBox1.Controls.Add(this.MBIng);
-            this.groupBox1.Location = new System.Drawing.Point(725, 422);
+            this.groupBox1.Location = new System.Drawing.Point(625, 440);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(396, 208);
             this.groupBox1.TabIndex = 53;
@@ -401,11 +404,22 @@ namespace clinica
             this.cmbClinica.TabIndex = 56;
             this.cmbClinica.SelectedIndexChanged += new System.EventHandler(this.cmbClinica_SelectedIndexChanged_1);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1134, 208);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(650, 339);
+            this.dataGridView1.TabIndex = 57;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // Clinica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 679);
+            this.ClientSize = new System.Drawing.Size(1909, 832);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cmbClinica);
             this.Controls.Add(this.txtHorario);
             this.Controls.Add(this.groupBox1);
@@ -429,16 +443,18 @@ namespace clinica
             this.Load += new System.EventHandler(this.Clinica_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        
-        private void Clinica_Load(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
         }
+
+     
 
         private void cmbClinica_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -468,5 +484,6 @@ namespace clinica
         private MaterialSkin.Controls.MaterialLabel MLNum_Clinic;
         private MaterialSkin.Controls.MaterialTextBox txtHorario;
         private MaterialSkin.Controls.MaterialComboBox cmbClinica;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

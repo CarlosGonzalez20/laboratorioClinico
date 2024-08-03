@@ -32,6 +32,7 @@ namespace clinica
                 return;
             }
 
+
             switch (codigo)
             {
                 case "1":

@@ -16,7 +16,7 @@ namespace clinica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Genero());
+            Application.Run(new Clinica());
         }
     }
 }

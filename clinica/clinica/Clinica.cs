@@ -20,9 +20,12 @@ namespace clinica
             cmbClinica.SelectedIndexChanged += CmbClinica_SelectedIndexChanged;
         }
 
-      
-        private void MBIng_Click(object sender, EventArgs e)
+        private void Clinica_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void MBIng_Click(object sender, EventArgs e)
         {
             string clinicaID = cmbClinica.SelectedItem?.ToString().Trim();
             if (string.IsNullOrEmpty(clinicaID))
@@ -39,7 +42,7 @@ namespace clinica
             string emailClinica = txtCorreo.Text.Trim();
             string estadoClinica = txtEstado.Text.Trim();
 
-       
+
 
             if (string.IsNullOrEmpty(nombreClinica) || string.IsNullOrEmpty(areaEspecialidadID) ||
                 string.IsNullOrEmpty(direccionClinica) || string.IsNullOrEmpty(horarioActividadClinica) ||
@@ -54,7 +57,7 @@ namespace clinica
             {
                 if (connection == null) return;
 
-                string query  = "INSERT INTO clinica (nombreClinica, areaEspecialidadID, direccionClinica, horarioActividadClinica, telefonoClinica, emailClinica, estadoClinica) " +
+                string query = "INSERT INTO clinica (nombreClinica, areaEspecialidadID, direccionClinica, horarioActividadClinica, telefonoClinica, emailClinica, estadoClinica) " +
                         "VALUES (@NombreClinica, @AreaEspecialidadID, @DireccionClinica, @HorarioActividadClinica, @TelefonoClinica, @EmailClinica, @EstadoClinica)";
 
                 try
@@ -102,7 +105,7 @@ namespace clinica
                 return;
             }
 
-                switch (numeroClinica)
+            switch (numeroClinica)
             {
                 case "1":
                     txtNomCl.Text = "Clínica 1";
@@ -148,11 +151,188 @@ namespace clinica
 
         private void LlenarComboBox()
         {
-           
+
+        }
+
+        private void MTElim_Click(object sender, EventArgs e)
+        {
+            {
+                string clinicaID = cmbClinica.SelectedItem?.ToString().Trim();
+
+                if (string.IsNullOrEmpty(clinicaID))
+                {
+                    MessageBox.Show("Por favor, seleccione un número de clínica.");
+                    return;
+                }
+
+                DatabaseConnection dbConnection = new DatabaseConnection();
+                using (MySqlConnection connection = dbConnection.GetConnection())
+                {
+                    if (connection == null) return;
+
+                    string query = "DELETE FROM clinica WHERE clinicaID = @ClinicaID";
+
+                    try
+                    {
+                        using (MySqlCommand command = new MySqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@ClinicaID", clinicaID);
+
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Datos Eliminados Correctamente.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontraron datos para eliminar.");
+                            }
+                        }
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show("Error en la base de datos: " + ex.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
+        private void MBmod_Click(object sender, EventArgs e)
+        {
+            string clinicaID = cmbClinica.SelectedItem?.ToString().Trim();
+
+            if (string.IsNullOrEmpty(clinicaID))
+            {
+                MessageBox.Show("Por favor, seleccione un número de clínica.");
+                return;
+            }
+
+            string nombreClinica = txtNomCl.Text.Trim();
+            string areaEspecialidadID = txtArea.Text.Trim();
+            string direccionClinica = txtDir.Text.Trim();
+            string horarioActividadClinica = txtHorario.Text.Trim();
+            string telefonoClinica = txtTelefono.Text.Trim();
+            string emailClinica = txtCorreo.Text.Trim();
+            string estadoClinica = txtEstado.Text.Trim();
+
+            if (string.IsNullOrEmpty(nombreClinica) || string.IsNullOrEmpty(areaEspecialidadID) ||
+                string.IsNullOrEmpty(direccionClinica) || string.IsNullOrEmpty(horarioActividadClinica) ||
+                string.IsNullOrEmpty(telefonoClinica) || string.IsNullOrEmpty(emailClinica) || string.IsNullOrEmpty(estadoClinica))
+            {
+                MessageBox.Show("Por favor, complete todos los campos.");
+                return;
+            }
+
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                if (connection == null) return;
+
+                string query = "UPDATE clinica SET nombreClinica = @NombreClinica, areaEspecialidadID = @AreaEspecialidadID, direccionClinica = @DireccionClinica, " +
+                               "horarioActividadClinica = @HorarioActividadClinica, telefonoClinica = @TelefonoClinica, emailClinica = @EmailClinica, estadoClinica = @EstadoClinica " +
+                               "WHERE clinicaID = @ClinicaID";
+
+                try
+                {
+                    
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ClinicaID", clinicaID);
+                        command.Parameters.AddWithValue("@NombreClinica", nombreClinica);
+                        command.Parameters.AddWithValue("@AreaEspecialidadID", areaEspecialidadID);
+                        command.Parameters.AddWithValue("@DireccionClinica", direccionClinica);
+                        command.Parameters.AddWithValue("@HorarioActividadClinica", horarioActividadClinica);
+                        command.Parameters.AddWithValue("@TelefonoClinica", telefonoClinica);
+                        command.Parameters.AddWithValue("@EmailClinica", emailClinica);
+                        command.Parameters.AddWithValue("@EstadoClinica", estadoClinica);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Datos Modificados Correctamente.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontraron datos para modificar.");
+                        }
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error en la base de datos: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+
+        private void MBBus_Click(object sender, EventArgs e)
+        {
+            string clinicaID = cmbClinica.SelectedItem?.ToString().Trim();
+
+            if (string.IsNullOrEmpty(clinicaID))
+            {
+                MessageBox.Show("Por favor, seleccione un número de clínica.");
+                return;
+            }
+
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                if (connection == null) return;
+
+                string query = "SELECT * FROM clinica WHERE clinicaID = @ClinicaID";
+
+                try
+                {
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ClinicaID", clinicaID);
+
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                txtNomCl.Text = reader["nombreClinica"].ToString();
+                                txtArea.Text = reader["areaEspecialidadID"].ToString();
+                                txtDir.Text = reader["direccionClinica"].ToString();
+                                txtHorario.Text = reader["horarioActividadClinica"].ToString();
+                                txtTelefono.Text = reader["telefonoClinica"].ToString();
+                                txtCorreo.Text = reader["emailClinica"].ToString();
+                                txtEstado.Text = reader["estadoClinica"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontraron datos para la clínica seleccionada.");
+                            }
+                        }
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error en la base de datos: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void txtArea_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
-
 
 
 

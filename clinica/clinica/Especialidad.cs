@@ -18,74 +18,19 @@ namespace clinica
         public Especialidad()
         {
             InitializeComponent();
+            CargarDatosEspecialidad();
         }
-
-
-
-        private void cmbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnElim_Click(object sender, EventArgs e)
-        {
-            string codigo = cmbEspecialidad.SelectedItem?.ToString().Trim();
-
-            if (string.IsNullOrEmpty(codigo))
-            {
-                MessageBox.Show("Por favor, seleccione un código de especialidad.");
-                return;
-            }
-
-            // Elimina la especialidad de la base de datos
-            DatabaseConnection dbConnection = new DatabaseConnection();
-            using (MySqlConnection connection = dbConnection.GetConnection())
-            {
-                if (connection == null) return;
-
-                string query = "DELETE FROM especialidad WHERE especialidadID = @EspecialidadID";
-
-                try
-                {
-                    using (MySqlCommand command = new MySqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@EspecialidadID", codigo);
-
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Datos Eliminados Correctamente.");
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se encontraron datos para eliminar.");
-                        }
-                    }
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error en la base de datos: " + ex.Message);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-            }
-        }
-
-
+    
         private void btnIng_Click(object sender, EventArgs e)
         {
             string codigo = cmbEspecialidad.SelectedItem?.ToString().Trim();
 
             if (string.IsNullOrEmpty(codigo))
             {
-                MessageBox.Show("Por favor, seleccione un código de especialidad.");
+                MessageBox.Show("Por favor, seleccione un código.");
                 return;
             }
 
-            // Asigna valores basados en el código seleccionado
             switch (codigo)
             {
                 case "100":
@@ -113,7 +58,7 @@ namespace clinica
                     break;
             }
 
-            // Guarda los valores en la base de datos
+            // Ahora, guarda estos valores en la base de datos
             DatabaseConnection dbConnection = new DatabaseConnection();
             using (MySqlConnection connection = dbConnection.GetConnection())
             {
@@ -122,16 +67,15 @@ namespace clinica
                 string especialidadID = cmbEspecialidad.SelectedItem?.ToString().Trim();
                 string nombreEspecialidad = txtNom.Text.Trim();
                 string descripcionEspecialidad = txtDes.Text.Trim();
-                string estadoEspecialidad = txtEstado.Text.Trim(); // "Activo" o "Inactivo"
+                string estadoEspecialidad = txtEstado.Text.Trim();
 
                 if (string.IsNullOrEmpty(especialidadID) || string.IsNullOrEmpty(nombreEspecialidad) || string.IsNullOrEmpty(descripcionEspecialidad) || string.IsNullOrEmpty(estadoEspecialidad))
                 {
-                    MessageBox.Show("Todos los campos deben ser completados.");
+                    MessageBox.Show("Al ingresar los datos, deben ser completados");
                     return;
                 }
 
-                string query = "INSERT INTO especialidad (especialidadID, nombreEspecialidad, descripcionEspecialidad, estadoEspecialidad) " +
-                               "VALUES (@EspecialidadID, @NombreEspecialidad, @DescripcionEspecialidad, @EstadoEspecialidad)";
+                string query = "INSERT INTO especialidad (especialidadID, nombreEspecialidad, descripcionEspecialidad, estadoEspecialidad) VALUES (@EspecialidadID, @NombreEspecialidad, @DescripcionEspecialidad, @EstadoEspecialidad)";
 
                 try
                 {
@@ -147,6 +91,7 @@ namespace clinica
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Datos Ingresados Correctamente.");
+                            CargarDatosEspecialidad(); // Cargar los datos actualizados en el DataGridView
                         }
                         else
                         {
@@ -165,125 +110,205 @@ namespace clinica
             }
         }
 
+        private void btnElim_Click(object sender, EventArgs e)
+        {
+            string codigo = cmbEspecialidad.SelectedItem?.ToString().Trim();
+
+            if (string.IsNullOrEmpty(codigo))
+            {
+                MessageBox.Show("Por favor, seleccione un código.");
+                return;
+            }
+
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                if (connection == null) return;
+
+                string query = "DELETE FROM especialidad WHERE especialidadID = @EspecialidadID";
+
+                try
+                {
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@EspecialidadID", codigo);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Datos Eliminados Correctamente.");
+                            CargarDatosEspecialidad(); // Cargar los datos actualizados en el DataGridView
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontraron datos para eliminar.");
+                        }
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error en la base de datos: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
         private void btnMod_Click(object sender, EventArgs e)
         {
-            {
-                string codigo = cmbEspecialidad.SelectedItem?.ToString().Trim();
+            string codigo = cmbEspecialidad.SelectedItem?.ToString().Trim();
 
-                if (string.IsNullOrEmpty(codigo))
+            if (string.IsNullOrEmpty(codigo))
+            {
+                MessageBox.Show("Por favor, seleccione un código.");
+                return;
+            }
+
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                if (connection == null) return;
+
+                string nombreEspecialidad = txtNom.Text.Trim();
+                string descripcionEspecialidad = txtDes.Text.Trim();
+                string estadoEspecialidad = txtEstado.Text.Trim();
+
+                if (string.IsNullOrEmpty(nombreEspecialidad) || string.IsNullOrEmpty(descripcionEspecialidad) || string.IsNullOrEmpty(estadoEspecialidad))
                 {
-                    MessageBox.Show("Por favor, seleccione un código de especialidad.");
+                    MessageBox.Show("Por favor, complete todos los campos.");
                     return;
                 }
 
-                // Modifica los valores en la base de datos
-                DatabaseConnection dbConnection = new DatabaseConnection();
-                using (MySqlConnection connection = dbConnection.GetConnection())
+                string query = "UPDATE especialidad SET nombreEspecialidad = @NombreEspecialidad, descripcionEspecialidad = @DescripcionEspecialidad, estadoEspecialidad = @EstadoEspecialidad WHERE especialidadID = @EspecialidadID";
+
+                try
                 {
-                    if (connection == null) return;
-
-                    string nombreEspecialidad = txtNom.Text.Trim();
-                    string descripcionEspecialidad = txtDes.Text.Trim();
-                    string estadoEspecialidad = txtEstado.Text.Trim(); // "0" o "1"
-
-                    if (string.IsNullOrEmpty(nombreEspecialidad) || string.IsNullOrEmpty(descripcionEspecialidad) || string.IsNullOrEmpty(estadoEspecialidad))
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
-                        MessageBox.Show("Todos los campos deben ser completados.");
-                        return;
-                    }
+                        command.Parameters.AddWithValue("@EspecialidadID", codigo);
+                        command.Parameters.AddWithValue("@NombreEspecialidad", nombreEspecialidad);
+                        command.Parameters.AddWithValue("@DescripcionEspecialidad", descripcionEspecialidad);
+                        command.Parameters.AddWithValue("@EstadoEspecialidad", estadoEspecialidad);
 
-                    string query = "UPDATE especialidad SET nombreEspecialidad = @NombreEspecialidad, descripcionEspecialidad = @DescripcionEspecialidad, estadoEspecialidad = @EstadoEspecialidad WHERE especialidadID = @EspecialidadID";
+                        int rowsAffected = command.ExecuteNonQuery();
 
-                    try
-                    {
-                        using (MySqlCommand command = new MySqlCommand(query, connection))
+                        if (rowsAffected > 0)
                         {
-                            command.Parameters.AddWithValue("@EspecialidadID", codigo);
-                            command.Parameters.AddWithValue("@NombreEspecialidad", nombreEspecialidad);
-                            command.Parameters.AddWithValue("@DescripcionEspecialidad", descripcionEspecialidad);
-                            command.Parameters.AddWithValue("@EstadoEspecialidad", estadoEspecialidad);
-
-                            int rowsAffected = command.ExecuteNonQuery();
-
-                            if (rowsAffected > 0)
-                            {
-                                MessageBox.Show("Datos Modificados Correctamente.");
-                            }
-                            else
-                            {
-                                MessageBox.Show("No se encontraron datos para modificar.");
-                            }
+                            MessageBox.Show("Datos Modificados Correctamente.");
+                            CargarDatosEspecialidad(); // Cargar los datos actualizados en el DataGridView
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontraron datos para modificar.");
                         }
                     }
-                    catch (MySqlException ex)
-                    {
-                        MessageBox.Show("Error en la base de datos: " + ex.Message);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error en la base de datos: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
         }
 
         private void btnBusc_Click(object sender, EventArgs e)
         {
+            string codigo = cmbEspecialidad.SelectedItem?.ToString().Trim();
+
+            if (string.IsNullOrEmpty(codigo))
             {
-                string codigo = cmbEspecialidad.SelectedItem?.ToString().Trim();
+                MessageBox.Show("Por favor, seleccione un código.");
+                return;
+            }
 
-                if (string.IsNullOrEmpty(codigo))
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                if (connection == null) return;
+
+                string query = "SELECT nombreEspecialidad, descripcionEspecialidad, estadoEspecialidad FROM especialidad WHERE especialidadID = @EspecialidadID";
+
+                try
                 {
-                    MessageBox.Show("Por favor, seleccione un código de especialidad.");
-                    return;
-                }
-
-                // Busca la especialidad en la base de datos
-                DatabaseConnection dbConnection = new DatabaseConnection();
-                using (MySqlConnection connection = dbConnection.GetConnection())
-                {
-                    if (connection == null) return;
-
-                    string query = "SELECT nombreEspecialidad, descripcionEspecialidad, estadoEspecialidad FROM especialidad WHERE especialidadID = @EspecialidadID";
-
-                    try
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
-                        using (MySqlCommand command = new MySqlCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@EspecialidadID", codigo);
+                        command.Parameters.AddWithValue("@EspecialidadID", codigo);
 
-                            using (MySqlDataReader reader = command.ExecuteReader())
+
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
                             {
-                                if (reader.Read())
-                                {
-                                    txtNom.Text = reader["nombreEspecialidad"].ToString();
-                                    txtDes.Text = reader["descripcionEspecialidad"].ToString();
-                                    txtEstado.Text = reader["estadoEspecialidad"].ToString();
-                                    MessageBox.Show("Datos Encontrados.");
-                                }
-                                else
-                                {
-                                    MessageBox.Show("No se encontraron datos.");
-                                    txtNom.Clear();
-                                    txtDes.Clear();
-                                    txtEstado.Clear();
-                                }
+                                txtNom.Text = reader["nombreEspecialidad"].ToString();
+                                txtDes.Text = reader["descripcionEspecialidad"].ToString();
+                                txtEstado.Text = reader["estadoEspecialidad"].ToString();
+                                MessageBox.Show("Datos Encontrados.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontraron datos.");
+                                txtNom.Clear();
+                                txtDes.Clear();
+                                txtEstado.Clear();
                             }
                         }
                     }
-                    catch (MySqlException ex)
-                    {
-                        MessageBox.Show("Error en la base de datos: " + ex.Message);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error en la base de datos: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
         }
+
+        private void CargarDatosEspecialidad()
+        {
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                if (connection == null) return;
+
+                string query = "SELECT * FROM especialidad";
+
+                try
+                {
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error en la base de datos: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void CmbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Lógica para manejar el cambio de selección en el ComboBox
+        }
+
+         
+  
+
+        private void cmbEspecialidad_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-
-
-

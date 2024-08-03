@@ -229,7 +229,7 @@ namespace clinica
             "3",
             "4",
             "5"});
-            this.CmbGenero.Location = new System.Drawing.Point(318, 112);
+            this.CmbGenero.Location = new System.Drawing.Point(318, 114);
             this.CmbGenero.MaxDropDownItems = 4;
             this.CmbGenero.MouseState = MaterialSkin.MouseState.OUT;
             this.CmbGenero.Name = "CmbGenero";
