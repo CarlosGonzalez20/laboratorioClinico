@@ -44,10 +44,12 @@ namespace clinica
             this.direccionPaciente = new System.Windows.Forms.TextBox();
             this.sexoPaciente = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tipoUsuario = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.contraseñaPaciente = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.estatusPaciente = new System.Windows.Forms.GroupBox();
-            this.estadoInactivo = new System.Windows.Forms.RadioButton();
+            this.estatusInactivo = new System.Windows.Forms.RadioButton();
             this.estatusActivo = new System.Windows.Forms.RadioButton();
             this.fechaIngPaciente = new System.Windows.Forms.DateTimePicker();
             this.fechaNacPaciente = new System.Windows.Forms.DateTimePicker();
@@ -77,8 +79,6 @@ namespace clinica
             this.modificarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.ingresarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.infoPacientes = new System.Windows.Forms.DataGridView();
-            this.tipoUsuario = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.estatusPaciente.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -250,11 +250,30 @@ namespace clinica
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(957, 301);
+            this.groupBox1.Size = new System.Drawing.Size(967, 301);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del paciente";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
+            // 
+            // tipoUsuario
+            // 
+            this.tipoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tipoUsuario.FormattingEnabled = true;
+            this.tipoUsuario.Location = new System.Drawing.Point(165, 265);
+            this.tipoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tipoUsuario.Name = "tipoUsuario";
+            this.tipoUsuario.Size = new System.Drawing.Size(100, 24);
+            this.tipoUsuario.TabIndex = 46;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(161, 245);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 17);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Tipo de usuario";
             // 
             // contraseñaPaciente
             // 
@@ -275,7 +294,7 @@ namespace clinica
             // 
             // estatusPaciente
             // 
-            this.estatusPaciente.Controls.Add(this.estadoInactivo);
+            this.estatusPaciente.Controls.Add(this.estatusInactivo);
             this.estatusPaciente.Controls.Add(this.estatusActivo);
             this.estatusPaciente.Location = new System.Drawing.Point(789, 138);
             this.estatusPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -286,18 +305,18 @@ namespace clinica
             this.estatusPaciente.TabStop = false;
             this.estatusPaciente.Text = "Estatus del Paciente";
             // 
-            // estadoInactivo
+            // estatusInactivo
             // 
-            this.estadoInactivo.AutoSize = true;
-            this.estadoInactivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.estadoInactivo.Location = new System.Drawing.Point(45, 60);
-            this.estadoInactivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.estadoInactivo.Name = "estadoInactivo";
-            this.estadoInactivo.Size = new System.Drawing.Size(77, 21);
-            this.estadoInactivo.TabIndex = 40;
-            this.estadoInactivo.TabStop = true;
-            this.estadoInactivo.Text = "Inactivo";
-            this.estadoInactivo.UseVisualStyleBackColor = true;
+            this.estatusInactivo.AutoSize = true;
+            this.estatusInactivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estatusInactivo.Location = new System.Drawing.Point(45, 60);
+            this.estatusInactivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.estatusInactivo.Name = "estatusInactivo";
+            this.estatusInactivo.Size = new System.Drawing.Size(77, 21);
+            this.estatusInactivo.TabIndex = 40;
+            this.estatusInactivo.TabStop = true;
+            this.estatusInactivo.Text = "Inactivo";
+            this.estatusInactivo.UseVisualStyleBackColor = true;
             // 
             // estatusActivo
             // 
@@ -520,7 +539,7 @@ namespace clinica
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(301, 135);
+            this.groupBox2.Size = new System.Drawing.Size(328, 135);
             this.groupBox2.TabIndex = 35;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mantenimiento";
@@ -619,30 +638,11 @@ namespace clinica
             this.infoPacientes.Size = new System.Drawing.Size(957, 316);
             this.infoPacientes.TabIndex = 36;
             // 
-            // tipoUsuario
-            // 
-            this.tipoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tipoUsuario.FormattingEnabled = true;
-            this.tipoUsuario.Location = new System.Drawing.Point(165, 265);
-            this.tipoUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tipoUsuario.Name = "tipoUsuario";
-            this.tipoUsuario.Size = new System.Drawing.Size(100, 24);
-            this.tipoUsuario.TabIndex = 46;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(161, 245);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 17);
-            this.label11.TabIndex = 45;
-            this.label11.Text = "Tipo de usuario";
-            // 
             // datosPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 884);
+            this.ClientSize = new System.Drawing.Size(1022, 884);
             this.Controls.Add(this.infoPacientes);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
@@ -704,7 +704,7 @@ namespace clinica
         private System.Windows.Forms.TextBox telefonoEmergencias;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox estatusPaciente;
-        private System.Windows.Forms.RadioButton estadoInactivo;
+        private System.Windows.Forms.RadioButton estatusInactivo;
         private System.Windows.Forms.RadioButton estatusActivo;
         private System.Windows.Forms.DateTimePicker fechaIngPaciente;
         private System.Windows.Forms.DateTimePicker fechaNacPaciente;

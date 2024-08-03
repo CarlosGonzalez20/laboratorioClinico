@@ -170,31 +170,81 @@ namespace clinica
 
         private void buscarPaciente_Click(object sender, EventArgs e)
         {
-            CargarDatosPacientes();
-            /*string idIngresado = expedienteNo.Text.Trim();
+CargarDatosPacientes();
+    DatabaseConnection dbConnection = new DatabaseConnection();
+    using (MySqlConnection connection = dbConnection.GetConnection())
+    {
+        if (connection == null) return; // Verifica si la conexión fue exitosa
 
-            if (string.IsNullOrEmpty(idIngresado))
+        string expedienteID = expedienteNo.Text.Trim();
+
+        if (string.IsNullOrEmpty(expedienteID))
+        {
+            MessageBox.Show("Por favor, ingrese un número de expediente.");
+            return;
+        }
+
+        string query = "SELECT * FROM paciente WHERE pacienteID = @pacienteID";
+
+        try
+        {
+            using (MySqlCommand command = new MySqlCommand(query, connection))
             {
-                MessageBox.Show("Por favor, ingrese un ID.");
-                return;
-            }
-            int idColumnaIndex = 1;
-            bool filaEncontrada = false;
-            foreach (DataGridViewRow row in infoPacientes.Rows)
-            {
-                if (row.Cells[idColumnaIndex].Value != null && row.Cells[idColumnaIndex].Value.ToString() == idIngresado)
+                command.Parameters.AddWithValue("@pacienteID", expedienteID);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
                 {
-                    infoPacientes.CurrentCell = row.Cells[0];
-                    row.Selected = true;
-                    infoPacientes.FirstDisplayedScrollingRowIndex = row.Index;
-                    filaEncontrada = true;
-                    break;
+                    if (reader.Read())
+                    {
+                        tipoUsuario.SelectedItem = reader["tipoUsuarioID"].ToString();
+                        documentoIdentificacion.Text = reader["numeroDocumento"].ToString();
+                        nombresPaciente.Text = reader["nombrePaciente"].ToString();
+                        apellidosPaciente.Text = reader["apellidoPaciente"].ToString();
+                        fechaNacPaciente.Value = reader.GetDateTime("fechaNacimientoPaciente");
+                        fechaIngPaciente.Value = reader.GetDateTime("fechaRegistro");
+                        telefonoPaciente.Text = reader["telefonoPaciente"].ToString();
+                        correoPaciente.Text = reader["emailPaciente"].ToString();
+                        tipoSangrePaciente.SelectedItem = reader["tipoSangrePaciente"].ToString();
+                        sexoPaciente.SelectedItem = reader["generoID"].ToString();
+                        direccionPaciente.Text = reader["direccionPaciente"].ToString();
+                        alergiasPaciente.Text = reader["alergiasPaciente"].ToString();
+                        medicamentosPaciente.Text = reader["medicamentosActualesPaciente"].ToString();
+                        nombreEmergencias.Text = reader["nombreContactoEmergencia"].ToString();
+                        telefonoEmergencias.Text = reader["telefonoContactoEmergencia"].ToString();
+                        relacionEmergencias.Text = reader["relacionContactoEmergencia"].ToString();
+                        seguroPaciente.Text = reader["proveedorSeguro"].ToString();
+
+                        string estadoPaciente = reader["estadoPaciente"].ToString();
+                        Console.WriteLine($"Estado Paciente: {estadoPaciente}"); // Para depuración
+                        if (estadoPaciente=="true") {
+                            estatusActivo.Checked = true; 
+                        } else if (estadoPaciente=="false") {
+                            estatusInactivo.Checked = true;
+                        }
+
+                        // Seleccionar la fila en el DataGridView
+                        foreach (DataGridViewRow row in infoPacientes.Rows)
+                        {
+                            if (row.Cells["pacienteID"].Value.ToString() == expedienteID)
+                            {
+                                row.Selected = true;
+                                infoPacientes.FirstDisplayedScrollingRowIndex = row.Index;
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró un paciente con ese número de expediente.");
+                    }
                 }
             }
-            if (!filaEncontrada)
-            {
-                MessageBox.Show("No se encontró ninguna fila con el ID proporcionado.");
-            }*/
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Error al buscar el paciente: {ex.Message}");
+        }
+    }
         }
 
         private void ingresarPaciente_Click(object sender, EventArgs e)
@@ -325,7 +375,8 @@ namespace clinica
                 MessageBox.Show("ID inválido.");
                 return;
             }
-            string query = "DELETE FROM paciente WHERE pacienteID = @id";
+
+            string query = "UPDATE paciente SET estadoPaciente = 0 WHERE pacienteID = @id";
             DatabaseConnection dbConnection = new DatabaseConnection();
             using (MySqlConnection connection = dbConnection.GetConnection())
             {
@@ -343,7 +394,7 @@ namespace clinica
                         int filasAfectadas = command.ExecuteNonQuery();
                         if (filasAfectadas > 0)
                         {
-                            MessageBox.Show("Registro eliminado correctamente.");
+                            MessageBox.Show("El estado del paciente se ha actualizado a inactivo.");
                             CargarDatosPacientes();
                         }
                         else
@@ -354,10 +405,9 @@ namespace clinica
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error al eliminar el registro: {ex.Message}");
+                    MessageBox.Show($"Error al actualizar el estado del paciente: {ex.Message}");
                 }
             }
-            CargarDatosPacientes();
         }
 
         private void modificarPaciente_Click(object sender, EventArgs e)
