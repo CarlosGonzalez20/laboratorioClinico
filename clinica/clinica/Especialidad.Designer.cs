@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace clinica
 {
     partial class Especialidad
@@ -40,10 +42,10 @@ namespace clinica
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtNo = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.txtNom = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.txtDes = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            this.txtEsta = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.txtEstado = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.cmbEspecialidad = new MaterialSkin.Controls.MaterialComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,9 +58,9 @@ namespace clinica
             this.groupBox1.Controls.Add(this.btnMod);
             this.groupBox1.Controls.Add(this.btnElim);
             this.groupBox1.Controls.Add(this.btnIng);
-            this.groupBox1.Location = new System.Drawing.Point(324, 437);
+            this.groupBox1.Location = new System.Drawing.Point(484, 485);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(472, 103);
+            this.groupBox1.Size = new System.Drawing.Size(371, 177);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimiento";
@@ -70,7 +72,7 @@ namespace clinica
             this.btnBusc.Depth = 0;
             this.btnBusc.HighEmphasis = true;
             this.btnBusc.Icon = null;
-            this.btnBusc.Location = new System.Drawing.Point(353, 38);
+            this.btnBusc.Location = new System.Drawing.Point(206, 99);
             this.btnBusc.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnBusc.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnBusc.Name = "btnBusc";
@@ -81,6 +83,7 @@ namespace clinica
             this.btnBusc.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnBusc.UseAccentColor = false;
             this.btnBusc.UseVisualStyleBackColor = true;
+            this.btnBusc.Click += new System.EventHandler(this.btnBusc_Click);
             // 
             // btnMod
             // 
@@ -89,7 +92,7 @@ namespace clinica
             this.btnMod.Depth = 0;
             this.btnMod.HighEmphasis = true;
             this.btnMod.Icon = null;
-            this.btnMod.Location = new System.Drawing.Point(246, 38);
+            this.btnMod.Location = new System.Drawing.Point(51, 99);
             this.btnMod.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnMod.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMod.Name = "btnMod";
@@ -100,6 +103,7 @@ namespace clinica
             this.btnMod.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnMod.UseAccentColor = false;
             this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // btnElim
             // 
@@ -108,7 +112,7 @@ namespace clinica
             this.btnElim.Depth = 0;
             this.btnElim.HighEmphasis = true;
             this.btnElim.Icon = null;
-            this.btnElim.Location = new System.Drawing.Point(150, 38);
+            this.btnElim.Location = new System.Drawing.Point(206, 38);
             this.btnElim.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnElim.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnElim.Name = "btnElim";
@@ -119,6 +123,7 @@ namespace clinica
             this.btnElim.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnElim.UseAccentColor = false;
             this.btnElim.UseVisualStyleBackColor = true;
+            this.btnElim.Click += new System.EventHandler(this.btnElim_Click);
             // 
             // btnIng
             // 
@@ -138,13 +143,14 @@ namespace clinica
             this.btnIng.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnIng.UseAccentColor = false;
             this.btnIng.UseVisualStyleBackColor = true;
+            this.btnIng.Click += new System.EventHandler(this.btnIng_Click);
             // 
             // materialLabel4
             // 
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(455, 380);
+            this.materialLabel4.Location = new System.Drawing.Point(519, 386);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(58, 19);
@@ -156,7 +162,7 @@ namespace clinica
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(392, 296);
+            this.materialLabel3.Location = new System.Drawing.Point(456, 302);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(209, 19);
@@ -166,19 +172,20 @@ namespace clinica
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 90);
+            this.pictureBox1.Location = new System.Drawing.Point(87, 90);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(344, 315);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // materialLabel2
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(417, 114);
+            this.materialLabel2.Location = new System.Drawing.Point(481, 134);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(159, 19);
@@ -190,53 +197,12 @@ namespace clinica
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(417, 206);
+            this.materialLabel1.Location = new System.Drawing.Point(481, 212);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(159, 19);
             this.materialLabel1.TabIndex = 22;
             this.materialLabel1.Text = "Nombre Especialidad: ";
-            // 
-            // txtNo
-            // 
-            this.txtNo.AllowPromptAsInput = true;
-            this.txtNo.AnimateReadOnly = false;
-            this.txtNo.AsciiOnly = false;
-            this.txtNo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtNo.BeepOnError = false;
-            this.txtNo.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txtNo.Depth = 0;
-            this.txtNo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtNo.HidePromptOnLeave = false;
-            this.txtNo.HideSelection = true;
-            this.txtNo.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.txtNo.LeadingIcon = null;
-            this.txtNo.Location = new System.Drawing.Point(638, 114);
-            this.txtNo.Mask = "";
-            this.txtNo.MaxLength = 32767;
-            this.txtNo.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtNo.Name = "txtNo";
-            this.txtNo.PasswordChar = '\0';
-            this.txtNo.PrefixSuffixText = null;
-            this.txtNo.PromptChar = '_';
-            this.txtNo.ReadOnly = false;
-            this.txtNo.RejectInputOnFirstFailure = false;
-            this.txtNo.ResetOnPrompt = true;
-            this.txtNo.ResetOnSpace = true;
-            this.txtNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtNo.SelectedText = "";
-            this.txtNo.SelectionLength = 0;
-            this.txtNo.SelectionStart = 0;
-            this.txtNo.ShortcutsEnabled = true;
-            this.txtNo.Size = new System.Drawing.Size(250, 48);
-            this.txtNo.SkipLiterals = true;
-            this.txtNo.TabIndex = 28;
-            this.txtNo.TabStop = false;
-            this.txtNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtNo.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txtNo.TrailingIcon = null;
-            this.txtNo.UseSystemPasswordChar = false;
-            this.txtNo.ValidatingType = null;
             // 
             // txtNom
             // 
@@ -247,12 +213,12 @@ namespace clinica
             this.txtNom.BeepOnError = false;
             this.txtNom.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtNom.Depth = 0;
-            this.txtNom.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNom.HidePromptOnLeave = false;
             this.txtNom.HideSelection = true;
             this.txtNom.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtNom.LeadingIcon = null;
-            this.txtNom.Location = new System.Drawing.Point(638, 206);
+            this.txtNom.Location = new System.Drawing.Point(702, 212);
             this.txtNom.Mask = "";
             this.txtNom.MaxLength = 32767;
             this.txtNom.MouseState = MaterialSkin.MouseState.OUT;
@@ -278,6 +244,7 @@ namespace clinica
             this.txtNom.TrailingIcon = null;
             this.txtNom.UseSystemPasswordChar = false;
             this.txtNom.ValidatingType = null;
+            this.txtNom.Click += new System.EventHandler(this.txtNom_Click);
             // 
             // txtDes
             // 
@@ -288,12 +255,12 @@ namespace clinica
             this.txtDes.BeepOnError = false;
             this.txtDes.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtDes.Depth = 0;
-            this.txtDes.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtDes.HidePromptOnLeave = false;
             this.txtDes.HideSelection = true;
             this.txtDes.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtDes.LeadingIcon = null;
-            this.txtDes.Location = new System.Drawing.Point(638, 296);
+            this.txtDes.Location = new System.Drawing.Point(702, 302);
             this.txtDes.Mask = "";
             this.txtDes.MaxLength = 32767;
             this.txtDes.MouseState = MaterialSkin.MouseState.OUT;
@@ -320,67 +287,94 @@ namespace clinica
             this.txtDes.UseSystemPasswordChar = false;
             this.txtDes.ValidatingType = null;
             // 
-            // txtEsta
+            // txtEstado
             // 
-            this.txtEsta.AllowPromptAsInput = true;
-            this.txtEsta.AnimateReadOnly = false;
-            this.txtEsta.AsciiOnly = false;
-            this.txtEsta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtEsta.BeepOnError = false;
-            this.txtEsta.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txtEsta.Depth = 0;
-            this.txtEsta.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtEsta.HidePromptOnLeave = false;
-            this.txtEsta.HideSelection = true;
-            this.txtEsta.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.txtEsta.LeadingIcon = null;
-            this.txtEsta.Location = new System.Drawing.Point(638, 368);
-            this.txtEsta.Mask = "";
-            this.txtEsta.MaxLength = 32767;
-            this.txtEsta.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtEsta.Name = "txtEsta";
-            this.txtEsta.PasswordChar = '\0';
-            this.txtEsta.PrefixSuffixText = null;
-            this.txtEsta.PromptChar = '_';
-            this.txtEsta.ReadOnly = false;
-            this.txtEsta.RejectInputOnFirstFailure = false;
-            this.txtEsta.ResetOnPrompt = true;
-            this.txtEsta.ResetOnSpace = true;
-            this.txtEsta.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtEsta.SelectedText = "";
-            this.txtEsta.SelectionLength = 0;
-            this.txtEsta.SelectionStart = 0;
-            this.txtEsta.ShortcutsEnabled = true;
-            this.txtEsta.Size = new System.Drawing.Size(250, 48);
-            this.txtEsta.SkipLiterals = true;
-            this.txtEsta.TabIndex = 31;
-            this.txtEsta.TabStop = false;
-            this.txtEsta.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtEsta.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txtEsta.TrailingIcon = null;
-            this.txtEsta.UseSystemPasswordChar = false;
-            this.txtEsta.ValidatingType = null;
+            this.txtEstado.AllowPromptAsInput = true;
+            this.txtEstado.AnimateReadOnly = false;
+            this.txtEstado.AsciiOnly = false;
+            this.txtEstado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtEstado.BeepOnError = false;
+            this.txtEstado.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtEstado.Depth = 0;
+            this.txtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEstado.HidePromptOnLeave = false;
+            this.txtEstado.HideSelection = true;
+            this.txtEstado.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.txtEstado.LeadingIcon = null;
+            this.txtEstado.Location = new System.Drawing.Point(702, 386);
+            this.txtEstado.Mask = "";
+            this.txtEstado.MaxLength = 32767;
+            this.txtEstado.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.PasswordChar = '\0';
+            this.txtEstado.PrefixSuffixText = null;
+            this.txtEstado.PromptChar = '_';
+            this.txtEstado.ReadOnly = false;
+            this.txtEstado.RejectInputOnFirstFailure = false;
+            this.txtEstado.ResetOnPrompt = true;
+            this.txtEstado.ResetOnSpace = true;
+            this.txtEstado.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtEstado.SelectedText = "";
+            this.txtEstado.SelectionLength = 0;
+            this.txtEstado.SelectionStart = 0;
+            this.txtEstado.ShortcutsEnabled = true;
+            this.txtEstado.Size = new System.Drawing.Size(250, 48);
+            this.txtEstado.SkipLiterals = true;
+            this.txtEstado.TabIndex = 33;
+            this.txtEstado.TabStop = false;
+            this.txtEstado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEstado.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtEstado.TrailingIcon = null;
+            this.txtEstado.UseSystemPasswordChar = false;
+            this.txtEstado.ValidatingType = null;
+            // 
+            // cmbEspecialidad
+            // 
+            this.cmbEspecialidad.AutoResize = false;
+            this.cmbEspecialidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmbEspecialidad.Depth = 0;
+            this.cmbEspecialidad.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cmbEspecialidad.DropDownHeight = 174;
+            this.cmbEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEspecialidad.DropDownWidth = 121;
+            this.cmbEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbEspecialidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cmbEspecialidad.FormattingEnabled = true;
+            this.cmbEspecialidad.IntegralHeight = false;
+            this.cmbEspecialidad.ItemHeight = 43;
+            this.cmbEspecialidad.Items.AddRange(new object[] {
+            "Seleccione un numero ",
+            "100",
+            "200",
+            "300"});
+            this.cmbEspecialidad.Location = new System.Drawing.Point(702, 121);
+            this.cmbEspecialidad.MaxDropDownItems = 4;
+            this.cmbEspecialidad.MouseState = MaterialSkin.MouseState.OUT;
+            this.cmbEspecialidad.Name = "cmbEspecialidad";
+            this.cmbEspecialidad.Size = new System.Drawing.Size(250, 49);
+            this.cmbEspecialidad.StartIndex = 0;
+            this.cmbEspecialidad.TabIndex = 34;
+            this.cmbEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cmbEspecialidad_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(930, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(1002, 224);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(362, 326);
-            this.dataGridView1.TabIndex = 32;
+            this.dataGridView1.Size = new System.Drawing.Size(580, 396);
+            this.dataGridView1.TabIndex = 35;
             // 
             // Especialidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1325, 557);
+            this.ClientSize = new System.Drawing.Size(1647, 761);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtEsta);
+            this.Controls.Add(this.cmbEspecialidad);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtDes);
             this.Controls.Add(this.txtNom);
-            this.Controls.Add(this.txtNo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.materialLabel3);
@@ -389,7 +383,7 @@ namespace clinica
             this.Controls.Add(this.materialLabel1);
             this.Name = "Especialidad";
             this.Text = "Especialidad";
-            this.Load += new System.EventHandler(this.Especialidad_Load);
+            this.Load += new System.EventHandler(this.Especialidad_load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -398,6 +392,29 @@ namespace clinica
             this.PerformLayout();
 
         }
+
+        private void cmbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Especialidad_load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
 
         #endregion
 
@@ -411,10 +428,10 @@ namespace clinica
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialMaskedTextBox txtNo;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtNom;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtDes;
-        private MaterialSkin.Controls.MaterialMaskedTextBox txtEsta;
+        private MaterialSkin.Controls.MaterialMaskedTextBox txtEstado;
+        private MaterialSkin.Controls.MaterialComboBox cmbEspecialidad;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
