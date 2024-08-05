@@ -1,6 +1,5 @@
 # Ignore Visual Studio .suo files
 *.suo
-*.vs
 
 # Ignore cache files and directories
 *.cache
