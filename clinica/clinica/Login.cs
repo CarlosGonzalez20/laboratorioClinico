@@ -189,6 +189,7 @@ namespace clinica
                 }
             }
 
+
             return isValid;
         }
     }
