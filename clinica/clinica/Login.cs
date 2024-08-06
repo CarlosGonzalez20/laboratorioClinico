@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
+using MySql.Data.MySqlClient;
 
 namespace clinica
 {
@@ -20,7 +21,7 @@ namespace clinica
 
         private void llenarComboArea()
         {
-            List<string> items = new List<string> { "Pacientes", "Médicos", "Clínicas","Solicitud Cita", "Empleados","Tipo Empleado","Cargo Per. Lab.","Detalle Factura","Equipo Laboratorio","Area Especialidad","Género","Laboratorio","Medicina","Muestras","Personal Lab.","Proveedores"};
+            List<string> items = new List<string> { "Pacientes", "Médicos", "Clínicas", "Solicitud Cita", "Empleados", "Tipo Empleado", "Cargo Per. Lab.", "Detalle Factura", "Equipo Laboratorio", "Area Especialidad", "Género", "Laboratorio", "Medicina", "Muestras", "Personal Lab.", "Proveedores" };
             areaUsuario.Items.Clear();
             foreach (var item in items)
             {
@@ -40,7 +41,7 @@ namespace clinica
 
         private void materialComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void materialLabel3_Click(object sender, EventArgs e)
@@ -60,6 +61,15 @@ namespace clinica
                 if (areaUsuario.SelectedItem == null)
                 {
                     MessageBox.Show("Por favor, selecciona un elemento del combo box.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                string correo = usuario.Text;
+                string contrasena = contraseña.Text;
+
+                if (!ValidarCredenciales(correo, contrasena))
+                {
+                    MessageBox.Show("Correo o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -138,11 +148,48 @@ namespace clinica
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void cambiarContraseña_Click(object sender, EventArgs e)
         {
             Cambio_de_Contraseña cambio = new Cambio_de_Contraseña();
             cambio.Show();
+        }
+
+
+        private bool ValidarCredenciales(string correo, string contrasena)
+        {
+            bool isValid = false;
+            string query = "SELECT COUNT(*) FROM login WHERE correo = @correo AND contrasena = @contrasena";
+
+
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@correo", correo);
+                cmd.Parameters.AddWithValue("@contrasena", contrasena);
+
+                try
+                {
+                    // La conexión se abre al llamar a ExecuteScalar, no es necesario abrirla explícitamente aquí
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    if (count > 0)
+                    {
+                        isValid = true;
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    // Manejo específico de errores de MySQL
+                    MessageBox.Show("Error de base de datos: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    // Manejo general de excepciones
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+            return isValid;
         }
     }
 }
