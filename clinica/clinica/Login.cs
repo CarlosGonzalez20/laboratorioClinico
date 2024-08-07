@@ -212,5 +212,6 @@ namespace clinica
             return isValid;
 
         }
+
     }
 }
