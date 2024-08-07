@@ -43,56 +43,51 @@ namespace clinica
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioInactivo = new System.Windows.Forms.RadioButton();
             this.radioActivo = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.infoCargo = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoCargo)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Descripcion
             // 
-            this.Descripcion.Location = new System.Drawing.Point(21, 241);
-            this.Descripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.Descripcion.Location = new System.Drawing.Point(16, 196);
             this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Size = new System.Drawing.Size(248, 22);
+            this.Descripcion.Size = new System.Drawing.Size(187, 20);
             this.Descripcion.TabIndex = 15;
             // 
             // idCargo
             // 
-            this.idCargo.Location = new System.Drawing.Point(115, 117);
-            this.idCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.idCargo.Location = new System.Drawing.Point(86, 95);
             this.idCargo.Name = "idCargo";
-            this.idCargo.Size = new System.Drawing.Size(41, 22);
+            this.idCargo.Size = new System.Drawing.Size(32, 20);
             this.idCargo.TabIndex = 13;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 222);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(13, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 17);
+            this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Descripción";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 158);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(13, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Cargo";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(86, 120);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(64, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 17);
+            this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "ID";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -103,11 +98,11 @@ namespace clinica
             this.groupBox1.Controls.Add(this.modificarEmpleado);
             this.groupBox1.Controls.Add(this.eliminarCargo);
             this.groupBox1.Controls.Add(this.ingresarCargo);
-            this.groupBox1.Location = new System.Drawing.Point(277, 103);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(208, 84);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(197, 287);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(148, 233);
             this.groupBox1.TabIndex = 58;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimiento";
@@ -119,8 +114,8 @@ namespace clinica
             this.buscarCargo.Depth = 0;
             this.buscarCargo.HighEmphasis = true;
             this.buscarCargo.Icon = null;
-            this.buscarCargo.Location = new System.Drawing.Point(51, 166);
-            this.buscarCargo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.buscarCargo.Location = new System.Drawing.Point(38, 135);
+            this.buscarCargo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.buscarCargo.MouseState = MaterialSkin.MouseState.HOVER;
             this.buscarCargo.Name = "buscarCargo";
             this.buscarCargo.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -130,6 +125,7 @@ namespace clinica
             this.buscarCargo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buscarCargo.UseAccentColor = false;
             this.buscarCargo.UseVisualStyleBackColor = true;
+            this.buscarCargo.Click += new System.EventHandler(this.buscarCargo_Click);
             // 
             // modificarEmpleado
             // 
@@ -138,8 +134,8 @@ namespace clinica
             this.modificarEmpleado.Depth = 0;
             this.modificarEmpleado.HighEmphasis = true;
             this.modificarEmpleado.Icon = null;
-            this.modificarEmpleado.Location = new System.Drawing.Point(51, 228);
-            this.modificarEmpleado.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.modificarEmpleado.Location = new System.Drawing.Point(38, 185);
+            this.modificarEmpleado.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.modificarEmpleado.MouseState = MaterialSkin.MouseState.HOVER;
             this.modificarEmpleado.Name = "modificarEmpleado";
             this.modificarEmpleado.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -157,8 +153,8 @@ namespace clinica
             this.eliminarCargo.Depth = 0;
             this.eliminarCargo.HighEmphasis = true;
             this.eliminarCargo.Icon = null;
-            this.eliminarCargo.Location = new System.Drawing.Point(51, 103);
-            this.eliminarCargo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.eliminarCargo.Location = new System.Drawing.Point(38, 84);
+            this.eliminarCargo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.eliminarCargo.MouseState = MaterialSkin.MouseState.HOVER;
             this.eliminarCargo.Name = "eliminarCargo";
             this.eliminarCargo.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -168,6 +164,7 @@ namespace clinica
             this.eliminarCargo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.eliminarCargo.UseAccentColor = false;
             this.eliminarCargo.UseVisualStyleBackColor = true;
+            this.eliminarCargo.Click += new System.EventHandler(this.eliminarCargo_Click);
             // 
             // ingresarCargo
             // 
@@ -176,8 +173,8 @@ namespace clinica
             this.ingresarCargo.Depth = 0;
             this.ingresarCargo.HighEmphasis = true;
             this.ingresarCargo.Icon = null;
-            this.ingresarCargo.Location = new System.Drawing.Point(51, 38);
-            this.ingresarCargo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ingresarCargo.Location = new System.Drawing.Point(38, 31);
+            this.ingresarCargo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ingresarCargo.MouseState = MaterialSkin.MouseState.HOVER;
             this.ingresarCargo.Name = "ingresarCargo";
             this.ingresarCargo.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -191,19 +188,17 @@ namespace clinica
             // 
             // cargos
             // 
-            this.cargos.Location = new System.Drawing.Point(21, 177);
-            this.cargos.Margin = new System.Windows.Forms.Padding(4);
+            this.cargos.Location = new System.Drawing.Point(16, 144);
             this.cargos.Name = "cargos";
-            this.cargos.Size = new System.Drawing.Size(248, 22);
+            this.cargos.Size = new System.Drawing.Size(187, 20);
             this.cargos.TabIndex = 59;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(-20, -18);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton1.Location = new System.Drawing.Point(-15, -15);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(110, 21);
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
             this.radioButton1.TabIndex = 60;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "radioButton1";
@@ -212,10 +207,9 @@ namespace clinica
             // radioInactivo
             // 
             this.radioInactivo.AutoSize = true;
-            this.radioInactivo.Location = new System.Drawing.Point(31, 49);
-            this.radioInactivo.Margin = new System.Windows.Forms.Padding(4);
+            this.radioInactivo.Location = new System.Drawing.Point(23, 40);
             this.radioInactivo.Name = "radioInactivo";
-            this.radioInactivo.Size = new System.Drawing.Size(77, 21);
+            this.radioInactivo.Size = new System.Drawing.Size(63, 17);
             this.radioInactivo.TabIndex = 61;
             this.radioInactivo.TabStop = true;
             this.radioInactivo.Text = "Inactivo";
@@ -224,43 +218,45 @@ namespace clinica
             // radioActivo
             // 
             this.radioActivo.AutoSize = true;
-            this.radioActivo.Location = new System.Drawing.Point(31, 20);
-            this.radioActivo.Margin = new System.Windows.Forms.Padding(4);
+            this.radioActivo.Location = new System.Drawing.Point(23, 16);
             this.radioActivo.Name = "radioActivo";
-            this.radioActivo.Size = new System.Drawing.Size(67, 21);
+            this.radioActivo.Size = new System.Drawing.Size(55, 17);
             this.radioActivo.TabIndex = 62;
             this.radioActivo.TabStop = true;
             this.radioActivo.Text = "Activo";
             this.radioActivo.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // infoCargo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(526, 103);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(343, 287);
-            this.dataGridView1.TabIndex = 63;
+            this.infoCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.infoCargo.Location = new System.Drawing.Point(394, 84);
+            this.infoCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.infoCargo.Name = "infoCargo";
+            this.infoCargo.RowHeadersWidth = 51;
+            this.infoCargo.RowTemplate.Height = 24;
+            this.infoCargo.Size = new System.Drawing.Size(257, 233);
+            this.infoCargo.TabIndex = 63;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.radioActivo);
             this.groupBox2.Controls.Add(this.radioInactivo);
-            this.groupBox2.Location = new System.Drawing.Point(66, 297);
+            this.groupBox2.Location = new System.Drawing.Point(50, 241);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(129, 83);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(97, 67);
             this.groupBox2.TabIndex = 64;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Estado";
             // 
             // Cargo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 403);
+            this.ClientSize = new System.Drawing.Size(663, 327);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.infoCargo);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.cargos);
             this.Controls.Add(this.groupBox1);
@@ -269,14 +265,12 @@ namespace clinica
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cargo";
-            this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Text = "Cargo Personal Laboratorio";
             this.Load += new System.EventHandler(this.Cargo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoCargo)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -299,7 +293,7 @@ namespace clinica
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioInactivo;
         private System.Windows.Forms.RadioButton radioActivo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView infoCargo;
         private System.Windows.Forms.GroupBox groupBox2;
     }
 }
