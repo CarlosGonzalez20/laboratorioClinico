@@ -31,26 +31,37 @@ namespace clinica
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nacimiento = new System.Windows.Forms.DateTimePicker();
+            this.apellido = new System.Windows.Forms.TextBox();
+            this.nombre = new System.Windows.Forms.TextBox();
+            this.numeroIdentificacion = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.horarioPer = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.horarioPersonal = new System.Windows.Forms.TextBox();
+            this.puestoPersonal = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lunes = new System.Windows.Forms.CheckBox();
+            this.domingo = new System.Windows.Forms.CheckBox();
+            this.martes = new System.Windows.Forms.CheckBox();
+            this.miercoles = new System.Windows.Forms.CheckBox();
+            this.jueves = new System.Windows.Forms.CheckBox();
+            this.sabado = new System.Windows.Forms.CheckBox();
+            this.viernes = new System.Windows.Forms.CheckBox();
+            this.estatusPaciente = new System.Windows.Forms.GroupBox();
+            this.estadoInactivo = new System.Windows.Forms.RadioButton();
+            this.estatusActivo = new System.Windows.Forms.RadioButton();
+            this.correoElectronico = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.telefono = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.sexoPer = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.fechaContratacion = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,45 +70,32 @@ namespace clinica
             this.buscarPersonal = new MaterialSkin.Controls.MaterialButton();
             this.modificarPersonal = new MaterialSkin.Controls.MaterialButton();
             this.ingresarPersonal = new MaterialSkin.Controls.MaterialButton();
-            this.estatusPaciente = new System.Windows.Forms.GroupBox();
-            this.estadoInactivo = new System.Windows.Forms.RadioButton();
-            this.estatusActivo = new System.Windows.Forms.RadioButton();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.infoPersonal = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.estatusPaciente.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.estatusPaciente.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.infoPersonal)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.nacimiento);
+            this.groupBox1.Controls.Add(this.apellido);
+            this.groupBox1.Controls.Add(this.nombre);
+            this.groupBox1.Controls.Add(this.numeroIdentificacion);
+            this.groupBox1.Controls.Add(this.ID);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(8, 94);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(6, 76);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(283, 395);
+            this.groupBox1.Size = new System.Drawing.Size(212, 321);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos personales";
@@ -105,239 +103,340 @@ namespace clinica
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 313);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(3, 254);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 17);
+            this.label6.Size = new System.Drawing.Size(93, 13);
             this.label6.TabIndex = 42;
             this.label6.Text = "Fecha Nacimiento";
             // 
-            // dateTimePicker1
+            // nacimiento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(8, 331);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(248, 23);
-            this.dateTimePicker1.TabIndex = 41;
+            this.nacimiento.Location = new System.Drawing.Point(6, 269);
+            this.nacimiento.Margin = new System.Windows.Forms.Padding(2);
+            this.nacimiento.Name = "nacimiento";
+            this.nacimiento.Size = new System.Drawing.Size(187, 20);
+            this.nacimiento.TabIndex = 41;
             // 
-            // textBox4
+            // apellido
             // 
-            this.textBox4.Location = new System.Drawing.Point(8, 263);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(248, 23);
-            this.textBox4.TabIndex = 8;
+            this.apellido.Location = new System.Drawing.Point(6, 214);
+            this.apellido.Name = "apellido";
+            this.apellido.Size = new System.Drawing.Size(187, 20);
+            this.apellido.TabIndex = 8;
             // 
-            // textBox3
+            // nombre
             // 
-            this.textBox3.Location = new System.Drawing.Point(8, 193);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(248, 23);
-            this.textBox3.TabIndex = 7;
+            this.nombre.Location = new System.Drawing.Point(6, 157);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(187, 20);
+            this.nombre.TabIndex = 7;
             // 
-            // textBox2
+            // numeroIdentificacion
             // 
-            this.textBox2.Location = new System.Drawing.Point(8, 129);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(111, 23);
-            this.textBox2.TabIndex = 6;
+            this.numeroIdentificacion.Location = new System.Drawing.Point(6, 105);
+            this.numeroIdentificacion.Name = "numeroIdentificacion";
+            this.numeroIdentificacion.Size = new System.Drawing.Size(84, 20);
+            this.numeroIdentificacion.TabIndex = 6;
             // 
-            // textBox1
+            // ID
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 63);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 23);
-            this.textBox1.TabIndex = 5;
+            this.ID.Location = new System.Drawing.Point(132, 16);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(74, 20);
+            this.ID.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 244);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(3, 198);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Apellido";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(544, 31);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(408, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 17);
+            this.label4.Size = new System.Drawing.Size(91, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Fecha nacimiento";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 174);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 17);
+            this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 110);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 17);
+            this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "No.Identificación";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 43);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(108, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 17);
+            this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "No.Expediente";
+            this.label1.Text = "ID";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.horarioPersonal);
+            this.groupBox2.Controls.Add(this.puestoPersonal);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.estatusPaciente);
-            this.groupBox2.Controls.Add(this.horarioPer);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.correoElectronico);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.telefono);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.sexoPer);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
+            this.groupBox2.Controls.Add(this.fechaContratacion);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(299, 94);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(224, 76);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(740, 232);
+            this.groupBox2.Size = new System.Drawing.Size(555, 188);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Otros datos";
             // 
-            // horarioPer
+            // horarioPersonal
             // 
-            this.horarioPer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.horarioPer.FormattingEnabled = true;
-            this.horarioPer.Location = new System.Drawing.Point(160, 47);
-            this.horarioPer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.horarioPer.Name = "horarioPer";
-            this.horarioPer.Size = new System.Drawing.Size(100, 24);
-            this.horarioPer.TabIndex = 56;
+            this.horarioPersonal.Location = new System.Drawing.Point(120, 35);
+            this.horarioPersonal.Name = "horarioPersonal";
+            this.horarioPersonal.Size = new System.Drawing.Size(74, 20);
+            this.horarioPersonal.TabIndex = 67;
             // 
-            // textBox6
+            // puestoPersonal
             // 
-            this.textBox6.Location = new System.Drawing.Point(160, 110);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(183, 22);
-            this.textBox6.TabIndex = 53;
+            this.puestoPersonal.Location = new System.Drawing.Point(209, 38);
+            this.puestoPersonal.Name = "puestoPersonal";
+            this.puestoPersonal.Size = new System.Drawing.Size(72, 20);
+            this.puestoPersonal.TabIndex = 66;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lunes);
+            this.groupBox4.Controls.Add(this.domingo);
+            this.groupBox4.Controls.Add(this.martes);
+            this.groupBox4.Controls.Add(this.miercoles);
+            this.groupBox4.Controls.Add(this.jueves);
+            this.groupBox4.Controls.Add(this.sabado);
+            this.groupBox4.Controls.Add(this.viernes);
+            this.groupBox4.Location = new System.Drawing.Point(16, 125);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(506, 50);
+            this.groupBox4.TabIndex = 65;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Días que trabaja";
+            // 
+            // lunes
+            // 
+            this.lunes.AutoSize = true;
+            this.lunes.Location = new System.Drawing.Point(19, 19);
+            this.lunes.Name = "lunes";
+            this.lunes.Size = new System.Drawing.Size(55, 17);
+            this.lunes.TabIndex = 57;
+            this.lunes.Text = "Lunes";
+            this.lunes.UseVisualStyleBackColor = true;
+            // 
+            // domingo
+            // 
+            this.domingo.AutoSize = true;
+            this.domingo.Location = new System.Drawing.Point(426, 19);
+            this.domingo.Name = "domingo";
+            this.domingo.Size = new System.Drawing.Size(68, 17);
+            this.domingo.TabIndex = 63;
+            this.domingo.Text = "Domingo";
+            this.domingo.UseVisualStyleBackColor = true;
+            // 
+            // martes
+            // 
+            this.martes.AutoSize = true;
+            this.martes.Location = new System.Drawing.Point(83, 19);
+            this.martes.Name = "martes";
+            this.martes.Size = new System.Drawing.Size(58, 17);
+            this.martes.TabIndex = 58;
+            this.martes.Text = "Martes";
+            this.martes.UseVisualStyleBackColor = true;
+            // 
+            // miercoles
+            // 
+            this.miercoles.AutoSize = true;
+            this.miercoles.Location = new System.Drawing.Point(147, 19);
+            this.miercoles.Name = "miercoles";
+            this.miercoles.Size = new System.Drawing.Size(71, 17);
+            this.miercoles.TabIndex = 59;
+            this.miercoles.Text = "Miércoles";
+            this.miercoles.UseVisualStyleBackColor = true;
+            // 
+            // jueves
+            // 
+            this.jueves.AutoSize = true;
+            this.jueves.Location = new System.Drawing.Point(224, 19);
+            this.jueves.Name = "jueves";
+            this.jueves.Size = new System.Drawing.Size(60, 17);
+            this.jueves.TabIndex = 60;
+            this.jueves.Text = "Jueves";
+            this.jueves.UseVisualStyleBackColor = true;
+            // 
+            // sabado
+            // 
+            this.sabado.AutoSize = true;
+            this.sabado.Location = new System.Drawing.Point(357, 19);
+            this.sabado.Name = "sabado";
+            this.sabado.Size = new System.Drawing.Size(63, 17);
+            this.sabado.TabIndex = 62;
+            this.sabado.Text = "Sábado";
+            this.sabado.UseVisualStyleBackColor = true;
+            // 
+            // viernes
+            // 
+            this.viernes.AutoSize = true;
+            this.viernes.Location = new System.Drawing.Point(290, 19);
+            this.viernes.Name = "viernes";
+            this.viernes.Size = new System.Drawing.Size(61, 17);
+            this.viernes.TabIndex = 61;
+            this.viernes.Text = "Viernes";
+            this.viernes.UseVisualStyleBackColor = true;
+            // 
+            // estatusPaciente
+            // 
+            this.estatusPaciente.Controls.Add(this.estadoInactivo);
+            this.estatusPaciente.Controls.Add(this.estatusActivo);
+            this.estatusPaciente.Location = new System.Drawing.Point(403, 26);
+            this.estatusPaciente.Margin = new System.Windows.Forms.Padding(2);
+            this.estatusPaciente.Name = "estatusPaciente";
+            this.estatusPaciente.Padding = new System.Windows.Forms.Padding(2);
+            this.estatusPaciente.Size = new System.Drawing.Size(119, 81);
+            this.estatusPaciente.TabIndex = 57;
+            this.estatusPaciente.TabStop = false;
+            this.estatusPaciente.Text = "Estatus";
+            // 
+            // estadoInactivo
+            // 
+            this.estadoInactivo.AutoSize = true;
+            this.estadoInactivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estadoInactivo.Location = new System.Drawing.Point(34, 49);
+            this.estadoInactivo.Margin = new System.Windows.Forms.Padding(2);
+            this.estadoInactivo.Name = "estadoInactivo";
+            this.estadoInactivo.Size = new System.Drawing.Size(63, 17);
+            this.estadoInactivo.TabIndex = 40;
+            this.estadoInactivo.TabStop = true;
+            this.estadoInactivo.Text = "Inactivo";
+            this.estadoInactivo.UseVisualStyleBackColor = true;
+            // 
+            // estatusActivo
+            // 
+            this.estatusActivo.AutoSize = true;
+            this.estatusActivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.estatusActivo.Location = new System.Drawing.Point(34, 27);
+            this.estatusActivo.Margin = new System.Windows.Forms.Padding(2);
+            this.estatusActivo.Name = "estatusActivo";
+            this.estatusActivo.Size = new System.Drawing.Size(55, 17);
+            this.estatusActivo.TabIndex = 39;
+            this.estatusActivo.TabStop = true;
+            this.estatusActivo.Text = "Activo";
+            this.estatusActivo.UseVisualStyleBackColor = true;
+            // 
+            // correoElectronico
+            // 
+            this.correoElectronico.Location = new System.Drawing.Point(120, 89);
+            this.correoElectronico.Name = "correoElectronico";
+            this.correoElectronico.Size = new System.Drawing.Size(138, 20);
+            this.correoElectronico.TabIndex = 53;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(156, 90);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(117, 73);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 17);
+            this.label13.Size = new System.Drawing.Size(94, 13);
             this.label13.TabIndex = 52;
             this.label13.Text = "Correo Electrónico";
             // 
-            // comboBox1
+            // telefono
             // 
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(278, 42);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 24);
-            this.comboBox1.TabIndex = 51;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(8, 110);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(128, 22);
-            this.textBox8.TabIndex = 50;
+            this.telefono.Location = new System.Drawing.Point(6, 89);
+            this.telefono.Name = "telefono";
+            this.telefono.Size = new System.Drawing.Size(97, 20);
+            this.telefono.TabIndex = 50;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 90);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(3, 73);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 17);
+            this.label12.Size = new System.Drawing.Size(49, 13);
             this.label12.TabIndex = 49;
             this.label12.Text = "Telefono";
             // 
-            // comboBox2
+            // sexoPer
             // 
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(396, 43);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 24);
-            this.comboBox2.TabIndex = 48;
+            this.sexoPer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sexoPer.FormattingEnabled = true;
+            this.sexoPer.Location = new System.Drawing.Point(297, 35);
+            this.sexoPer.Margin = new System.Windows.Forms.Padding(2);
+            this.sexoPer.Name = "sexoPer";
+            this.sexoPer.Size = new System.Drawing.Size(76, 21);
+            this.sexoPer.TabIndex = 48;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(394, 25);
+            this.label11.Location = new System.Drawing.Point(296, 20);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 17);
+            this.label11.Size = new System.Drawing.Size(31, 13);
             this.label11.TabIndex = 47;
             this.label11.Text = "Sexo";
             // 
-            // dateTimePicker2
+            // fechaContratacion
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(9, 43);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(128, 22);
-            this.dateTimePicker2.TabIndex = 43;
+            this.fechaContratacion.Location = new System.Drawing.Point(7, 35);
+            this.fechaContratacion.Margin = new System.Windows.Forms.Padding(2);
+            this.fechaContratacion.Name = "fechaContratacion";
+            this.fechaContratacion.Size = new System.Drawing.Size(97, 20);
+            this.fechaContratacion.TabIndex = 43;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(274, 24);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(206, 20);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 17);
+            this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 44;
             this.label9.Text = "Puesto";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(156, 25);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(117, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 17);
+            this.label7.Size = new System.Drawing.Size(41, 13);
             this.label7.TabIndex = 8;
             this.label7.Text = "Horario";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(4, 23);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(3, 19);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 17);
+            this.label8.Size = new System.Drawing.Size(100, 13);
             this.label8.TabIndex = 7;
             this.label8.Text = "Fecha Contratación";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -348,11 +447,11 @@ namespace clinica
             this.groupBox3.Controls.Add(this.buscarPersonal);
             this.groupBox3.Controls.Add(this.modificarPersonal);
             this.groupBox3.Controls.Add(this.ingresarPersonal);
-            this.groupBox3.Location = new System.Drawing.Point(415, 358);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Location = new System.Drawing.Point(231, 290);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(424, 90);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(548, 73);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Mantenimiento";
@@ -366,8 +465,8 @@ namespace clinica
             this.eliminarPersonal.Depth = 0;
             this.eliminarPersonal.HighEmphasis = true;
             this.eliminarPersonal.Icon = null;
-            this.eliminarPersonal.Location = new System.Drawing.Point(121, 31);
-            this.eliminarPersonal.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.eliminarPersonal.Location = new System.Drawing.Point(156, 25);
+            this.eliminarPersonal.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.eliminarPersonal.MouseState = MaterialSkin.MouseState.HOVER;
             this.eliminarPersonal.Name = "eliminarPersonal";
             this.eliminarPersonal.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -377,6 +476,7 @@ namespace clinica
             this.eliminarPersonal.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.eliminarPersonal.UseAccentColor = false;
             this.eliminarPersonal.UseVisualStyleBackColor = true;
+            this.eliminarPersonal.Click += new System.EventHandler(this.eliminarPersonal_Click);
             // 
             // buscarPersonal
             // 
@@ -386,8 +486,8 @@ namespace clinica
             this.buscarPersonal.Depth = 0;
             this.buscarPersonal.HighEmphasis = true;
             this.buscarPersonal.Icon = null;
-            this.buscarPersonal.Location = new System.Drawing.Point(324, 31);
-            this.buscarPersonal.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.buscarPersonal.Location = new System.Drawing.Point(435, 25);
+            this.buscarPersonal.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.buscarPersonal.MouseState = MaterialSkin.MouseState.HOVER;
             this.buscarPersonal.Name = "buscarPersonal";
             this.buscarPersonal.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -397,6 +497,7 @@ namespace clinica
             this.buscarPersonal.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buscarPersonal.UseAccentColor = false;
             this.buscarPersonal.UseVisualStyleBackColor = true;
+            this.buscarPersonal.Click += new System.EventHandler(this.buscarPersonal_Click);
             // 
             // modificarPersonal
             // 
@@ -406,8 +507,8 @@ namespace clinica
             this.modificarPersonal.Depth = 0;
             this.modificarPersonal.HighEmphasis = true;
             this.modificarPersonal.Icon = null;
-            this.modificarPersonal.Location = new System.Drawing.Point(217, 31);
-            this.modificarPersonal.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.modificarPersonal.Location = new System.Drawing.Point(290, 25);
+            this.modificarPersonal.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.modificarPersonal.MouseState = MaterialSkin.MouseState.HOVER;
             this.modificarPersonal.Name = "modificarPersonal";
             this.modificarPersonal.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -426,8 +527,8 @@ namespace clinica
             this.ingresarPersonal.Depth = 0;
             this.ingresarPersonal.HighEmphasis = true;
             this.ingresarPersonal.Icon = null;
-            this.ingresarPersonal.Location = new System.Drawing.Point(22, 31);
-            this.ingresarPersonal.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ingresarPersonal.Location = new System.Drawing.Point(18, 25);
+            this.ingresarPersonal.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ingresarPersonal.MouseState = MaterialSkin.MouseState.HOVER;
             this.ingresarPersonal.Name = "ingresarPersonal";
             this.ingresarPersonal.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -437,177 +538,43 @@ namespace clinica
             this.ingresarPersonal.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.ingresarPersonal.UseAccentColor = false;
             this.ingresarPersonal.UseVisualStyleBackColor = true;
+            this.ingresarPersonal.Click += new System.EventHandler(this.ingresarPersonal_Click);
             // 
-            // estatusPaciente
+            // infoPersonal
             // 
-            this.estatusPaciente.Controls.Add(this.estadoInactivo);
-            this.estatusPaciente.Controls.Add(this.estatusActivo);
-            this.estatusPaciente.Location = new System.Drawing.Point(537, 32);
-            this.estatusPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.estatusPaciente.Name = "estatusPaciente";
-            this.estatusPaciente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.estatusPaciente.Size = new System.Drawing.Size(159, 100);
-            this.estatusPaciente.TabIndex = 57;
-            this.estatusPaciente.TabStop = false;
-            this.estatusPaciente.Text = "Estatus";
-            // 
-            // estadoInactivo
-            // 
-            this.estadoInactivo.AutoSize = true;
-            this.estadoInactivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.estadoInactivo.Location = new System.Drawing.Point(45, 60);
-            this.estadoInactivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.estadoInactivo.Name = "estadoInactivo";
-            this.estadoInactivo.Size = new System.Drawing.Size(77, 21);
-            this.estadoInactivo.TabIndex = 40;
-            this.estadoInactivo.TabStop = true;
-            this.estadoInactivo.Text = "Inactivo";
-            this.estadoInactivo.UseVisualStyleBackColor = true;
-            // 
-            // estatusActivo
-            // 
-            this.estatusActivo.AutoSize = true;
-            this.estatusActivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.estatusActivo.Location = new System.Drawing.Point(45, 33);
-            this.estatusActivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.estatusActivo.Name = "estatusActivo";
-            this.estatusActivo.Size = new System.Drawing.Size(67, 21);
-            this.estatusActivo.TabIndex = 39;
-            this.estatusActivo.TabStop = true;
-            this.estatusActivo.Text = "Activo";
-            this.estatusActivo.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.checkBox2);
-            this.groupBox4.Controls.Add(this.checkBox8);
-            this.groupBox4.Controls.Add(this.checkBox3);
-            this.groupBox4.Controls.Add(this.checkBox4);
-            this.groupBox4.Controls.Add(this.checkBox5);
-            this.groupBox4.Controls.Add(this.checkBox7);
-            this.groupBox4.Controls.Add(this.checkBox6);
-            this.groupBox4.Location = new System.Drawing.Point(21, 154);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(675, 62);
-            this.groupBox4.TabIndex = 65;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Días que trabaja";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(25, 23);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(69, 21);
-            this.checkBox2.TabIndex = 57;
-            this.checkBox2.Text = "Lunes";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(568, 23);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(86, 21);
-            this.checkBox8.TabIndex = 63;
-            this.checkBox8.Text = "Domingo";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(111, 23);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(73, 21);
-            this.checkBox3.TabIndex = 58;
-            this.checkBox3.Text = "Martes";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(196, 23);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(90, 21);
-            this.checkBox4.TabIndex = 59;
-            this.checkBox4.Text = "Miércoles";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(299, 23);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(75, 21);
-            this.checkBox5.TabIndex = 60;
-            this.checkBox5.Text = "Jueves";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(476, 23);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(79, 21);
-            this.checkBox7.TabIndex = 62;
-            this.checkBox7.Text = "Sábado";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(387, 23);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(78, 21);
-            this.checkBox6.TabIndex = 61;
-            this.checkBox6.Text = "Viernes";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1083, 94);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 354);
-            this.dataGridView1.TabIndex = 37;
+            this.infoPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.infoPersonal.Location = new System.Drawing.Point(812, 76);
+            this.infoPersonal.Margin = new System.Windows.Forms.Padding(2);
+            this.infoPersonal.Name = "infoPersonal";
+            this.infoPersonal.RowHeadersWidth = 51;
+            this.infoPersonal.RowTemplate.Height = 24;
+            this.infoPersonal.Size = new System.Drawing.Size(180, 288);
+            this.infoPersonal.TabIndex = 37;
             // 
             // Personal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1352, 507);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1014, 412);
+            this.Controls.Add(this.infoPersonal);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Personal";
-            this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Text = "Personal Laboratorio";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.estatusPaciente.ResumeLayout(false);
-            this.estatusPaciente.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.estatusPaciente.ResumeLayout(false);
+            this.estatusPaciente.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.infoPersonal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -618,27 +585,25 @@ namespace clinica
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox nombre;
+        private System.Windows.Forms.TextBox numeroIdentificacion;
+        private System.Windows.Forms.TextBox apellido;
+        private System.Windows.Forms.DateTimePicker nacimiento;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker fechaContratacion;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox telefono;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox sexoPer;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox correoElectronico;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox horarioPer;
         private System.Windows.Forms.GroupBox groupBox3;
         private MaterialSkin.Controls.MaterialButton eliminarPersonal;
         private MaterialSkin.Controls.MaterialButton buscarPersonal;
@@ -648,13 +613,15 @@ namespace clinica
         private System.Windows.Forms.RadioButton estadoInactivo;
         private System.Windows.Forms.RadioButton estatusActivo;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.CheckBox lunes;
+        private System.Windows.Forms.CheckBox domingo;
+        private System.Windows.Forms.CheckBox martes;
+        private System.Windows.Forms.CheckBox miercoles;
+        private System.Windows.Forms.CheckBox jueves;
+        private System.Windows.Forms.CheckBox sabado;
+        private System.Windows.Forms.CheckBox viernes;
+        private System.Windows.Forms.DataGridView infoPersonal;
+        private System.Windows.Forms.TextBox horarioPersonal;
+        private System.Windows.Forms.TextBox puestoPersonal;
     }
 }

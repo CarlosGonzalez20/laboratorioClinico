@@ -38,6 +38,7 @@
             this.contraseña = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.cambiarContraseña = new MaterialSkin.Controls.MaterialButton();
+            this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // ingresar
@@ -49,8 +50,8 @@
             this.ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ingresar.HighEmphasis = true;
             this.ingresar.Icon = null;
-            this.ingresar.Location = new System.Drawing.Point(196, 343);
-            this.ingresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ingresar.Location = new System.Drawing.Point(147, 279);
+            this.ingresar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ingresar.MouseState = MaterialSkin.MouseState.HOVER;
             this.ingresar.Name = "ingresar";
             this.ingresar.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -77,11 +78,12 @@
             this.tipoUsuario.FormattingEnabled = true;
             this.tipoUsuario.IntegralHeight = false;
             this.tipoUsuario.ItemHeight = 43;
-            this.tipoUsuario.Location = new System.Drawing.Point(346, 141);
+            this.tipoUsuario.Location = new System.Drawing.Point(260, 115);
+            this.tipoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tipoUsuario.MaxDropDownItems = 4;
             this.tipoUsuario.MouseState = MaterialSkin.MouseState.OUT;
             this.tipoUsuario.Name = "tipoUsuario";
-            this.tipoUsuario.Size = new System.Drawing.Size(242, 49);
+            this.tipoUsuario.Size = new System.Drawing.Size(182, 49);
             this.tipoUsuario.StartIndex = 0;
             this.tipoUsuario.TabIndex = 8;
             // 
@@ -90,7 +92,8 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(343, 105);
+            this.materialLabel1.Location = new System.Drawing.Point(257, 85);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(111, 19);
@@ -103,7 +106,8 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(343, 223);
+            this.materialLabel2.Location = new System.Drawing.Point(257, 181);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(33, 19);
@@ -126,11 +130,12 @@
             this.areaUsuario.FormattingEnabled = true;
             this.areaUsuario.IntegralHeight = false;
             this.areaUsuario.ItemHeight = 43;
-            this.areaUsuario.Location = new System.Drawing.Point(346, 258);
+            this.areaUsuario.Location = new System.Drawing.Point(260, 210);
+            this.areaUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.areaUsuario.MaxDropDownItems = 4;
             this.areaUsuario.MouseState = MaterialSkin.MouseState.OUT;
             this.areaUsuario.Name = "areaUsuario";
-            this.areaUsuario.Size = new System.Drawing.Size(242, 49);
+            this.areaUsuario.Size = new System.Drawing.Size(182, 49);
             this.areaUsuario.StartIndex = 0;
             this.areaUsuario.TabIndex = 10;
             this.areaUsuario.SelectedIndexChanged += new System.EventHandler(this.materialComboBox2_SelectedIndexChanged);
@@ -140,7 +145,8 @@
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(34, 111);
+            this.materialLabel3.Location = new System.Drawing.Point(26, 90);
+            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(118, 19);
@@ -158,12 +164,13 @@
             this.usuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.usuario.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.usuario.Depth = 0;
-            this.usuario.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.usuario.HidePromptOnLeave = false;
             this.usuario.HideSelection = true;
             this.usuario.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.usuario.LeadingIcon = null;
-            this.usuario.Location = new System.Drawing.Point(37, 142);
+            this.usuario.Location = new System.Drawing.Point(28, 115);
+            this.usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usuario.Mask = "";
             this.usuario.MaxLength = 32767;
             this.usuario.MouseState = MaterialSkin.MouseState.OUT;
@@ -180,7 +187,7 @@
             this.usuario.SelectionLength = 0;
             this.usuario.SelectionStart = 0;
             this.usuario.ShortcutsEnabled = true;
-            this.usuario.Size = new System.Drawing.Size(250, 48);
+            this.usuario.Size = new System.Drawing.Size(188, 48);
             this.usuario.SkipLiterals = true;
             this.usuario.TabIndex = 13;
             this.usuario.TabStop = false;
@@ -200,12 +207,13 @@
             this.contraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.contraseña.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.contraseña.Depth = 0;
-            this.contraseña.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.contraseña.HidePromptOnLeave = false;
             this.contraseña.HideSelection = true;
             this.contraseña.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.contraseña.LeadingIcon = null;
-            this.contraseña.Location = new System.Drawing.Point(37, 258);
+            this.contraseña.Location = new System.Drawing.Point(28, 210);
+            this.contraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.contraseña.Mask = "";
             this.contraseña.MaxLength = 32767;
             this.contraseña.MouseState = MaterialSkin.MouseState.OUT;
@@ -222,7 +230,7 @@
             this.contraseña.SelectionLength = 0;
             this.contraseña.SelectionStart = 0;
             this.contraseña.ShortcutsEnabled = true;
-            this.contraseña.Size = new System.Drawing.Size(250, 48);
+            this.contraseña.Size = new System.Drawing.Size(188, 48);
             this.contraseña.SkipLiterals = true;
             this.contraseña.TabIndex = 15;
             this.contraseña.TabStop = false;
@@ -237,7 +245,8 @@
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(34, 227);
+            this.materialLabel4.Location = new System.Drawing.Point(26, 184);
+            this.materialLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(82, 19);
@@ -253,8 +262,8 @@
             this.cambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cambiarContraseña.HighEmphasis = true;
             this.cambiarContraseña.Icon = null;
-            this.cambiarContraseña.Location = new System.Drawing.Point(346, 343);
-            this.cambiarContraseña.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.cambiarContraseña.Location = new System.Drawing.Point(260, 279);
+            this.cambiarContraseña.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cambiarContraseña.MouseState = MaterialSkin.MouseState.HOVER;
             this.cambiarContraseña.Name = "cambiarContraseña";
             this.cambiarContraseña.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -266,11 +275,22 @@
             this.cambiarContraseña.UseVisualStyleBackColor = true;
             this.cambiarContraseña.Click += new System.EventHandler(this.cambiarContraseña_Click);
             // 
+            // showPasswordCheckBox
+            // 
+            this.showPasswordCheckBox.AutoSize = true;
+            this.showPasswordCheckBox.Location = new System.Drawing.Point(29, 264);
+            this.showPasswordCheckBox.Name = "showPasswordCheckBox";
+            this.showPasswordCheckBox.Size = new System.Drawing.Size(117, 17);
+            this.showPasswordCheckBox.TabIndex = 17;
+            this.showPasswordCheckBox.Text = "Mostrar contraseña";
+            this.showPasswordCheckBox.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 430);
+            this.ClientSize = new System.Drawing.Size(481, 349);
+            this.Controls.Add(this.showPasswordCheckBox);
             this.Controls.Add(this.cambiarContraseña);
             this.Controls.Add(this.contraseña);
             this.Controls.Add(this.materialLabel4);
@@ -281,9 +301,7 @@
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.tipoUsuario);
             this.Controls.Add(this.ingresar);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
-            this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
@@ -302,5 +320,6 @@
         private MaterialSkin.Controls.MaterialMaskedTextBox contraseña;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialButton cambiarContraseña;
+        private System.Windows.Forms.CheckBox showPasswordCheckBox;
     }
 }

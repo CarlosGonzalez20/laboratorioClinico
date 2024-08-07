@@ -17,7 +17,26 @@ namespace clinica
         public Login()
         {
             InitializeComponent();
+            contraseña.UseSystemPasswordChar = true;
+            showPasswordCheckBox.CheckedChanged += new EventHandler(ShowPasswordCheckBox_CheckedChanged);
+
         }
+
+        private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            // Alterna la visibilidad de la contraseña según el estado del CheckBox
+            if (showPasswordCheckBox.Checked)
+            {
+                contraseña.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                contraseña.UseSystemPasswordChar = true;
+            }
+        }
+
+
+
 
         private void llenarComboArea()
         {
@@ -193,5 +212,6 @@ namespace clinica
             return isValid;
 
         }
+
     }
 }
