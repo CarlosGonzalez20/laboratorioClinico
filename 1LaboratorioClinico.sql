@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS laboratorio (
     clinicaID INT,
     examenMedicoID INT,
     horarioLaboratorio VARCHAR(255),
-    direccionLaboratorio TEXT,
+    DireccionLab TEXT,
     fechaAsignacionLaboratorio DATE,
     estadoLaboratorio TINYINT(1) NOT NULL,
     FOREIGN KEY (personalLabID) REFERENCES personalLab (personalLabID),

@@ -44,11 +44,11 @@ namespace clinica
             this.Fechaasignacion = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.IDexamenes = new System.Windows.Forms.MaskedTextBox();
+            this.examenMedicoIDTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.IDclinica = new System.Windows.Forms.MaskedTextBox();
+            this.clinicaIDTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.IDpersonal = new System.Windows.Forms.MaskedTextBox();
+            this.personalLabIDTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.IDlab = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,11 +69,11 @@ namespace clinica
             this.groupBox1.Controls.Add(this.Fechaasignacion);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.IDexamenes);
+            this.groupBox1.Controls.Add(this.examenMedicoIDTextBox);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.IDclinica);
+            this.groupBox1.Controls.Add(this.clinicaIDTextBox);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.IDpersonal);
+            this.groupBox1.Controls.Add(this.personalLabIDTextBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.IDlab);
             this.groupBox1.Controls.Add(this.label2);
@@ -114,9 +114,9 @@ namespace clinica
             this.groupBox4.Controls.Add(this.modificarPaciente);
             this.groupBox4.Controls.Add(this.ingresarPaciente);
             this.groupBox4.Location = new System.Drawing.Point(288, 120);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(212, 110);
             this.groupBox4.TabIndex = 65;
             this.groupBox4.TabStop = false;
@@ -211,9 +211,9 @@ namespace clinica
             this.estatusPaciente.Controls.Add(this.estadoInactivo);
             this.estatusPaciente.Controls.Add(this.estatusActivo);
             this.estatusPaciente.Location = new System.Drawing.Point(130, 128);
-            this.estatusPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.estatusPaciente.Margin = new System.Windows.Forms.Padding(2);
             this.estatusPaciente.Name = "estatusPaciente";
-            this.estatusPaciente.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.estatusPaciente.Padding = new System.Windows.Forms.Padding(2);
             this.estatusPaciente.Size = new System.Drawing.Size(119, 81);
             this.estatusPaciente.TabIndex = 47;
             this.estatusPaciente.TabStop = false;
@@ -224,7 +224,7 @@ namespace clinica
             this.estadoInactivo.AutoSize = true;
             this.estadoInactivo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.estadoInactivo.Location = new System.Drawing.Point(34, 49);
-            this.estadoInactivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.estadoInactivo.Margin = new System.Windows.Forms.Padding(2);
             this.estadoInactivo.Name = "estadoInactivo";
             this.estadoInactivo.Size = new System.Drawing.Size(63, 17);
             this.estadoInactivo.TabIndex = 40;
@@ -237,7 +237,7 @@ namespace clinica
             this.estatusActivo.AutoSize = true;
             this.estatusActivo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.estatusActivo.Location = new System.Drawing.Point(34, 27);
-            this.estatusActivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.estatusActivo.Margin = new System.Windows.Forms.Padding(2);
             this.estatusActivo.Name = "estatusActivo";
             this.estatusActivo.Size = new System.Drawing.Size(55, 17);
             this.estatusActivo.TabIndex = 39;
@@ -248,7 +248,7 @@ namespace clinica
             // Fechaasignacion
             // 
             this.Fechaasignacion.Location = new System.Drawing.Point(207, 42);
-            this.Fechaasignacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Fechaasignacion.Margin = new System.Windows.Forms.Padding(2);
             this.Fechaasignacion.Name = "Fechaasignacion";
             this.Fechaasignacion.Size = new System.Drawing.Size(169, 20);
             this.Fechaasignacion.TabIndex = 45;
@@ -273,12 +273,12 @@ namespace clinica
             this.label8.TabIndex = 43;
             this.label8.Text = "Fecha de Asignación";
             // 
-            // IDexamenes
+            // examenMedicoIDTextBox
             // 
-            this.IDexamenes.Location = new System.Drawing.Point(396, 88);
-            this.IDexamenes.Name = "IDexamenes";
-            this.IDexamenes.Size = new System.Drawing.Size(173, 20);
-            this.IDexamenes.TabIndex = 9;
+            this.examenMedicoIDTextBox.Location = new System.Drawing.Point(396, 88);
+            this.examenMedicoIDTextBox.Name = "examenMedicoIDTextBox";
+            this.examenMedicoIDTextBox.Size = new System.Drawing.Size(173, 20);
+            this.examenMedicoIDTextBox.TabIndex = 9;
             // 
             // label5
             // 
@@ -289,12 +289,12 @@ namespace clinica
             this.label5.TabIndex = 8;
             this.label5.Text = "Identificación de Examenes";
             // 
-            // IDclinica
+            // clinicaIDTextBox
             // 
-            this.IDclinica.Location = new System.Drawing.Point(208, 88);
-            this.IDclinica.Name = "IDclinica";
-            this.IDclinica.Size = new System.Drawing.Size(173, 20);
-            this.IDclinica.TabIndex = 7;
+            this.clinicaIDTextBox.Location = new System.Drawing.Point(208, 88);
+            this.clinicaIDTextBox.Name = "clinicaIDTextBox";
+            this.clinicaIDTextBox.Size = new System.Drawing.Size(173, 20);
+            this.clinicaIDTextBox.TabIndex = 7;
             // 
             // label4
             // 
@@ -305,12 +305,12 @@ namespace clinica
             this.label4.TabIndex = 6;
             this.label4.Text = "Identificación de la Clínica";
             // 
-            // IDpersonal
+            // personalLabIDTextBox
             // 
-            this.IDpersonal.Location = new System.Drawing.Point(23, 88);
-            this.IDpersonal.Name = "IDpersonal";
-            this.IDpersonal.Size = new System.Drawing.Size(173, 20);
-            this.IDpersonal.TabIndex = 5;
+            this.personalLabIDTextBox.Location = new System.Drawing.Point(23, 88);
+            this.personalLabIDTextBox.Name = "personalLabIDTextBox";
+            this.personalLabIDTextBox.Size = new System.Drawing.Size(173, 20);
+            this.personalLabIDTextBox.TabIndex = 5;
             // 
             // label3
             // 
@@ -341,7 +341,7 @@ namespace clinica
             // 
             this.infoLab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.infoLab.Location = new System.Drawing.Point(606, 76);
-            this.infoLab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.infoLab.Margin = new System.Windows.Forms.Padding(2);
             this.infoLab.Name = "infoLab";
             this.infoLab.RowHeadersWidth = 51;
             this.infoLab.RowTemplate.Height = 24;
@@ -386,11 +386,11 @@ namespace clinica
         private System.Windows.Forms.DateTimePicker Fechaasignacion;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MaskedTextBox IDexamenes;
+        private System.Windows.Forms.MaskedTextBox examenMedicoIDTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox IDclinica;
+        private System.Windows.Forms.MaskedTextBox clinicaIDTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox IDpersonal;
+        private System.Windows.Forms.MaskedTextBox personalLabIDTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox IDlab;
         private System.Windows.Forms.Label label2;
