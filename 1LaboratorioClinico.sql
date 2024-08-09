@@ -250,3 +250,26 @@ CREATE TABLE IF NOT EXISTS facturaDetalle (
     FOREIGN KEY (facturaEncabezadoID) REFERENCES facturaEncabezado (facturaEncabezadoID)
 );
 
+CREATE TABLE IF NOT EXISTS login (
+    cuentaID INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    correo VARCHAR(255) NOT NULL,
+    contrasena VARCHAR(255) NOT NULL
+);
+
+INSERT INTO login (correo, contrasena) VALUES ('prueba@gmail.com', '12345');
+SELECT * FROM login;
+
+-- Agregando tabla de equipo lab
+create table if not exists equipoLaboratorio (
+	equipoID int not null auto_increment primary key,
+    proveedorID int not null, foreign key (proveedorID) references proveedor (proveedorID),
+    clinicaID int not null, foreign key (clinicaID) references clinica (clinicaID),
+    nombreEquipo varchar (80) not null,
+    descripcionEquipo text,
+    fechaAdquision date not null,
+    fechaActualizacion date not null,
+    estadoEquipo int (1) not null,
+    cantidad int not null,
+    estatusEquipo int(1) NOT NULl
+    );
+
