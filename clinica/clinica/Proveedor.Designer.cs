@@ -30,92 +30,87 @@ namespace clinica
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.Des = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
+            this.Dir = new System.Windows.Forms.MaskedTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.eliminarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.buscarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.modificarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.ingresarPaciente = new MaterialSkin.Controls.MaterialButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
+            this.Tel = new System.Windows.Forms.MaskedTextBox();
             this.estatusPaciente = new System.Windows.Forms.GroupBox();
             this.estadoInactivo = new System.Windows.Forms.RadioButton();
             this.estatusActivo = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Fecha_Reg = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
+            this.Correo = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.Apellidos = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.Nombres = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.NoID = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.infoProv = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.estatusPaciente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoProv)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.Des);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.maskedTextBox8);
+            this.groupBox1.Controls.Add(this.Dir);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.maskedTextBox6);
+            this.groupBox1.Controls.Add(this.Tel);
             this.groupBox1.Controls.Add(this.estatusPaciente);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.Fecha_Reg);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.maskedTextBox5);
+            this.groupBox1.Controls.Add(this.Correo);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.maskedTextBox4);
+            this.groupBox1.Controls.Add(this.Apellidos);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.maskedTextBox3);
+            this.groupBox1.Controls.Add(this.Nombres);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
+            this.groupBox1.Controls.Add(this.NoID);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(8, 82);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(6, 67);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1035, 302);
+            this.groupBox1.Size = new System.Drawing.Size(776, 245);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Proveedor";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // maskedTextBox1
+            // Des
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(31, 233);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(707, 22);
-            this.maskedTextBox1.TabIndex = 68;
+            this.Des.Location = new System.Drawing.Point(23, 189);
+            this.Des.Name = "Des";
+            this.Des.Size = new System.Drawing.Size(531, 20);
+            this.Des.TabIndex = 68;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 213);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(20, 173);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 67;
             this.label1.Text = "Descripción";
             // 
-            // maskedTextBox8
+            // Dir
             // 
-            this.maskedTextBox8.Location = new System.Drawing.Point(528, 52);
-            this.maskedTextBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(229, 22);
-            this.maskedTextBox8.TabIndex = 66;
+            this.Dir.Location = new System.Drawing.Point(396, 42);
+            this.Dir.Name = "Dir";
+            this.Dir.Size = new System.Drawing.Size(173, 20);
+            this.Dir.TabIndex = 66;
             // 
             // groupBox4
             // 
@@ -123,11 +118,11 @@ namespace clinica
             this.groupBox4.Controls.Add(this.buscarPaciente);
             this.groupBox4.Controls.Add(this.modificarPaciente);
             this.groupBox4.Controls.Add(this.ingresarPaciente);
-            this.groupBox4.Location = new System.Drawing.Point(745, 160);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Location = new System.Drawing.Point(559, 130);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(283, 135);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(212, 110);
             this.groupBox4.TabIndex = 65;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Mantenimiento";
@@ -140,8 +135,8 @@ namespace clinica
             this.eliminarPaciente.Depth = 0;
             this.eliminarPaciente.HighEmphasis = true;
             this.eliminarPaciente.Icon = null;
-            this.eliminarPaciente.Location = new System.Drawing.Point(152, 74);
-            this.eliminarPaciente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.eliminarPaciente.Location = new System.Drawing.Point(114, 60);
+            this.eliminarPaciente.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.eliminarPaciente.MouseState = MaterialSkin.MouseState.HOVER;
             this.eliminarPaciente.Name = "eliminarPaciente";
             this.eliminarPaciente.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -151,6 +146,7 @@ namespace clinica
             this.eliminarPaciente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.eliminarPaciente.UseAccentColor = false;
             this.eliminarPaciente.UseVisualStyleBackColor = true;
+            this.eliminarPaciente.Click += new System.EventHandler(this.eliminarPaciente_Click);
             // 
             // buscarPaciente
             // 
@@ -160,8 +156,8 @@ namespace clinica
             this.buscarPaciente.Depth = 0;
             this.buscarPaciente.HighEmphasis = true;
             this.buscarPaciente.Icon = null;
-            this.buscarPaciente.Location = new System.Drawing.Point(12, 25);
-            this.buscarPaciente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.buscarPaciente.Location = new System.Drawing.Point(9, 20);
+            this.buscarPaciente.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.buscarPaciente.MouseState = MaterialSkin.MouseState.HOVER;
             this.buscarPaciente.Name = "buscarPaciente";
             this.buscarPaciente.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -171,6 +167,7 @@ namespace clinica
             this.buscarPaciente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.buscarPaciente.UseAccentColor = false;
             this.buscarPaciente.UseVisualStyleBackColor = true;
+            this.buscarPaciente.Click += new System.EventHandler(this.buscarPaciente_Click);
             // 
             // modificarPaciente
             // 
@@ -180,8 +177,8 @@ namespace clinica
             this.modificarPaciente.Depth = 0;
             this.modificarPaciente.HighEmphasis = true;
             this.modificarPaciente.Icon = null;
-            this.modificarPaciente.Location = new System.Drawing.Point(12, 74);
-            this.modificarPaciente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.modificarPaciente.Location = new System.Drawing.Point(9, 60);
+            this.modificarPaciente.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.modificarPaciente.MouseState = MaterialSkin.MouseState.HOVER;
             this.modificarPaciente.Name = "modificarPaciente";
             this.modificarPaciente.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -191,6 +188,7 @@ namespace clinica
             this.modificarPaciente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.modificarPaciente.UseAccentColor = false;
             this.modificarPaciente.UseVisualStyleBackColor = true;
+            this.modificarPaciente.Click += new System.EventHandler(this.modificarPaciente_Click);
             // 
             // ingresarPaciente
             // 
@@ -200,8 +198,8 @@ namespace clinica
             this.ingresarPaciente.Depth = 0;
             this.ingresarPaciente.HighEmphasis = true;
             this.ingresarPaciente.Icon = null;
-            this.ingresarPaciente.Location = new System.Drawing.Point(148, 25);
-            this.ingresarPaciente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ingresarPaciente.Location = new System.Drawing.Point(111, 20);
+            this.ingresarPaciente.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ingresarPaciente.MouseState = MaterialSkin.MouseState.HOVER;
             this.ingresarPaciente.Name = "ingresarPaciente";
             this.ingresarPaciente.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -211,34 +209,33 @@ namespace clinica
             this.ingresarPaciente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.ingresarPaciente.UseAccentColor = false;
             this.ingresarPaciente.UseVisualStyleBackColor = true;
+            this.ingresarPaciente.Click += new System.EventHandler(this.ingresarPaciente_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 149);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(20, 121);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 52;
             this.label7.Text = "Teléfono";
             // 
-            // maskedTextBox6
+            // Tel
             // 
-            this.maskedTextBox6.Location = new System.Drawing.Point(31, 169);
-            this.maskedTextBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(229, 22);
-            this.maskedTextBox6.TabIndex = 53;
+            this.Tel.Location = new System.Drawing.Point(23, 137);
+            this.Tel.Name = "Tel";
+            this.Tel.Size = new System.Drawing.Size(173, 20);
+            this.Tel.TabIndex = 53;
             // 
             // estatusPaciente
             // 
             this.estatusPaciente.Controls.Add(this.estadoInactivo);
             this.estatusPaciente.Controls.Add(this.estatusActivo);
-            this.estatusPaciente.Location = new System.Drawing.Point(801, 22);
-            this.estatusPaciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.estatusPaciente.Location = new System.Drawing.Point(601, 18);
+            this.estatusPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.estatusPaciente.Name = "estatusPaciente";
-            this.estatusPaciente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.estatusPaciente.Size = new System.Drawing.Size(159, 100);
+            this.estatusPaciente.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.estatusPaciente.Size = new System.Drawing.Size(119, 81);
             this.estatusPaciente.TabIndex = 47;
             this.estatusPaciente.TabStop = false;
             this.estatusPaciente.Text = "Estado";
@@ -247,10 +244,10 @@ namespace clinica
             // 
             this.estadoInactivo.AutoSize = true;
             this.estadoInactivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.estadoInactivo.Location = new System.Drawing.Point(45, 60);
-            this.estadoInactivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.estadoInactivo.Location = new System.Drawing.Point(34, 49);
+            this.estadoInactivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.estadoInactivo.Name = "estadoInactivo";
-            this.estadoInactivo.Size = new System.Drawing.Size(77, 21);
+            this.estadoInactivo.Size = new System.Drawing.Size(63, 17);
             this.estadoInactivo.TabIndex = 40;
             this.estadoInactivo.TabStop = true;
             this.estadoInactivo.Text = "Inactivo";
@@ -260,134 +257,127 @@ namespace clinica
             // 
             this.estatusActivo.AutoSize = true;
             this.estatusActivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.estatusActivo.Location = new System.Drawing.Point(45, 33);
-            this.estatusActivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.estatusActivo.Location = new System.Drawing.Point(34, 27);
+            this.estatusActivo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.estatusActivo.Name = "estatusActivo";
-            this.estatusActivo.Size = new System.Drawing.Size(67, 21);
+            this.estatusActivo.Size = new System.Drawing.Size(55, 17);
             this.estatusActivo.TabIndex = 39;
             this.estatusActivo.TabStop = true;
             this.estatusActivo.Text = "Activo";
             this.estatusActivo.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // Fecha_Reg
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(276, 52);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(224, 22);
-            this.dateTimePicker1.TabIndex = 45;
+            this.Fecha_Reg.Location = new System.Drawing.Point(207, 42);
+            this.Fecha_Reg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Fecha_Reg.Name = "Fecha_Reg";
+            this.Fecha_Reg.Size = new System.Drawing.Size(169, 20);
+            this.Fecha_Reg.TabIndex = 45;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(524, 32);
+            this.label14.Location = new System.Drawing.Point(393, 26);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 17);
+            this.label14.Size = new System.Drawing.Size(52, 13);
             this.label14.TabIndex = 44;
             this.label14.Text = "Dirección";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(273, 32);
+            this.label8.Location = new System.Drawing.Point(205, 26);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 17);
+            this.label8.Size = new System.Drawing.Size(94, 13);
             this.label8.TabIndex = 43;
             this.label8.Text = "Fecha de Registro";
             // 
-            // maskedTextBox5
+            // Correo
             // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(528, 108);
-            this.maskedTextBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(229, 22);
-            this.maskedTextBox5.TabIndex = 9;
+            this.Correo.Location = new System.Drawing.Point(396, 88);
+            this.Correo.Name = "Correo";
+            this.Correo.Size = new System.Drawing.Size(173, 20);
+            this.Correo.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(524, 89);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(393, 72);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 17);
+            this.label5.Size = new System.Drawing.Size(93, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Correo electrónico";
             // 
-            // maskedTextBox4
+            // Apellidos
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(277, 108);
-            this.maskedTextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(229, 22);
-            this.maskedTextBox4.TabIndex = 7;
+            this.Apellidos.Location = new System.Drawing.Point(208, 88);
+            this.Apellidos.Name = "Apellidos";
+            this.Apellidos.Size = new System.Drawing.Size(173, 20);
+            this.Apellidos.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(273, 89);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(205, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Apellidos";
             // 
-            // maskedTextBox3
+            // Nombres
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(31, 108);
-            this.maskedTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(229, 22);
-            this.maskedTextBox3.TabIndex = 5;
+            this.Nombres.Location = new System.Drawing.Point(23, 88);
+            this.Nombres.Name = "Nombres";
+            this.Nombres.Size = new System.Drawing.Size(173, 20);
+            this.Nombres.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 89);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(20, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 17);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombres";
             // 
-            // maskedTextBox2
+            // NoID
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(31, 52);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(229, 22);
-            this.maskedTextBox2.TabIndex = 3;
+            this.NoID.Location = new System.Drawing.Point(23, 42);
+            this.NoID.Name = "NoID";
+            this.NoID.Size = new System.Drawing.Size(173, 20);
+            this.NoID.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(20, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 17);
+            this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "No. Identificación";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // dataGridView1
+            // infoProv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1061, 82);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(280, 302);
-            this.dataGridView1.TabIndex = 4;
+            this.infoProv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.infoProv.Location = new System.Drawing.Point(796, 67);
+            this.infoProv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.infoProv.Name = "infoProv";
+            this.infoProv.RowHeadersWidth = 51;
+            this.infoProv.RowTemplate.Height = 24;
+            this.infoProv.Size = new System.Drawing.Size(210, 245);
+            this.infoProv.TabIndex = 4;
             // 
             // Proveedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1360, 402);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1020, 327);
+            this.Controls.Add(this.infoProv);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Proveedor";
-            this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Text = "Proveedor";
             this.Load += new System.EventHandler(this.Proveedor_Load);
             this.groupBox1.ResumeLayout(false);
@@ -396,7 +386,7 @@ namespace clinica
             this.groupBox4.PerformLayout();
             this.estatusPaciente.ResumeLayout(false);
             this.estatusPaciente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoProv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -410,24 +400,24 @@ namespace clinica
         private MaterialSkin.Controls.MaterialButton modificarPaciente;
         private MaterialSkin.Controls.MaterialButton ingresarPaciente;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
+        private System.Windows.Forms.MaskedTextBox Tel;
         private System.Windows.Forms.GroupBox estatusPaciente;
         private System.Windows.Forms.RadioButton estadoInactivo;
         private System.Windows.Forms.RadioButton estatusActivo;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Fecha_Reg;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
+        private System.Windows.Forms.MaskedTextBox Correo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox Apellidos;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox Nombres;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox NoID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox Dir;
+        private System.Windows.Forms.MaskedTextBox Des;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView infoProv;
     }
 }
