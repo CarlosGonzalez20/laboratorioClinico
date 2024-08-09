@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS laboratorio (
     clinicaID INT,
     examenMedicoID INT,
     horarioLaboratorio VARCHAR(255),
-    actividadLaboratorio TEXT,
+    direccionLaboratorio TEXT,
     fechaAsignacionLaboratorio DATE,
     estadoLaboratorio TINYINT(1) NOT NULL,
     FOREIGN KEY (personalLabID) REFERENCES personalLab (personalLabID),
@@ -185,6 +185,7 @@ CREATE TABLE IF NOT EXISTS muestra (
 CREATE TABLE IF NOT EXISTS proveedor (
     proveedorID INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombreProveedor VARCHAR(255) NOT NULL,
+    apellidoProveedor VARCHAR(255) NOT NULL,
     telefonoProveedor VARCHAR(50),
     emailProveedor VARCHAR(255),
     direccionProveedor TEXT,
