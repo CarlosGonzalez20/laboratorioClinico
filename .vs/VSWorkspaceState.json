@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\clinica",
-    "\\clinica\\clinica"
+    "\\clinica\\clinica",
+    "\\clinica\\clinica\\Properties"
   ],
-  "SelectedNode": "\\clinica\\clinica\\Laboratorio.cs",
+  "SelectedNode": "\\clinica\\clinica\\Proveedor.cs",
   "PreviewInSolutionExplorer": false
 }

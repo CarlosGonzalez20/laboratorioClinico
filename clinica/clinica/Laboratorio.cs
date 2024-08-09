@@ -14,6 +14,84 @@ namespace clinica
 {
     public partial class Laboratorio : MaterialSkin.Controls.MaterialForm
     {
+        private void LLavesForaneasmetodo()
+        {
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                if (connection == null) return;
+
+                // Llenar el ComboBox para Personal
+                string personalQuery = "SELECT personalLabID FROM personalLab";
+                MySqlCommand personalCommand = new MySqlCommand(personalQuery, connection);
+                try
+                {
+                    MySqlDataReader personalReader = personalCommand.ExecuteReader();
+                    Personal.Items.Clear();
+                    while (personalReader.Read())
+                    {
+                        int personalLabID = personalReader.GetInt32("personalLabID");
+                        Personal.Items.Add(personalLabID);
+                    }
+                    if (Personal.Items.Count > 0)
+                    {
+                        Personal.SelectedIndex = 0;
+                    }
+                    personalReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox Personal: " + ex.Message);
+                }
+
+                // Llenar el ComboBox para Clinica
+                string clinicaQuery = "SELECT clinicaID FROM clinica";
+                MySqlCommand clinicaCommand = new MySqlCommand(clinicaQuery, connection);
+                try
+                {
+                    MySqlDataReader clinicaReader = clinicaCommand.ExecuteReader();
+                    clinica.Items.Clear();
+                    while (clinicaReader.Read())
+                    {
+                        int clinicaID = clinicaReader.GetInt32("clinicaID");
+                        clinica.Items.Add(clinicaID);
+                    }
+                    if (clinica.Items.Count > 0)
+                    {
+                        clinica.SelectedIndex = 0;
+                    }
+                    clinicaReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox Clinica: " + ex.Message);
+                }
+
+                // Llenar el ComboBox para Examenes
+                string examenesQuery = "SELECT examenMedicoID FROM examenMedico";
+                MySqlCommand examenesCommand = new MySqlCommand(examenesQuery, connection);
+                try
+                {
+                    MySqlDataReader examenesReader = examenesCommand.ExecuteReader();
+                    Examenes.Items.Clear();
+                    while (examenesReader.Read())
+                    {
+                        int examenMedicoID = examenesReader.GetInt32("examenMedicoID");
+                        Examenes.Items.Add(examenMedicoID);
+                    }
+                    if (Examenes.Items.Count > 0)
+                    {
+                        Examenes.SelectedIndex = 0;
+                    }
+                    examenesReader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al llenar el ComboBox Examenes: " + ex.Message);
+                }
+            }
+        }
+
         private void CargarDatosLaboratorio()
         {
             string query = "SELECT * FROM laboratorio";
@@ -45,6 +123,8 @@ namespace clinica
         public Laboratorio()
         {
             InitializeComponent();
+            LLavesForaneasmetodo();
+            CargarDatosLaboratorio();
         }
 
         private void Laboratorio_Load(object sender, EventArgs e)
@@ -212,9 +292,6 @@ namespace clinica
         { "Dirección", () => Dir.Text.Trim() },
         { "Horario", () => Horario.Text.Trim() },
         { "Estado", () => estatusActivo.Checked ? "1" : "0" },
-        { "Personal Lab ID", () => personalLabIDTextBox.Text.Trim() }, 
-        { "Clinica ID", () => clinicaIDTextBox.Text.Trim() }, 
-        { "Examen Medico ID", () => examenMedicoIDTextBox.Text.Trim() } 
     };
 
                 // Validar los campos
@@ -229,16 +306,23 @@ namespace clinica
                 }
 
                 // Convertir los valores necesarios a sus tipos correspondientes
-                int documento;
-                int personalLabID, clinicaID, examenMedicoID;
-                if (!int.TryParse(campos["Documento de Identificación"].Invoke(), out documento) ||
-                    !int.TryParse(campos["Personal Lab ID"].Invoke(), out personalLabID) ||
-                    !int.TryParse(campos["Clinica ID"].Invoke(), out clinicaID) ||
-                    !int.TryParse(campos["Examen Medico ID"].Invoke(), out examenMedicoID))
+                int documento, personalLabID, clinicaID, examenMedicoID;
+                if (!int.TryParse(campos["Documento de Identificación"].Invoke(), out documento))
                 {
-                    MessageBox.Show("Uno de los campos numéricos no es válido.");
+                    MessageBox.Show("El campo 'Documento de Identificación' no es válido.");
                     return;
                 }
+
+                // Obtener los valores seleccionados de los ComboBoxes
+                if (Personal.SelectedItem == null || clinica.SelectedItem == null || Examenes.SelectedItem == null)
+                {
+                    MessageBox.Show("Debes seleccionar un valor en los campos de Personal, Clinica, y Examenes.");
+                    return;
+                }
+
+                personalLabID = (int)Personal.SelectedItem;
+                clinicaID = (int)clinica.SelectedItem;
+                examenMedicoID = (int)Examenes.SelectedItem;
 
                 DateTime fechaNac = DateTime.Parse(campos["Fecha de Asignacion"].Invoke());
                 string direccion = campos["Dirección"].Invoke();
@@ -276,6 +360,7 @@ namespace clinica
 
             CargarDatosLaboratorio();
 
+
         }
 
         private void modificarPaciente_Click(object sender, EventArgs e)
@@ -312,9 +397,6 @@ namespace clinica
         { "Dirección", () => Dir.Text.Trim() },
         { "Horario", () => Horario.Text.Trim() },
         { "Estado", () => estatusActivo.Checked ? "1" : "0" },
-        { "Personal Lab ID", () => personalLabIDTextBox.Text.Trim() }, // Assuming a TextBox for personalLabID
-        { "Clinica ID", () => clinicaIDTextBox.Text.Trim() }, // Assuming a TextBox for clinicaID
-        { "Examen Medico ID", () => examenMedicoIDTextBox.Text.Trim() } // Assuming a TextBox for examenMedicoID
     };
 
                 foreach (var campo in campos)
@@ -329,13 +411,17 @@ namespace clinica
 
                 // Convertir los valores necesarios a sus tipos correspondientes
                 int personalLabID, clinicaID, examenMedicoID;
-                if (!int.TryParse(campos["Personal Lab ID"].Invoke(), out personalLabID) ||
-                    !int.TryParse(campos["Clinica ID"].Invoke(), out clinicaID) ||
-                    !int.TryParse(campos["Examen Medico ID"].Invoke(), out examenMedicoID))
+
+                // Obtener los valores seleccionados de los ComboBoxes
+                if (Personal.SelectedItem == null || clinica.SelectedItem == null || Examenes.SelectedItem == null)
                 {
-                    MessageBox.Show("Uno de los campos numéricos no es válido.");
+                    MessageBox.Show("Debes seleccionar un valor en los campos de Personal, Clinica, y Examenes.");
                     return;
                 }
+
+                personalLabID = (int)Personal.SelectedItem;
+                clinicaID = (int)clinica.SelectedItem;
+                examenMedicoID = (int)Examenes.SelectedItem;
 
                 DateTime fechaAsignacion = DateTime.Parse(campos["Fecha de Asignacion"].Invoke());
                 string direccion = campos["Dirección"].Invoke();
@@ -345,7 +431,7 @@ namespace clinica
                 // Definir la consulta SQL de actualización
                 string query = "UPDATE laboratorio SET " +
                                "horarioLaboratorio = @horarioLaboratorio, " +
-                               "direccionLaboratorio = @direccionLaboratorio, " +
+                               "DireccionLab = @direccionLaboratorio, " +
                                "fechaAsignacionLaboratorio = @fechaAsignacionLaboratorio, " +
                                "estadoLaboratorio = @estadoLaboratorio, " +
                                "personalLabID = @personalLabID, " +
@@ -393,6 +479,12 @@ namespace clinica
                     MessageBox.Show($"Error al modificar los datos: {ex.Message}");
                 }
             }
+
+
+        }
+
+        private void clinica_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
