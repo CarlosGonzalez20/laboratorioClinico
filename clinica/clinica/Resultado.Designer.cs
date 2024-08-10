@@ -29,89 +29,99 @@ namespace clinica
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.Modificar = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            this.dataresultados = new System.Windows.Forms.DataGridView();
+            this.Inac = new System.Windows.Forms.RadioButton();
+            this.Act = new System.Windows.Forms.RadioButton();
+            this.Est = new System.Windows.Forms.Label();
+            this.medicamentos = new System.Windows.Forms.Label();
+            this.Buscar = new MaterialSkin.Controls.MaterialButton();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.MedicamentoID = new System.Windows.Forms.ComboBox();
+            this.ExamenMedico = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataresultados)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // materialButton4
+            // dataresultados
             // 
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(229, 307);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(88, 36);
-            this.materialButton4.TabIndex = 95;
-            this.materialButton4.Text = "Eliminar";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseVisualStyleBackColor = true;
+            this.dataresultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataresultados.Location = new System.Drawing.Point(48, 404);
+            this.dataresultados.Name = "dataresultados";
+            this.dataresultados.RowHeadersWidth = 51;
+            this.dataresultados.RowTemplate.Height = 24;
+            this.dataresultados.Size = new System.Drawing.Size(598, 150);
+            this.dataresultados.TabIndex = 113;
             // 
-            // Modificar
+            // Inac
             // 
-            this.Modificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Modificar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Dense;
-            this.Modificar.Depth = 0;
-            this.Modificar.HighEmphasis = true;
-            this.Modificar.Icon = null;
-            this.Modificar.Location = new System.Drawing.Point(229, 355);
-            this.Modificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Modificar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Modificar.Name = "Modificar";
-            this.Modificar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.Modificar.Size = new System.Drawing.Size(99, 36);
-            this.Modificar.TabIndex = 94;
-            this.Modificar.Text = "Modificar";
-            this.Modificar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.Modificar.UseAccentColor = false;
-            this.Modificar.UseVisualStyleBackColor = true;
+            this.Inac.AutoSize = true;
+            this.Inac.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inac.Location = new System.Drawing.Point(713, 266);
+            this.Inac.Name = "Inac";
+            this.Inac.Size = new System.Drawing.Size(115, 33);
+            this.Inac.TabIndex = 112;
+            this.Inac.TabStop = true;
+            this.Inac.Text = "Inactivo";
+            this.Inac.UseVisualStyleBackColor = true;
             // 
-            // materialButton2
+            // Act
             // 
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(119, 355);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(79, 36);
-            this.materialButton2.TabIndex = 93;
-            this.materialButton2.Text = "Limpiar";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = false;
-            this.materialButton2.UseVisualStyleBackColor = true;
+            this.Act.AutoSize = true;
+            this.Act.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Act.Location = new System.Drawing.Point(713, 226);
+            this.Act.Name = "Act";
+            this.Act.Size = new System.Drawing.Size(98, 33);
+            this.Act.TabIndex = 111;
+            this.Act.TabStop = true;
+            this.Act.Text = "Activo";
+            this.Act.UseVisualStyleBackColor = true;
+            // 
+            // Est
+            // 
+            this.Est.AutoSize = true;
+            this.Est.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Est.Location = new System.Drawing.Point(712, 181);
+            this.Est.Name = "Est";
+            this.Est.Size = new System.Drawing.Size(91, 29);
+            this.Est.TabIndex = 110;
+            this.Est.Text = "Estatus";
+            // 
+            // medicamentos
+            // 
+            this.medicamentos.AutoSize = true;
+            this.medicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medicamentos.Location = new System.Drawing.Point(63, 318);
+            this.medicamentos.Name = "medicamentos";
+            this.medicamentos.Size = new System.Drawing.Size(195, 25);
+            this.medicamentos.TabIndex = 108;
+            this.medicamentos.Text = "ID de medicamentos ";
+            this.medicamentos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Buscar
+            // 
+            this.Buscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Buscar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.Buscar.Depth = 0;
+            this.Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscar.HighEmphasis = true;
+            this.Buscar.Icon = null;
+            this.Buscar.Location = new System.Drawing.Point(712, 477);
+            this.Buscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Buscar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.Buscar.Name = "Buscar";
+            this.Buscar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.Buscar.Size = new System.Drawing.Size(77, 36);
+            this.Buscar.TabIndex = 107;
+            this.Buscar.Text = "Buscar";
+            this.Buscar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.Buscar.UseAccentColor = false;
+            this.Buscar.UseVisualStyleBackColor = true;
             // 
             // materialButton3
             // 
@@ -120,242 +130,116 @@ namespace clinica
             this.materialButton3.Depth = 0;
             this.materialButton3.HighEmphasis = true;
             this.materialButton3.Icon = null;
-            this.materialButton3.Location = new System.Drawing.Point(119, 307);
+            this.materialButton3.Location = new System.Drawing.Point(712, 429);
             this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton3.Name = "materialButton3";
             this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
             this.materialButton3.Size = new System.Drawing.Size(91, 36);
-            this.materialButton3.TabIndex = 92;
+            this.materialButton3.TabIndex = 106;
             this.materialButton3.Text = "Ingresar";
             this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton3.UseAccentColor = false;
             this.materialButton3.UseVisualStyleBackColor = true;
             // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(705, 400);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(202, 27);
-            this.textBox7.TabIndex = 91;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(705, 333);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(310, 27);
-            this.textBox6.TabIndex = 90;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(468, 394);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(188, 27);
-            this.textBox5.TabIndex = 89;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(468, 333);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 27);
-            this.textBox4.TabIndex = 88;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(703, 310);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(144, 17);
-            this.label9.TabIndex = 87;
-            this.label9.Text = "Descripcion detallada";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(703, 383);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 17);
-            this.label8.TabIndex = 86;
-            this.label8.Text = "Duracion";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(465, 374);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 17);
-            this.label7.TabIndex = 85;
-            this.label7.Text = "Dosis";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(465, 310);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(166, 17);
-            this.label6.TabIndex = 84;
-            this.label6.Text = "Nombre de medicamento";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(574, 258);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(273, 25);
-            this.label5.TabIndex = 83;
-            this.label5.Text = "Descripcion de medicamentos";
-            // 
-            // materialButton1
-            // 
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(628, 182);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(201, 36);
-            this.materialButton1.TabIndex = 82;
-            this.materialButton1.Text = "Descripcion detallada";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(794, 143);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(168, 21);
-            this.checkBox3.TabIndex = 81;
-            this.checkBox3.Text = "Requiere seguimiento";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(658, 143);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(97, 21);
-            this.checkBox2.TabIndex = 80;
-            this.checkBox2.Text = "Anormales";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(522, 143);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(90, 21);
-            this.checkBox1.TabIndex = 79;
-            this.checkBox1.Text = "Normales";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(575, 97);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(314, 24);
-            this.label4.TabIndex = 78;
-            this.label4.Text = "Resultados de examenes realizados";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(236, 232);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(205, 27);
-            this.textBox3.TabIndex = 77;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 231);
+            this.label3.Location = new System.Drawing.Point(63, 254);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 25);
-            this.label3.TabIndex = 76;
-            this.label3.Text = "Entrega de resultados";
+            this.label3.Size = new System.Drawing.Size(133, 25);
+            this.label3.TabIndex = 105;
+            this.label3.Text = "ID de examen";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(238, 168);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 27);
-            this.textBox2.TabIndex = 75;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 167);
+            this.label2.Location = new System.Drawing.Point(63, 190);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 25);
-            this.label2.TabIndex = 74;
-            this.label2.Text = "Identificacion Paciente";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(260, 25);
+            this.label2.TabIndex = 104;
+            this.label2.Text = "Fecha entrega de resultados";
             // 
-            // textBox1
+            // groupBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(219, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 27);
-            this.textBox1.TabIndex = 73;
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.MedicamentoID);
+            this.groupBox1.Controls.Add(this.ExamenMedico);
+            this.groupBox1.Location = new System.Drawing.Point(48, 103);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(598, 283);
+            this.groupBox1.TabIndex = 109;
+            this.groupBox1.TabStop = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(306, 90);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(257, 22);
+            this.dateTimePicker1.TabIndex = 103;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 98);
+            this.label1.Location = new System.Drawing.Point(15, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 25);
+            this.label1.Size = new System.Drawing.Size(123, 25);
             this.label1.TabIndex = 72;
-            this.label1.Text = "Correlativo examen";
+            this.label1.Text = "ID Resultado";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(306, 28);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(257, 27);
+            this.textBox1.TabIndex = 73;
+            // 
+            // MedicamentoID
+            // 
+            this.MedicamentoID.FormattingEnabled = true;
+            this.MedicamentoID.Location = new System.Drawing.Point(306, 216);
+            this.MedicamentoID.Name = "MedicamentoID";
+            this.MedicamentoID.Size = new System.Drawing.Size(257, 24);
+            this.MedicamentoID.TabIndex = 98;
+            // 
+            // ExamenMedico
+            // 
+            this.ExamenMedico.FormattingEnabled = true;
+            this.ExamenMedico.Location = new System.Drawing.Point(306, 151);
+            this.ExamenMedico.Name = "ExamenMedico";
+            this.ExamenMedico.Size = new System.Drawing.Size(257, 24);
+            this.ExamenMedico.TabIndex = 96;
             // 
             // Resultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 466);
-            this.Controls.Add(this.materialButton4);
-            this.Controls.Add(this.Modificar);
-            this.Controls.Add(this.materialButton2);
+            this.ClientSize = new System.Drawing.Size(879, 596);
+            this.Controls.Add(this.dataresultados);
+            this.Controls.Add(this.Inac);
+            this.Controls.Add(this.Act);
+            this.Controls.Add(this.Est);
+            this.Controls.Add(this.medicamentos);
+            this.Controls.Add(this.Buscar);
             this.Controls.Add(this.materialButton3);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.materialButton1);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Resultado";
             this.Text = "Resultado";
             this.Load += new System.EventHandler(this.Resultado_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataresultados)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,29 +247,20 @@ namespace clinica
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialButton materialButton4;
-        private MaterialSkin.Controls.MaterialButton Modificar;
-        private MaterialSkin.Controls.MaterialButton materialButton2;
+        private System.Windows.Forms.DataGridView dataresultados;
+        private System.Windows.Forms.RadioButton Inac;
+        private System.Windows.Forms.RadioButton Act;
+        private System.Windows.Forms.Label Est;
+        private System.Windows.Forms.Label medicamentos;
+        private MaterialSkin.Controls.MaterialButton Buscar;
         private MaterialSkin.Controls.MaterialButton materialButton3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox MedicamentoID;
+        private System.Windows.Forms.ComboBox ExamenMedico;
     }
 }
